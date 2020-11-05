@@ -1,0 +1,9 @@
+xst -intstyle ise -ifn "D:/Digital/lab/Test7segment/Test7segments2/sevensegments_display.xst" -ofn "D:/Digital/lab/Test7segment/Test7segments2/sevensegments_display.syr" 
+xst -intstyle ise -ifn "D:/Digital/lab/Test7segment/Test7segments2/sevensegments_display.xst" -ofn "D:/Digital/lab/Test7segment/Test7segments2/sevensegments_display.syr" 
+xst -intstyle ise -ifn "D:/Digital/lab/Test7segment/Test7segments2/sevensegments_display.xst" -ofn "D:/Digital/lab/Test7segment/Test7segments2/sevensegments_display.syr" 
+xst -intstyle ise -ifn "D:/Digital/lab/Test7segment/Test7segments2/sevensegments_display.xst" -ofn "D:/Digital/lab/Test7segment/Test7segments2/sevensegments_display.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc6slx9-tqg144-3 sevensegments_display.ngc sevensegments_display.ngd  
+map -intstyle ise -p xc6slx9-tqg144-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o sevensegments_display_map.ncd sevensegments_display.ngd sevensegments_display.pcf 
+par -w -intstyle ise -ol high -mt off sevensegments_display_map.ncd sevensegments_display.ncd sevensegments_display.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml sevensegments_display.twx sevensegments_display.ncd -o sevensegments_display.twr sevensegments_display.pcf 
+bitgen -intstyle ise -f sevensegments_display.ut sevensegments_display.ncd 

@@ -1,0 +1,2 @@
+sch2hdl,-intstyle,ise,-family,spartan6,-verilog,D:/work/2D/Digital/lab/testRam/divide20M.vf,-w,D:/work/2D/Digital/lab/testRam/divide20M.sch
+sch2hdl,-intstyle,ise,-family,spartan6,-verilog,D:/work/2D/Digital/lab/testRam/res.vf,-w,D:/work/2D/Digital/lab/testRam/res.sch

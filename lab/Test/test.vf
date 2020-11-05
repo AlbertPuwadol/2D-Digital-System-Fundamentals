@@ -1,0 +1,41 @@
+////////////////////////////////////////////////////////////////////////////////
+// Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+////////////////////////////////////////////////////////////////////////////////
+//   ____  ____ 
+//  /   /\/   / 
+// /___/  \  /    Vendor: Xilinx 
+// \   \   \/     Version : 14.7
+//  \   \         Application : sch2hdl
+//  /   /         Filename : test.vf
+// /___/   /\     Timestamp : 09/16/2019 01:20:47
+// \   \  /  \ 
+//  \___\/\___\ 
+//
+//Command: sch2hdl -intstyle ise -family spartan6 -verilog D:/Digital/lab/Test/test.vf -w D:/Digital/lab/Test/test.sch
+//Design Name: test
+//Device: spartan6
+//Purpose:
+//    This verilog netlist is translated from an ECS schematic.It can be 
+//    synthesized and simulated, but it should not be modified. 
+//
+`timescale 1ns / 1ps
+
+module test(P55, 
+            P56, 
+            QBAR_P74, 
+            Q_P67);
+
+    input P55;
+    input P56;
+   output QBAR_P74;
+   output Q_P67;
+   
+   wire Q_P67_DUMMY;
+   
+   assign Q_P67 = Q_P67_DUMMY;
+   FD #( .INIT(1'b0) ) XLXI_1 (.C(P56), 
+              .D(P55), 
+              .Q(Q_P67_DUMMY));
+   INV  XLXI_2 (.I(Q_P67_DUMMY), 
+               .O(QBAR_P74));
+endmodule

@@ -1,0 +1,150 @@
+////////////////////////////////////////////////////////////////////////////////
+// Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+////////////////////////////////////////////////////////////////////////////////
+//   ____  ____ 
+//  /   /\/   / 
+// /___/  \  /    Vendor: Xilinx 
+// \   \   \/     Version : 14.7
+//  \   \         Application : sch2hdl
+//  /   /         Filename : DivideClk.vf
+// /___/   /\     Timestamp : 11/25/2019 15:02:48
+// \   \  /  \ 
+//  \___\/\___\ 
+//
+//Command: sch2hdl -intstyle ise -family spartan6 -verilog D:/work/2D/Digital/lab/testLab1/DivideClk.vf -w D:/work/2D/Digital/lab/testLab1/DivideClk.sch
+//Design Name: DivideClk
+//Device: spartan6
+//Purpose:
+//    This verilog netlist is translated from an ECS schematic.It can be 
+//    synthesized and simulated, but it should not be modified. 
+//
+`timescale 100 ps / 10 ps
+
+module FTC_HXILINX_DivideClk(Q, C, CLR, T);
+   
+   output             Q;
+
+   input 	      C;	
+   input 	      CLR;	
+   input              T;
+   
+   parameter INIT = 1'b0;
+   reg                Q = INIT;
+  
+   
+ 
+   always @(posedge C or posedge CLR)
+     begin
+	if (CLR)
+	  Q <= 1'b0;
+	else if(T)
+          Q <= !Q;
+     end
+   
+endmodule
+`timescale 100 ps / 10 ps
+
+module CD4CE_HXILINX_DivideClk(CEO, Q0, Q1, Q2, Q3, TC, C, CE, CLR);
+   
+   parameter TERMINAL_COUNT = 4'b1001;
+   
+   output             CEO;
+   output             Q0;
+   output             Q1;
+   output             Q2;
+   output             Q3;
+   output             TC;
+
+   input 	      C;	
+   input 	      CE;	
+   input 	      CLR;	
+   
+   reg                Q0;
+   reg                Q1;
+   reg                Q2;
+   reg                Q3;
+   
+   always @(posedge C or posedge CLR)
+     begin
+	if (CLR)
+	  {Q3, Q2, Q1, Q0} <= 4'b0000;
+
+	else if (CE)
+          begin
+             if ({Q3,Q2,Q1,Q0} == 4'b1001)
+               {Q3,Q2,Q1,Q0} <= 4'b0000;
+             else if({Q3,Q2,Q1,Q0} == 4'b1011)
+               {Q3,Q2,Q1,Q0} <= 4'b0110;
+             else if({Q3,Q2,Q1,Q0} == 4'b1101)
+               {Q3,Q2,Q1,Q0} <= 4'b0100;
+             else if({Q3,Q2,Q1,Q0} == 4'b1111)
+               {Q3,Q2,Q1,Q0} <= 4'b0010;
+            
+             else
+	      {Q3, Q2, Q1,Q0} <= {Q3, Q2, Q1,Q0} + 1;
+          end
+     end
+   
+   assign CEO = TC & CE;
+   assign TC = CLR ? 1'b0 : ({Q3, Q2, Q1, Q0} == TERMINAL_COUNT);
+   
+endmodule
+`timescale 1ns / 1ps
+
+module DivideClk(ClIn, 
+                 ClOut);
+
+    input ClIn;
+   output ClOut;
+   
+   wire XLXN_1;
+   wire XLXN_2;
+   wire XLXN_3;
+   wire XLXN_4;
+   wire XLXN_7;
+   wire XLXN_8;
+   wire XLXN_11;
+   
+   (* HU_SET = "XLXI_1_0" *) 
+   CD4CE_HXILINX_DivideClk  XLXI_1 (.C(ClIn), 
+                                   .CE(XLXN_7), 
+                                   .CLR(), 
+                                   .CEO(), 
+                                   .Q0(), 
+                                   .Q1(), 
+                                   .Q2(), 
+                                   .Q3(), 
+                                   .TC(XLXN_1));
+   (* HU_SET = "XLXI_2_1" *) 
+   CD4CE_HXILINX_DivideClk  XLXI_2 (.C(XLXN_2), 
+                                   .CE(XLXN_7), 
+                                   .CLR(), 
+                                   .CEO(), 
+                                   .Q0(), 
+                                   .Q1(), 
+                                   .Q2(), 
+                                   .Q3(), 
+                                   .TC(XLXN_3));
+   (* HU_SET = "XLXI_3_2" *) 
+   CD4CE_HXILINX_DivideClk  XLXI_3 (.C(XLXN_4), 
+                                   .CE(XLXN_7), 
+                                   .CLR(), 
+                                   .CEO(), 
+                                   .Q0(), 
+                                   .Q1(), 
+                                   .Q2(), 
+                                   .Q3(), 
+                                   .TC(XLXN_8));
+   INV  XLXI_4 (.I(XLXN_1), 
+               .O(XLXN_2));
+   INV  XLXI_5 (.I(XLXN_3), 
+               .O(XLXN_4));
+   INV  XLXI_6 (.I(XLXN_8), 
+               .O(XLXN_11));
+   VCC  XLXI_7 (.P(XLXN_7));
+   (* HU_SET = "XLXI_10_3" *) 
+   FTC_HXILINX_DivideClk  XLXI_10 (.C(XLXN_11), 
+                                  .CLR(), 
+                                  .T(XLXN_7), 
+                                  .Q(ClOut));
+endmodule

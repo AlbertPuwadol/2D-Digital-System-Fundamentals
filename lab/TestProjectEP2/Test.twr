@@ -1,0 +1,115 @@
+--------------------------------------------------------------------------------
+Release 14.7 Trace  (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+
+C:\Xilinx\14.7\ISE_DS\ISE\bin\nt64\unwrapped\trce.exe -intstyle ise -v 3 -s 3
+-n 3 -fastpaths -xml Test.twx Test.ncd -o Test.twr Test.pcf -ucf Test.ucf
+
+Design file:              Test.ncd
+Physical constraint file: Test.pcf
+Device,package,speed:     xc6slx9,tqg144,C,-3 (PRODUCTION 1.23 2013-10-13)
+Report level:             verbose report
+
+Environment Variable      Effect 
+--------------------      ------ 
+NONE                      No environment variables were set
+--------------------------------------------------------------------------------
+
+INFO:Timing:2698 - No timing constraints found, doing default enumeration.
+INFO:Timing:3412 - To improve timing, see the Timing Closure User Guide (UG612).
+INFO:Timing:2752 - To get complete path coverage, use the unconstrained paths 
+   option. All paths that are not constrained will be reported in the 
+   unconstrained paths section(s) of the report.
+INFO:Timing:3339 - The clock-to-out numbers in this timing report are based on 
+   a 50 Ohm transmission line loading model.  For the details of this model, 
+   and for more information on accounting for different loading conditions, 
+   please see the device datasheet.
+
+
+
+Data Sheet report:
+-----------------
+All values displayed in nanoseconds (ns)
+
+Clock to Setup on destination clock Clk
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+Clk            |    1.347|         |         |         |
+---------------+---------+---------+---------+---------+
+
+Pad to Pad
+---------------+---------------+---------+
+Source Pad     |Destination Pad|  Delay  |
+---------------+---------------+---------+
+SW0            |SegA           |    9.006|
+SW0            |SegB           |    8.749|
+SW0            |SegC           |    8.937|
+SW0            |SegD           |    8.761|
+SW0            |SegE           |    8.113|
+SW0            |SegF           |    9.194|
+SW0            |SegG           |   10.036|
+SW1            |SegA           |    9.104|
+SW1            |SegB           |    8.782|
+SW1            |SegC           |    8.889|
+SW1            |SegD           |    8.813|
+SW1            |SegE           |    8.073|
+SW1            |SegF           |    9.154|
+SW1            |SegG           |   10.115|
+SW2            |SegA           |    8.795|
+SW2            |SegB           |    8.744|
+SW2            |SegC           |    8.924|
+SW2            |SegD           |    8.504|
+SW2            |SegE           |    8.108|
+SW2            |SegF           |    9.189|
+SW2            |SegG           |   10.031|
+SW3            |SegA           |    7.951|
+SW3            |SegB           |    7.943|
+SW3            |SegC           |    8.123|
+SW3            |SegD           |    7.644|
+SW3            |SegE           |    7.307|
+SW3            |SegF           |    8.388|
+SW3            |SegG           |    9.230|
+SW4            |SegA           |    9.159|
+SW4            |SegB           |    9.151|
+SW4            |SegC           |    9.331|
+SW4            |SegD           |    8.852|
+SW4            |SegE           |    8.515|
+SW4            |SegF           |    9.596|
+SW4            |SegG           |   10.438|
+SW5            |SegA           |    9.186|
+SW5            |SegB           |    8.864|
+SW5            |SegC           |    9.011|
+SW5            |SegD           |    8.895|
+SW5            |SegE           |    8.195|
+SW5            |SegF           |    9.276|
+SW5            |SegG           |   10.197|
+SW6            |SegA           |    9.561|
+SW6            |SegB           |    9.239|
+SW6            |SegC           |    9.335|
+SW6            |SegD           |    9.270|
+SW6            |SegE           |    8.519|
+SW6            |SegF           |    9.568|
+SW6            |SegG           |   10.572|
+SW7            |SegA           |    8.404|
+SW7            |SegB           |    8.379|
+SW7            |SegC           |    8.559|
+SW7            |SegD           |    8.080|
+SW7            |SegE           |    7.743|
+SW7            |SegF           |    8.824|
+SW7            |SegG           |    9.666|
+---------------+---------------+---------+
+
+
+Analysis completed Sat Dec 14 15:09:46 2019 
+--------------------------------------------------------------------------------
+
+Trace Settings:
+-------------------------
+Trace Settings 
+
+Peak Memory Usage: 4572 MB
+
+
+

@@ -1,0 +1,11 @@
+//! **************************************************************************
+// Written by: Map P.20131013 on Mon Sep 16 01:23:33 2019
+//! **************************************************************************
+
+SCHEMATIC START;
+COMP "Q_P67" LOCATE = SITE "P67" LEVEL 1;
+COMP "QBAR_P74" LOCATE = SITE "P74" LEVEL 1;
+COMP "P55" LOCATE = SITE "P55" LEVEL 1;
+COMP "P56" LOCATE = SITE "P56" LEVEL 1;
+SCHEMATIC END;
+

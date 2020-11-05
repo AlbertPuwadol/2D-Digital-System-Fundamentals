@@ -1,0 +1,48 @@
+
+
+NET "com[0]" LOC = P44;
+NET "com[1]" LOC = P43;
+NET "com[2]" LOC = P33;
+NET "com[3]" LOC = P30;
+
+# PlanAhead Generated physical constraints 
+
+NET "column[1]" LOC = P8;
+NET "column[2]" LOC = P10;
+NET "column[3]" LOC = P12;
+NET "outR[0]" LOC = P15;
+NET "outR[1]" LOC = P17;
+NET "outR[2]" LOC = P22;
+NET "outR[3]" LOC = P24;
+NET "A" LOC = P41;
+NET "B" LOC = P40;
+NET "C" LOC = P35;
+NET "Clk" LOC = P123;
+NET "D" LOC = P34;
+NET "E" LOC = P32;
+NET "F" LOC = P29;
+NET "G" LOC = P27;
+NET "P" LOC = P26;
+NET "PB" LOC = P45;
+NET "PB2" LOC = P46;
+NET "PB3" LOC = P47;
+
+NET "LED" LOC = P67;
+NET "LED2" LOC = P74;
+
+NET "Unlock[3]" LOC = P139;
+NET "Unlock[2]" LOC = P141;
+NET "Unlock[1]" LOC = P143;
+NET "Unlock[0]" LOC = P2;
+
+NET "Wrong" LOC = P133;
+NET "Buzzer" LOC = P137;
+NET "Dep" LOC = P131;
+NET "Wit" LOC = P126;
+NET "Fin" LOC = P6;
+
+NET "L[0]" LOC = P82;
+NET "L[1]" LOC = P81;
+NET "L[2]" LOC = P80;
+NET "L[3]" LOC = P79;
+NET "L[4]" LOC = P78;

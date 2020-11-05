@@ -1,0 +1,80 @@
+--------------------------------------------------------------------------------
+Release 14.7 Trace  (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+
+C:\Xilinx\14.7\ISE_DS\ISE\bin\nt64\unwrapped\trce.exe -intstyle ise -v 3 -s 3
+-n 3 -fastpaths -xml sevensegments_display.twx sevensegments_display.ncd -o
+sevensegments_display.twr sevensegments_display.pcf
+
+Design file:              sevensegments_display.ncd
+Physical constraint file: sevensegments_display.pcf
+Device,package,speed:     xc6slx9,tqg144,C,-3 (PRODUCTION 1.23 2013-10-13)
+Report level:             verbose report
+
+Environment Variable      Effect 
+--------------------      ------ 
+NONE                      No environment variables were set
+--------------------------------------------------------------------------------
+
+INFO:Timing:2698 - No timing constraints found, doing default enumeration.
+INFO:Timing:3412 - To improve timing, see the Timing Closure User Guide (UG612).
+INFO:Timing:2752 - To get complete path coverage, use the unconstrained paths 
+   option. All paths that are not constrained will be reported in the 
+   unconstrained paths section(s) of the report.
+INFO:Timing:3339 - The clock-to-out numbers in this timing report are based on 
+   a 50 Ohm transmission line loading model.  For the details of this model, 
+   and for more information on accounting for different loading conditions, 
+   please see the device datasheet.
+
+
+
+Data Sheet report:
+-----------------
+All values displayed in nanoseconds (ns)
+
+Pad to Pad
+---------------+---------------+---------+
+Source Pad     |Destination Pad|  Delay  |
+---------------+---------------+---------+
+Digit<0>       |A              |    7.198|
+Digit<0>       |B              |    6.881|
+Digit<0>       |C              |    6.729|
+Digit<0>       |D              |    6.772|
+Digit<0>       |E              |    6.999|
+Digit<0>       |F              |    7.151|
+Digit<0>       |G              |    6.817|
+Digit<1>       |A              |    7.506|
+Digit<1>       |B              |    7.026|
+Digit<1>       |C              |    6.874|
+Digit<1>       |D              |    7.080|
+Digit<1>       |E              |    7.109|
+Digit<1>       |F              |    7.261|
+Digit<1>       |G              |    7.125|
+Digit<2>       |A              |    6.971|
+Digit<2>       |B              |    6.817|
+Digit<2>       |C              |    6.665|
+Digit<2>       |D              |    6.545|
+Digit<2>       |E              |    6.845|
+Digit<2>       |F              |    6.997|
+Digit<2>       |G              |    6.590|
+Digit<3>       |A              |    6.861|
+Digit<3>       |B              |    6.442|
+Digit<3>       |C              |    6.290|
+Digit<3>       |D              |    6.435|
+Digit<3>       |E              |    6.651|
+Digit<3>       |F              |    6.803|
+Digit<3>       |G              |    6.480|
+---------------+---------------+---------+
+
+
+Analysis completed Mon Sep 30 01:35:38 2019 
+--------------------------------------------------------------------------------
+
+Trace Settings:
+-------------------------
+Trace Settings 
+
+Peak Memory Usage: 4572 MB
+
+
+

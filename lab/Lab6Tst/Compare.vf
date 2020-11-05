@@ -1,0 +1,65 @@
+////////////////////////////////////////////////////////////////////////////////
+// Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+////////////////////////////////////////////////////////////////////////////////
+//   ____  ____ 
+//  /   /\/   / 
+// /___/  \  /    Vendor: Xilinx 
+// \   \   \/     Version : 14.7
+//  \   \         Application : sch2hdl
+//  /   /         Filename : Compare.vf
+// /___/   /\     Timestamp : 10/21/2019 15:11:02
+// \   \  /  \ 
+//  \___\/\___\ 
+//
+//Command: sch2hdl -intstyle ise -family spartan6 -verilog D:/Digital/lab/Lab6Tst/Compare.vf -w D:/Digital/lab/Lab6Tst/Compare.sch
+//Design Name: Compare
+//Device: spartan6
+//Purpose:
+//    This verilog netlist is translated from an ECS schematic.It can be 
+//    synthesized and simulated, but it should not be modified. 
+//
+`timescale 1ns / 1ps
+
+module Compare(L0, 
+               L1, 
+               L2, 
+               L3, 
+               L4, 
+               L5, 
+               L6, 
+               L7, 
+               Res);
+
+    input L0;
+    input L1;
+    input L2;
+    input L3;
+    input L4;
+    input L5;
+    input L6;
+    input L7;
+   output Res;
+   
+   wire XLXN_1;
+   wire XLXN_3;
+   wire XLXN_4;
+   wire XLXN_6;
+   
+   XNOR2  XLXI_2 (.I0(L4), 
+                 .I1(L0), 
+                 .O(XLXN_1));
+   XNOR2  XLXI_3 (.I0(L5), 
+                 .I1(L1), 
+                 .O(XLXN_3));
+   XNOR2  XLXI_4 (.I0(L6), 
+                 .I1(L2), 
+                 .O(XLXN_4));
+   XNOR2  XLXI_5 (.I0(L7), 
+                 .I1(L3), 
+                 .O(XLXN_6));
+   AND4  XLXI_7 (.I0(XLXN_6), 
+                .I1(XLXN_4), 
+                .I2(XLXN_3), 
+                .I3(XLXN_1), 
+                .O(Res));
+endmodule

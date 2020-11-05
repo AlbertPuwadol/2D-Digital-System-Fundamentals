@@ -1,0 +1,67 @@
+--------------------------------------------------------------------------------
+Release 14.7 Trace  (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+
+C:\Xilinx\14.7\ISE_DS\ISE\bin\nt64\unwrapped\trce.exe -intstyle ise -v 3 -s 3
+-n 3 -fastpaths -xml res.twx res.ncd -o res.twr res.pcf
+
+Design file:              res.ncd
+Physical constraint file: res.pcf
+Device,package,speed:     xc6slx9,tqg144,C,-3 (PRODUCTION 1.23 2013-10-13)
+Report level:             verbose report
+
+Environment Variable      Effect 
+--------------------      ------ 
+NONE                      No environment variables were set
+--------------------------------------------------------------------------------
+
+INFO:Timing:2698 - No timing constraints found, doing default enumeration.
+INFO:Timing:3412 - To improve timing, see the Timing Closure User Guide (UG612).
+INFO:Timing:2752 - To get complete path coverage, use the unconstrained paths 
+   option. All paths that are not constrained will be reported in the 
+   unconstrained paths section(s) of the report.
+INFO:Timing:3339 - The clock-to-out numbers in this timing report are based on 
+   a 50 Ohm transmission line loading model.  For the details of this model, 
+   and for more information on accounting for different loading conditions, 
+   please see the device datasheet.
+
+
+
+Data Sheet report:
+-----------------
+All values displayed in nanoseconds (ns)
+
+Clock XLXN_11 to Pad
+------------+-----------------+------------+-----------------+------------+------------------+--------+
+            |Max (slowest) clk|  Process   |Min (fastest) clk|  Process   |                  | Clock  |
+Destination |  (edge) to PAD  |   Corner   |  (edge) to PAD  |   Corner   |Internal Clock(s) | Phase  |
+------------+-----------------+------------+-----------------+------------+------------------+--------+
+XLXN_12     |        12.579(R)|      SLOW  |         6.936(R)|      FAST  |XLXN_11_BUFGP     |   0.000|
+XLXN_13     |        12.699(R)|      SLOW  |         7.035(R)|      FAST  |XLXN_11_BUFGP     |   0.000|
+XLXN_14     |        12.543(R)|      SLOW  |         6.963(R)|      FAST  |XLXN_11_BUFGP     |   0.000|
+XLXN_15     |        12.323(R)|      SLOW  |         6.785(R)|      FAST  |XLXN_11_BUFGP     |   0.000|
+XLXN_16     |        12.567(R)|      SLOW  |         6.925(R)|      FAST  |XLXN_11_BUFGP     |   0.000|
+XLXN_17     |        11.677(R)|      SLOW  |         6.518(R)|      FAST  |XLXN_11_BUFGP     |   0.000|
+XLXN_18     |        12.124(R)|      SLOW  |         6.523(R)|      FAST  |XLXN_11_BUFGP     |   0.000|
+------------+-----------------+------------+-----------------+------------+------------------+--------+
+
+Clock to Setup on destination clock XLXN_11
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+XLXN_11        |    1.804|         |         |         |
+---------------+---------+---------+---------+---------+
+
+
+Analysis completed Mon Oct 28 00:47:33 2019 
+--------------------------------------------------------------------------------
+
+Trace Settings:
+-------------------------
+Trace Settings 
+
+Peak Memory Usage: 4572 MB
+
+
+

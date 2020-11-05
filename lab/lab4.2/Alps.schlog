@@ -1,0 +1,2 @@
+select figure at 132 244 8 -branches -sn=1
+select all in 132 244 2491 1561 -branches -enclosed -sn=1

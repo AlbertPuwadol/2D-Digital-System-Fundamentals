@@ -1,0 +1,256 @@
+////////////////////////////////////////////////////////////////////////////////
+// Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+////////////////////////////////////////////////////////////////////////////////
+//   ____  ____ 
+//  /   /\/   / 
+// /___/  \  /    Vendor: Xilinx 
+// \   \   \/     Version : 14.7
+//  \   \         Application : sch2hdl
+//  /   /         Filename : Counter.vf
+// /___/   /\     Timestamp : 09/30/2019 16:18:37
+// \   \  /  \ 
+//  \___\/\___\ 
+//
+//Command: sch2hdl -intstyle ise -family spartan6 -verilog "C:/Users/Puwadol Limwanichsin/Downloads/NewCOUNTER/Counter.vf" -w "C:/Users/Puwadol Limwanichsin/Downloads/NewCOUNTER/Counter.sch"
+//Design Name: Counter
+//Device: spartan6
+//Purpose:
+//    This verilog netlist is translated from an ECS schematic.It can be 
+//    synthesized and simulated, but it should not be modified. 
+//
+`timescale 100 ps / 10 ps
+
+module FJKC_HXILINX_Counter(Q, C, CLR, J, K);
+   
+   output             Q;
+
+   input 	      C;	
+   input 	      CLR;	
+   input              J;
+   input              K;
+   
+   parameter INIT = 1'b0;
+   reg                Q = INIT;
+
+
+   always @(posedge C or posedge CLR)
+     begin
+	if (CLR)
+	  Q <= 1'b0;
+	else
+        begin
+           if(!J)
+           begin
+              if(K)
+              Q <= 1'b0;
+           end
+           else
+           begin
+              if(!K)
+              Q <= 1'b1;
+              else 
+              Q <= !Q;
+           end
+        end
+     end
+   
+endmodule
+`timescale 100 ps / 10 ps
+
+module FJKP_HXILINX_Counter(Q, C, J, K, PRE);
+   
+   output             Q;
+
+   input 	      C;	
+   input              J;
+   input              K;
+   input 	      PRE;	
+   
+   parameter INIT = 1'b1;
+   reg                Q = INIT;
+
+   
+  always @(posedge C or posedge PRE)
+     begin
+	if (PRE)
+	  Q <= 1'b1;
+	else
+        begin
+           if(!J)
+           begin
+              if(K)
+              Q <= 1'b0;
+           end
+           else
+           begin
+              if(!K)
+              Q <= 1'b1;
+              else 
+              Q <= !Q;
+           end
+        end
+     end
+   
+endmodule
+`timescale 1ns / 1ps
+
+module Segment_MUSER_Counter(A_P82, 
+                             B_P81, 
+                             C_P80, 
+                             COM0_P44, 
+                             COM1_P43, 
+                             COM2_P33, 
+                             COM3_P30, 
+                             SegA_P41, 
+                             SegB_P40, 
+                             SegC_P35, 
+                             SegD_P34, 
+                             SegE_P32, 
+                             SegF_P29, 
+                             SegG_P27);
+
+    input A_P82;
+    input B_P81;
+    input C_P80;
+   output COM0_P44;
+   output COM1_P43;
+   output COM2_P33;
+   output COM3_P30;
+   output SegA_P41;
+   output SegB_P40;
+   output SegC_P35;
+   output SegD_P34;
+   output SegE_P32;
+   output SegF_P29;
+   output SegG_P27;
+   
+   wire XLXN_1;
+   wire XLXN_16;
+   wire XLXN_25;
+   wire XLXN_35;
+   wire XLXN_40;
+   
+   OR2  XLXI_1 (.I0(A_P82), 
+               .I1(B_P81), 
+               .O(XLXN_1));
+   AND2  XLXI_2 (.I0(C_P80), 
+                .I1(XLXN_1), 
+                .O(XLXN_25));
+   AND2  XLXI_3 (.I0(C_P80), 
+                .I1(A_P82), 
+                .O(XLXN_16));
+   INV  XLXI_4 (.I(XLXN_25), 
+               .O(SegB_P40));
+   OR2  XLXI_5 (.I0(A_P82), 
+               .I1(C_P80), 
+               .O(SegC_P35));
+   OR2  XLXI_6 (.I0(B_P81), 
+               .I1(XLXN_16), 
+               .O(SegD_P34));
+   INV  XLXI_7 (.I(A_P82), 
+               .O(XLXN_35));
+   AND2  XLXI_8 (.I0(B_P81), 
+                .I1(XLXN_35), 
+                .O(SegE_P32));
+   OR2  XLXI_9 (.I0(C_P80), 
+               .I1(B_P81), 
+               .O(SegG_P27));
+   INV  XLXI_10 (.I(C_P80), 
+                .O(XLXN_40));
+   INV  XLXI_11 (.I(XLXN_40), 
+                .O(SegF_P29));
+   OR2  XLXI_12 (.I0(XLXN_16), 
+                .I1(B_P81), 
+                .O(SegA_P41));
+   GND  XLXI_18 (.G(COM0_P44));
+   VCC  XLXI_20 (.P(COM3_P30));
+   VCC  XLXI_21 (.P(COM2_P33));
+   VCC  XLXI_22 (.P(COM1_P43));
+endmodule
+`timescale 1ns / 1ps
+
+module Counter(CLK_P45, 
+               RESET_P46, 
+               A_P41, 
+               B_P40, 
+               C_P35, 
+               C0_44, 
+               C1_P43, 
+               C2_P33, 
+               C3_P30, 
+               D_P34, 
+               E_P32, 
+               F_P29, 
+               G_P27, 
+               L_P80, 
+               L_P81, 
+               L_P82);
+
+   (* CLOCK_DEDICATED_ROUTE = "TRUE" *) 
+    input CLK_P45;
+    input RESET_P46;
+   output A_P41;
+   output B_P40;
+   output C_P35;
+   output C0_44;
+   output C1_P43;
+   output C2_P33;
+   output C3_P30;
+   output D_P34;
+   output E_P32;
+   output F_P29;
+   output G_P27;
+   output L_P80;
+   output L_P81;
+   output L_P82;
+   
+   wire XLXN_6;
+   wire XLXN_7;
+   wire XLXN_43;
+   wire L_P80_DUMMY;
+   wire L_P81_DUMMY;
+   wire L_P82_DUMMY;
+   
+   assign L_P80 = L_P80_DUMMY;
+   assign L_P81 = L_P81_DUMMY;
+   assign L_P82 = L_P82_DUMMY;
+   (* HU_SET = "XLXI_24_5" *) 
+   FJKP_HXILINX_Counter  XLXI_24 (.C(CLK_P45), 
+                                 .J(XLXN_43), 
+                                 .K(XLXN_43), 
+                                 .PRE(RESET_P46), 
+                                 .Q(L_P82_DUMMY));
+   (* HU_SET = "XLXI_25_4" *) 
+   FJKC_HXILINX_Counter  XLXI_25 (.C(CLK_P45), 
+                                 .CLR(RESET_P46), 
+                                 .J(L_P82_DUMMY), 
+                                 .K(XLXN_6), 
+                                 .Q(L_P81_DUMMY));
+   (* HU_SET = "XLXI_26_3" *) 
+   FJKC_HXILINX_Counter  XLXI_26 (.C(CLK_P45), 
+                                 .CLR(RESET_P46), 
+                                 .J(XLXN_7), 
+                                 .K(L_P81_DUMMY), 
+                                 .Q(L_P80_DUMMY));
+   OR2  XLXI_27 (.I0(L_P80_DUMMY), 
+                .I1(L_P82_DUMMY), 
+                .O(XLXN_6));
+   AND2  XLXI_28 (.I0(L_P81_DUMMY), 
+                 .I1(L_P82_DUMMY), 
+                 .O(XLXN_7));
+   VCC  XLXI_29 (.P(XLXN_43));
+   Segment_MUSER_Counter  XLXI_66 (.A_P82(L_P82_DUMMY), 
+                                  .B_P81(L_P81_DUMMY), 
+                                  .C_P80(L_P80_DUMMY), 
+                                  .COM0_P44(C0_44), 
+                                  .COM1_P43(C1_P43), 
+                                  .COM2_P33(C2_P33), 
+                                  .COM3_P30(C3_P30), 
+                                  .SegA_P41(A_P41), 
+                                  .SegB_P40(B_P40), 
+                                  .SegC_P35(C_P35), 
+                                  .SegD_P34(D_P34), 
+                                  .SegE_P32(E_P32), 
+                                  .SegF_P29(F_P29), 
+                                  .SegG_P27(G_P27));
+endmodule

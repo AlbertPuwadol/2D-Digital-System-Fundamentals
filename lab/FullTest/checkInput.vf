@@ -1,0 +1,74 @@
+////////////////////////////////////////////////////////////////////////////////
+// Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+////////////////////////////////////////////////////////////////////////////////
+//   ____  ____ 
+//  /   /\/   / 
+// /___/  \  /    Vendor: Xilinx 
+// \   \   \/     Version : 14.7
+//  \   \         Application : sch2hdl
+//  /   /         Filename : checkInput.vf
+// /___/   /\     Timestamp : 12/16/2019 07:07:44
+// \   \  /  \ 
+//  \___\/\___\ 
+//
+//Command: sch2hdl -intstyle ise -family spartan6 -verilog D:/work/2D/Digital/lab/FullTest/checkInput.vf -w D:/work/2D/Digital/lab/FullTest/checkInput.sch
+//Design Name: checkInput
+//Device: spartan6
+//Purpose:
+//    This verilog netlist is translated from an ECS schematic.It can be 
+//    synthesized and simulated, but it should not be modified. 
+//
+`timescale  100 ps / 10 ps
+
+module COMP4_HXILINX_checkInput (EQ, A0, A1, A2, A3, B0, B1, B2, B3);
+    
+
+   output EQ;
+
+   input A0;
+   input A1;
+   input A2;
+   input A3;
+   input B0;
+   input B1;
+   input B2;
+   input B3;
+
+   assign EQ = ((A0==B0) && (A1==B1) && (A2==B2) && (A3==B3)) ;
+
+endmodule
+`timescale 1ns / 1ps
+
+module checkInput(column, 
+                  inp, 
+                  o);
+
+    input [1:3] column;
+    input [3:0] inp;
+   output o;
+   
+   wire XLXN_6;
+   wire XLXN_7;
+   wire XLXN_8;
+   wire XLXN_9;
+   
+   (* HU_SET = "XLXI_1_92" *) 
+   COMP4_HXILINX_checkInput  XLXI_1 (.A0(inp[0]), 
+                                    .A1(inp[1]), 
+                                    .A2(inp[2]), 
+                                    .A3(inp[3]), 
+                                    .B0(XLXN_6), 
+                                    .B1(XLXN_7), 
+                                    .B2(XLXN_6), 
+                                    .B3(XLXN_7), 
+                                    .EQ(XLXN_8));
+   GND  XLXI_2 (.G(XLXN_6));
+   VCC  XLXI_3 (.P(XLXN_7));
+   AND2B1  XLXI_4 (.I0(XLXN_8), 
+                  .I1(XLXN_9), 
+                  .O(o));
+   OR3  XLXI_5 (.I0(column[1]), 
+               .I1(column[2]), 
+               .I2(column[3]), 
+               .O(XLXN_9));
+endmodule

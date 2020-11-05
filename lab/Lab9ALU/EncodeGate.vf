@@ -1,0 +1,39 @@
+////////////////////////////////////////////////////////////////////////////////
+// Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+////////////////////////////////////////////////////////////////////////////////
+//   ____  ____ 
+//  /   /\/   / 
+// /___/  \  /    Vendor: Xilinx 
+// \   \   \/     Version : 14.7
+//  \   \         Application : sch2hdl
+//  /   /         Filename : EncodeGate.vf
+// /___/   /\     Timestamp : 11/11/2019 02:52:18
+// \   \  /  \ 
+//  \___\/\___\ 
+//
+//Command: sch2hdl -intstyle ise -family spartan6 -verilog D:/Digital/lab/Lab9ALU/EncodeGate.vf -w D:/Digital/lab/Lab9ALU/EncodeGate.sch
+//Design Name: EncodeGate
+//Device: spartan6
+//Purpose:
+//    This verilog netlist is translated from an ECS schematic.It can be 
+//    synthesized and simulated, but it should not be modified. 
+//
+`timescale 1ns / 1ps
+
+module EncodeGate(inp, 
+                  bit);
+
+    input [3:0] inp;
+   output [1:0] bit;
+   
+   wire [3:0] inp_DUMMY;
+   
+   assign inp_DUMMY[3:0] = inp[3:0];
+   OR2  XLXI_1 (.I0(inp_DUMMY[3]), 
+               .I1(inp_DUMMY[1]), 
+               .O(bit[0]));
+   OR2  XLXI_4 (.I0(inp_DUMMY[3]), 
+               .I1(inp_DUMMY[2]), 
+               .O(bit[1]));
+   GND  XLXI_5 (.G(inp_DUMMY[0]));
+endmodule

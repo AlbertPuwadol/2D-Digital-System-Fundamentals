@@ -1,0 +1,26 @@
+#-----------------------------------------------------------
+# PlanAhead v14.7 (64-bit)
+# Build 321239 by xbuild on Fri Sep 27 19:29:51 MDT 2013
+# Start of session at: Mon Nov 25 15:03:20 2019
+# Process ID: 5516
+# Log file: D:/work/2D/Digital/lab/testLab1/planAhead_run_2/planAhead.log
+# Journal file: D:/work/2D/Digital/lab/testLab1/planAhead_run_2/planAhead.jou
+#-----------------------------------------------------------
+INFO: [Common 17-78] Attempting to get a license: PlanAhead
+INFO: [Common 17-290] Got license for PlanAhead
+INFO: [Device 21-36] Loading parts and site information from C:/Xilinx/14.7/ISE_DS/PlanAhead/data/parts/arch.xml
+Parsing RTL primitives file [C:/Xilinx/14.7/ISE_DS/PlanAhead/data/parts/xilinx/rtl/prims/rtl_prims.xml]
+Finished parsing RTL primitives file [C:/Xilinx/14.7/ISE_DS/PlanAhead/data/parts/xilinx/rtl/prims/rtl_prims.xml]
+start_gui
+source D:/work/2D/Digital/lab/testLab1/pa.fromHdl.tcl
+# create_project -name testLab1 -dir "D:/work/2D/Digital/lab/testLab1/planAhead_run_2" -part xc6slx9tqg144-3
+ERROR: [Common 17-53] User Exception: Project already exists on disk, please use '-force' option to overwrite: 
+     D:/work/2D/Digital/lab/testLab1/planAhead_run_2/testLab1.ppr
+     D:/work/2D/Digital/lab/testLab1/planAhead_run_2/testLab1.data
+
+    while executing
+"create_project -name testLab1 -dir "D:/work/2D/Digital/lab/testLab1/planAhead_run_2" -part xc6slx9tqg144-3"
+    (file "D:/work/2D/Digital/lab/testLab1/pa.fromHdl.tcl" line 4)
+exit
+INFO: [Common 17-206] Exiting PlanAhead at Mon Nov 25 15:03:33 2019...
+INFO: [Common 17-83] Releasing license: PlanAhead

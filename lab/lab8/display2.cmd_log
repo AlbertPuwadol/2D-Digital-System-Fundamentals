@@ -1,0 +1,1 @@
+sch2hdl -intstyle ise -family spartan6 -verilog display2_drc.vf -w D:/Digital/lab/lab8/display2.sch 

@@ -1,0 +1,4 @@
+sch2sym -intstyle ise -family spartan6 -refsym multiplexer C:/Users/ZeroOFBright/Desktop/Work/Digital/lab8/multiplexer.sch C:/Users/ZeroOFBright/Desktop/Work/Digital/lab8/multiplexer.sym 
+sch2sym -intstyle ise -family spartan6 -refsym multiplexer C:/Users/ZeroOFBright/Desktop/Work/Digital/lab8/multiplexer.sch C:/Users/ZeroOFBright/Desktop/Work/Digital/lab8/multiplexer.sym 
+sch2sym -intstyle ise -family spartan6 -w -refsym multiplexer C:/Users/ZeroOFBright/Desktop/Work/Digital/lab8/multiplexer.sch C:/Users/ZeroOFBright/Desktop/Work/Digital/lab8/multiplexer.sym 
+sch2sym -intstyle ise -family spartan6 -w -refsym multiplexer C:/Users/ZeroOFBright/Desktop/Work/Digital/lab8/multiplexer.sch C:/Users/ZeroOFBright/Desktop/Work/Digital/lab8/multiplexer.sym 

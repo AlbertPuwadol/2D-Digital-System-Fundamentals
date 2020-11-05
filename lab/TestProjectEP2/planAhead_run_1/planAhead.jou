@@ -1,0 +1,68 @@
+#-----------------------------------------------------------
+# PlanAhead v14.7 (64-bit)
+# Build 321239 by xbuild on Fri Sep 27 19:29:51 MDT 2013
+# Start of session at: Sun Nov 17 01:50:36 2019
+# Process ID: 10192
+# Log file: D:/work/2D/Digital/lab/TestProjectEP2/planAhead_run_1/planAhead.log
+# Journal file: D:/work/2D/Digital/lab/TestProjectEP2/planAhead_run_1/planAhead.jou
+#-----------------------------------------------------------
+start_gui
+source D:/work/2D/Digital/lab/TestProjectEP2/pa.fromHdl.tcl
+update_compile_order -fileset sim_1
+startgroup
+set_property package_pin P45 [get_ports Button]
+endgroup
+startgroup
+set_property package_pin P41 [get_ports SegA]
+endgroup
+startgroup
+set_property package_pin P40 [get_ports SegB]
+endgroup
+set_property package_pin "" [get_ports [list  SegD]]
+startgroup
+set_property package_pin P35 [get_ports SegC]
+endgroup
+startgroup
+set_property package_pin P34 [get_ports SegD]
+endgroup
+startgroup
+set_property package_pin P32 [get_ports SegE]
+endgroup
+startgroup
+set_property package_pin P29 [get_ports SegF]
+endgroup
+startgroup
+set_property package_pin P27 [get_ports SegG]
+endgroup
+startgroup
+set_property package_pin P26 [get_ports SegP]
+endgroup
+startgroup
+set_property package_pin P66 [get_ports SW0]
+endgroup
+set_property package_pin "" [get_ports [list  SW1]]
+startgroup
+set_property package_pin P58 [get_ports SW0]
+endgroup
+startgroup
+set_property package_pin P57 [get_ports SW1]
+endgroup
+startgroup
+set_property package_pin P56 [get_ports SW2]
+endgroup
+startgroup
+set_property package_pin P55 [get_ports SW3]
+endgroup
+startgroup
+set_property package_pin P66 [get_ports SW4]
+endgroup
+startgroup
+set_property package_pin P62 [get_ports SW5]
+endgroup
+startgroup
+set_property package_pin P61 [get_ports SW6]
+endgroup
+startgroup
+set_property package_pin P59 [get_ports SW7]
+endgroup
+save_constraints

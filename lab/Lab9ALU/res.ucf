@@ -1,0 +1,35 @@
+NET "Clock" LOC = P123;
+NET "SegA" LOC = P41;
+NET "SegB" LOC = P40;
+NET "SegC" LOC = P35;
+NET "SegD" LOC = P34;
+NET "SegE" LOC = P32;
+NET "SegF" LOC = P29;
+NET "SegG" LOC = P27;
+
+
+NET "com0" LOC = P44;
+NET "com1" LOC = P43;
+
+
+
+NET "in1[7]" LOC = P55;
+NET "in1[6]" LOC = P56;
+NET "in1[5]" LOC = P57;
+NET "in1[4]" LOC = P58;
+NET "in1[3]" LOC = P59;
+NET "in1[2]" LOC = P61;
+NET "in1[1]" LOC = P62;
+NET "in1[0]" LOC = P66;
+NET "in2[7]" LOC = P112;
+NET "in2[6]" LOC = P111;
+NET "in2[5]" LOC = P105;
+NET "in2[4]" LOC = P104;
+NET "in2[3]" LOC = P102;
+NET "in2[2]" LOC = P101;
+NET "in2[1]" LOC = P100;
+NET "in2[0]" LOC = P99;
+NET "com2" LOC = P33;
+NET "com3" LOC = P30;
+
+# PlanAhead Generated physical constraints 

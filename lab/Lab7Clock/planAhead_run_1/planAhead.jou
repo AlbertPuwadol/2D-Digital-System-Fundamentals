@@ -1,0 +1,62 @@
+#-----------------------------------------------------------
+# PlanAhead v14.7 (64-bit)
+# Build 321239 by xbuild on Fri Sep 27 19:29:51 MDT 2013
+# Start of session at: Sun Oct 27 02:21:32 2019
+# Process ID: 10000
+# Log file: D:/Digital/lab/Lab7Clock/planAhead_run_1/planAhead.log
+# Journal file: D:/Digital/lab/Lab7Clock/planAhead_run_1/planAhead.jou
+#-----------------------------------------------------------
+start_gui
+source D:/Digital/lab/Lab7Clock/pa.fromHdl.tcl
+update_compile_order -fileset sim_1
+startgroup
+set_property package_pin P30 [get_ports {com[3]}]
+endgroup
+startgroup
+set_property package_pin P33 [get_ports {com[2]}]
+endgroup
+startgroup
+set_property package_pin P43 [get_ports {com[1]}]
+endgroup
+startgroup
+set_property package_pin P44 [get_ports {com[0]}]
+endgroup
+set_property is_loc_fixed false [get_ports [list  {com[0]}]]
+startgroup
+set_property package_pin P123 [get_ports Clk_P123]
+endgroup
+startgroup
+set_property package_pin P48 [get_ports Reset_P48]
+endgroup
+startgroup
+set_property package_pin P41 [get_ports SegA_P41]
+endgroup
+startgroup
+set_property package_pin P40 [get_ports SegB_P40]
+endgroup
+startgroup
+set_property package_pin P35 [get_ports SegC_P35]
+endgroup
+set_property package_pin "" [get_ports [list  SegD_P34]]
+startgroup
+set_property package_pin P34 [get_ports SegD_P34]
+endgroup
+startgroup
+set_property package_pin P32 [get_ports SegE_P32]
+endgroup
+startgroup
+set_property package_pin P29 [get_ports SegF_P29]
+endgroup
+startgroup
+set_property package_pin P27 [get_ports SegG_P27]
+endgroup
+startgroup
+set_property package_pin P26 [get_ports SegP_P26]
+endgroup
+startgroup
+set_property package_pin P47 [get_ports Set_P47]
+endgroup
+set_property is_loc_fixed false [get_ports [list  Set_P47]]
+set_property is_loc_fixed true [get_ports [list  Set_P47]]
+set_property is_loc_fixed true [get_ports [list  {com[0]}]]
+save_constraints

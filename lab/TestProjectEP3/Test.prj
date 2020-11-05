@@ -1,0 +1,5 @@
+verilog work "DividerForNumber.vf"
+verilog work "DividerFor7segment.vf"
+verilog work "SvnEnable.vf"
+verilog work "Increase.vf"
+verilog work "Test.vf"

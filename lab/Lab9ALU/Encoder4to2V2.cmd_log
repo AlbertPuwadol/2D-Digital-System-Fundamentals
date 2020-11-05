@@ -1,0 +1,2 @@
+vhdtdtfi -lib work Encoder4to2V2.vhd -prj Lab9ALU -o Encoder4to2V2.spl -module Encoder4to2V2 -template C:/Xilinx/14.7/ISE_DS/ISE//data/splfile.tft -deleteonerror 
+spl2sym -intstyle ise -family spartan6 Encoder4to2V2.spl D:/Digital/lab/Lab9ALU/Encoder4to2V2.sym 

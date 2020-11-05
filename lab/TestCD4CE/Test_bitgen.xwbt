@@ -1,0 +1,8 @@
+INTSTYLE=ise
+INFILE=D:\Digital\lab\TestCD4CE\Test.ncd
+OUTFILE=D:\Digital\lab\TestCD4CE\Test.bit
+FAMILY=Spartan6
+PART=xc6slx9-3tqg144
+WORKINGDIR=D:\Digital\lab\TestCD4CE
+LICENSE=WebPack
+USER_INFO=__0_0_0

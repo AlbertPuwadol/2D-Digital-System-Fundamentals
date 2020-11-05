@@ -1,0 +1,46 @@
+<?xml version="1.0"?>
+<Interface Version="1" Minor="1">
+	<Ifc Id="ROOT" Top="1">
+		<Bus Id="A">
+			<Port Id="7" Dir="IN"/>
+			<Port Id="6" Dir="IN"/>
+			<Port Id="5" Dir="IN"/>
+			<Port Id="4" Dir="IN"/>
+			<Port Id="3" Dir="IN"/>
+			<Port Id="2" Dir="IN"/>
+			<Port Id="1" Dir="IN"/>
+			<Port Id="0" Dir="IN"/>
+		</Bus>
+		<Bus Id="B">
+			<Port Id="7" Dir="IN"/>
+			<Port Id="6" Dir="IN"/>
+			<Port Id="5" Dir="IN"/>
+			<Port Id="4" Dir="IN"/>
+			<Port Id="3" Dir="IN"/>
+			<Port Id="2" Dir="IN"/>
+			<Port Id="1" Dir="IN"/>
+			<Port Id="0" Dir="IN"/>
+		</Bus>
+		<Bus Id="Button">
+			<Port Id="3" Dir="IN"/>
+			<Port Id="2" Dir="IN"/>
+			<Port Id="1" Dir="IN"/>
+			<Port Id="0" Dir="IN"/>
+		</Bus>
+		<Bus Id="coms">
+			<Port Id="1" Dir="OUT"/>
+			<Port Id="0" Dir="OUT"/>
+		</Bus>
+		<Port Id="Clock" Dir="IN"/>
+		<Port Id="com0" Dir="OUT"/>
+		<Port Id="com1" Dir="OUT"/>
+		<Port Id="SegA" Dir="OUT"/>
+		<Port Id="SegB" Dir="OUT"/>
+		<Port Id="SegC" Dir="OUT"/>
+		<Port Id="SegD" Dir="OUT"/>
+		<Port Id="SegE" Dir="OUT"/>
+		<Port Id="SegF" Dir="OUT"/>
+		<Port Id="SegG" Dir="OUT"/>
+	</Ifc>
+</Interface>
+

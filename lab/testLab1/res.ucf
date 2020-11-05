@@ -1,0 +1,18 @@
+
+
+NET "A" LOC = P41;
+NET "B" LOC = P40;
+NET "C" LOC = P35;
+NET "com1" LOC = P33;
+NET "D" LOC = P34;
+NET "E" LOC = P32;
+NET "F" LOC = P29;
+NET "G" LOC = P27;
+NET "P" LOC = P26;
+NET "XLXN_42" LOC = P123;
+
+# PlanAhead Generated physical constraints 
+
+NET "com0" LOC = P30;
+NET "com3" LOC = P44;
+NET "com2" LOC = P43;

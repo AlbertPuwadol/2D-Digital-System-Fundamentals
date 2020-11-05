@@ -1,0 +1,20 @@
+
+
+NET "XLXN_81[7]" LOC = P26;
+NET "XLXN_81[6]" LOC = P27;
+NET "XLXN_81[5]" LOC = P29;
+NET "XLXN_81[4]" LOC = P32;
+NET "XLXN_81[3]" LOC = P34;
+NET "XLXN_81[2]" LOC = P35;
+NET "XLXN_81[1]" LOC = P40;
+NET "XLXN_81[0]" LOC = P41;
+NET "SW1" LOC = P55;
+NET "SW2" LOC = P56;
+NET "SW3" LOC = P57;
+
+# PlanAhead Generated physical constraints 
+
+NET "com0" LOC = P44;
+NET "com1" LOC = P43;
+NET "com2" LOC = P33;
+NET "com3" LOC = P30;

@@ -1,0 +1,8 @@
+xst -intstyle ise -ifn "C:/Users/Puwadol Limwanichsin/Downloads/NewCOUNTER/Sevensegment.xst" -ofn "C:/Users/Puwadol Limwanichsin/Downloads/NewCOUNTER/Sevensegment.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc Counter.ucf -p xc6slx9-tqg144-3 "Sevensegment.ngc" Sevensegment.ngd  
+xst -intstyle ise -ifn "C:/Users/Puwadol Limwanichsin/Downloads/NewCOUNTER/Sevensegment.xst" -ofn "C:/Users/Puwadol Limwanichsin/Downloads/NewCOUNTER/Sevensegment.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc Counter.ucf -p xc6slx9-tqg144-3 "Sevensegment.ngc" Sevensegment.ngd  
+xst -intstyle ise -ifn "C:/Users/Puwadol Limwanichsin/Downloads/NewCOUNTER/Sevensegment.xst" -ofn "C:/Users/Puwadol Limwanichsin/Downloads/NewCOUNTER/Sevensegment.syr" 
+sch2sym -intstyle ise -family spartan6 -refsym Sevensegment {C:/Users/Puwadol Limwanichsin/Downloads/NewCOUNTER/Sevensegment.sch} {C:/Users/Puwadol Limwanichsin/Downloads/NewCOUNTER/Sevensegment.sym} 
+sch2sym -intstyle ise -family spartan6 -refsym Sevensegment {C:/Users/Puwadol Limwanichsin/Downloads/NewCOUNTER/Sevensegment.sch} {C:/Users/Puwadol Limwanichsin/Downloads/NewCOUNTER/Sevensegment.sym} 
+sch2sym -intstyle ise -family spartan6 -refsym Sevensegment {C:/Users/Puwadol Limwanichsin/Downloads/NewCOUNTER/Sevensegment.sch} {C:/Users/Puwadol Limwanichsin/Downloads/NewCOUNTER/Sevensegment.sym} 

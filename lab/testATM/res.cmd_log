@@ -1,0 +1,108 @@
+xst -intstyle ise -ifn "D:/work/2D/Digital/lab/testATM/res.xst" -ofn "D:/work/2D/Digital/lab/testATM/res.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc res.ucf -p xc6slx9-tqg144-3 res.ngc res.ngd  
+map -intstyle ise -p xc6slx9-tqg144-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o res_map.ncd res.ngd res.pcf 
+par -w -intstyle ise -ol high -mt off res_map.ncd res.ncd res.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml res.twx res.ncd -o res.twr res.pcf -ucf res.ucf 
+bitgen -intstyle ise -f res.ut res.ncd 
+xst -intstyle ise -ifn "D:/work/2D/Digital/lab/testATM/res.xst" -ofn "D:/work/2D/Digital/lab/testATM/res.syr" 
+xst -intstyle ise -ifn "D:/work/2D/Digital/lab/testATM/res.xst" -ofn "D:/work/2D/Digital/lab/testATM/res.syr" 
+xst -intstyle ise -ifn "D:/work/2D/Digital/lab/testATM/res.xst" -ofn "D:/work/2D/Digital/lab/testATM/res.syr" 
+xst -intstyle ise -ifn "D:/work/2D/Digital/lab/testATM/res.xst" -ofn "D:/work/2D/Digital/lab/testATM/res.syr" 
+xst -intstyle ise -ifn "D:/work/2D/Digital/lab/testATM/res.xst" -ofn "D:/work/2D/Digital/lab/testATM/res.syr" 
+xst -intstyle ise -ifn "D:/work/2D/Digital/lab/testATM/res.xst" -ofn "D:/work/2D/Digital/lab/testATM/res.syr" 
+xst -intstyle ise -ifn "D:/work/2D/Digital/lab/testATM/res.xst" -ofn "D:/work/2D/Digital/lab/testATM/res.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc res.ucf -p xc6slx9-tqg144-3 res.ngc res.ngd  
+map -intstyle ise -p xc6slx9-tqg144-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o res_map.ncd res.ngd res.pcf 
+par -w -intstyle ise -ol high -mt off res_map.ncd res.ncd res.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml res.twx res.ncd -o res.twr res.pcf -ucf res.ucf 
+bitgen -intstyle ise -f res.ut res.ncd 
+xst -intstyle ise -ifn "D:/work/2D/Digital/lab/testATM/res.xst" -ofn "D:/work/2D/Digital/lab/testATM/res.syr" 
+xst -intstyle ise -ifn "D:/work/2D/Digital/lab/testATM/res.xst" -ofn "D:/work/2D/Digital/lab/testATM/res.syr" 
+xst -intstyle ise -ifn "D:/work/2D/Digital/lab/testATM/res.xst" -ofn "D:/work/2D/Digital/lab/testATM/res.syr" 
+xst -intstyle ise -ifn "D:/work/2D/Digital/lab/testATM/res.xst" -ofn "D:/work/2D/Digital/lab/testATM/res.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc res.ucf -p xc6slx9-tqg144-3 res.ngc res.ngd  
+map -intstyle ise -p xc6slx9-tqg144-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o res_map.ncd res.ngd res.pcf 
+par -w -intstyle ise -ol high -mt off res_map.ncd res.ncd res.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml res.twx res.ncd -o res.twr res.pcf -ucf res.ucf 
+bitgen -intstyle ise -f res.ut res.ncd 
+xst -intstyle ise -ifn "D:/work/2D/Digital/lab/testATM/res.xst" -ofn "D:/work/2D/Digital/lab/testATM/res.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc res.ucf -p xc6slx9-tqg144-3 res.ngc res.ngd  
+map -intstyle ise -p xc6slx9-tqg144-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o res_map.ncd res.ngd res.pcf 
+par -w -intstyle ise -ol high -mt off res_map.ncd res.ncd res.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml res.twx res.ncd -o res.twr res.pcf -ucf res.ucf 
+bitgen -intstyle ise -f res.ut res.ncd 
+xst -intstyle ise -ifn "D:/work/2D/Digital/lab/testATM/res.xst" -ofn "D:/work/2D/Digital/lab/testATM/res.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc res.ucf -p xc6slx9-tqg144-3 res.ngc res.ngd  
+map -intstyle ise -p xc6slx9-tqg144-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o res_map.ncd res.ngd res.pcf 
+par -w -intstyle ise -ol high -mt off res_map.ncd res.ncd res.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml res.twx res.ncd -o res.twr res.pcf -ucf res.ucf 
+bitgen -intstyle ise -f res.ut res.ncd 
+xst -intstyle ise -ifn "D:/work/2D/Digital/lab/testATM/res.xst" -ofn "D:/work/2D/Digital/lab/testATM/res.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc res.ucf -p xc6slx9-tqg144-3 res.ngc res.ngd  
+map -intstyle ise -p xc6slx9-tqg144-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o res_map.ncd res.ngd res.pcf 
+par -w -intstyle ise -ol high -mt off res_map.ncd res.ncd res.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml res.twx res.ncd -o res.twr res.pcf -ucf res.ucf 
+bitgen -intstyle ise -f res.ut res.ncd 
+xst -intstyle ise -ifn "D:/work/2D/Digital/lab/testATM/res.xst" -ofn "D:/work/2D/Digital/lab/testATM/res.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc res.ucf -p xc6slx9-tqg144-3 res.ngc res.ngd  
+map -intstyle ise -p xc6slx9-tqg144-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o res_map.ncd res.ngd res.pcf 
+par -w -intstyle ise -ol high -mt off res_map.ncd res.ncd res.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml res.twx res.ncd -o res.twr res.pcf -ucf res.ucf 
+bitgen -intstyle ise -f res.ut res.ncd 
+xst -intstyle ise -ifn "D:/work/2D/Digital/lab/testATM/res.xst" -ofn "D:/work/2D/Digital/lab/testATM/res.syr" 
+xst -intstyle ise -ifn "D:/work/2D/Digital/lab/testATM/res.xst" -ofn "D:/work/2D/Digital/lab/testATM/res.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc res.ucf -p xc6slx9-tqg144-3 res.ngc res.ngd  
+map -intstyle ise -p xc6slx9-tqg144-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o res_map.ncd res.ngd res.pcf 
+par -w -intstyle ise -ol high -mt off res_map.ncd res.ncd res.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml res.twx res.ncd -o res.twr res.pcf -ucf res.ucf 
+bitgen -intstyle ise -f res.ut res.ncd 
+xst -intstyle ise -ifn "D:/work/2D/Digital/lab/testATM/res.xst" -ofn "D:/work/2D/Digital/lab/testATM/res.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc res.ucf -p xc6slx9-tqg144-3 res.ngc res.ngd  
+map -intstyle ise -p xc6slx9-tqg144-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o res_map.ncd res.ngd res.pcf 
+par -w -intstyle ise -ol high -mt off res_map.ncd res.ncd res.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml res.twx res.ncd -o res.twr res.pcf -ucf res.ucf 
+bitgen -intstyle ise -f res.ut res.ncd 
+xst -intstyle ise -ifn "D:/work/2D/Digital/lab/testATM/res.xst" -ofn "D:/work/2D/Digital/lab/testATM/res.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc res.ucf -p xc6slx9-tqg144-3 res.ngc res.ngd  
+map -intstyle ise -p xc6slx9-tqg144-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o res_map.ncd res.ngd res.pcf 
+par -w -intstyle ise -ol high -mt off res_map.ncd res.ncd res.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml res.twx res.ncd -o res.twr res.pcf -ucf res.ucf 
+bitgen -intstyle ise -f res.ut res.ncd 
+xst -intstyle ise -ifn "D:/work/2D/Digital/lab/testATM/res.xst" -ofn "D:/work/2D/Digital/lab/testATM/res.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc res.ucf -p xc6slx9-tqg144-3 res.ngc res.ngd  
+map -intstyle ise -p xc6slx9-tqg144-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o res_map.ncd res.ngd res.pcf 
+par -w -intstyle ise -ol high -mt off res_map.ncd res.ncd res.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml res.twx res.ncd -o res.twr res.pcf -ucf res.ucf 
+bitgen -intstyle ise -f res.ut res.ncd 
+xst -intstyle ise -ifn "D:/work/2D/Digital/lab/testATM/res.xst" -ofn "D:/work/2D/Digital/lab/testATM/res.syr" 
+xst -intstyle ise -ifn "D:/work/2D/Digital/lab/testATM/res.xst" -ofn "D:/work/2D/Digital/lab/testATM/res.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc res.ucf -p xc6slx9-tqg144-3 res.ngc res.ngd  
+map -intstyle ise -p xc6slx9-tqg144-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o res_map.ncd res.ngd res.pcf 
+par -w -intstyle ise -ol high -mt off res_map.ncd res.ncd res.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml res.twx res.ncd -o res.twr res.pcf -ucf res.ucf 
+bitgen -intstyle ise -f res.ut res.ncd 
+xst -intstyle ise -ifn "D:/work/2D/Digital/lab/testATM/res.xst" -ofn "D:/work/2D/Digital/lab/testATM/res.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc res.ucf -p xc6slx9-tqg144-3 res.ngc res.ngd  
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc res.ucf -p xc6slx9-tqg144-3 res.ngc res.ngd  
+map -intstyle ise -p xc6slx9-tqg144-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o res_map.ncd res.ngd res.pcf 
+par -w -intstyle ise -ol high -mt off res_map.ncd res.ncd res.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml res.twx res.ncd -o res.twr res.pcf -ucf res.ucf 
+bitgen -intstyle ise -f res.ut res.ncd 
+xst -intstyle ise -ifn "D:/work/2D/Digital/lab/testATM/res.xst" -ofn "D:/work/2D/Digital/lab/testATM/res.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc res.ucf -p xc6slx9-tqg144-3 res.ngc res.ngd  
+map -intstyle ise -p xc6slx9-tqg144-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o res_map.ncd res.ngd res.pcf 
+par -w -intstyle ise -ol high -mt off res_map.ncd res.ncd res.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml res.twx res.ncd -o res.twr res.pcf -ucf res.ucf 
+bitgen -intstyle ise -f res.ut res.ncd 
+xst -intstyle ise -ifn "D:/work/2D/Digital/lab/testATM/res.xst" -ofn "D:/work/2D/Digital/lab/testATM/res.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc res.ucf -p xc6slx9-tqg144-3 res.ngc res.ngd  
+map -intstyle ise -p xc6slx9-tqg144-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o res_map.ncd res.ngd res.pcf 
+par -w -intstyle ise -ol high -mt off res_map.ncd res.ncd res.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml res.twx res.ncd -o res.twr res.pcf -ucf res.ucf 
+bitgen -intstyle ise -f res.ut res.ncd 
+xst -intstyle ise -ifn "D:/work/2D/Digital/lab/testATM/res.xst" -ofn "D:/work/2D/Digital/lab/testATM/res.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc res.ucf -p xc6slx9-tqg144-3 res.ngc res.ngd  
+map -intstyle ise -p xc6slx9-tqg144-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o res_map.ncd res.ngd res.pcf 
+par -w -intstyle ise -ol high -mt off res_map.ncd res.ncd res.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml res.twx res.ncd -o res.twr res.pcf -ucf res.ucf 
+bitgen -intstyle ise -f res.ut res.ncd 

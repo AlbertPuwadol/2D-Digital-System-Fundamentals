@@ -1,0 +1,108 @@
+////////////////////////////////////////////////////////////////////////////////
+// Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+////////////////////////////////////////////////////////////////////////////////
+//   ____  ____ 
+//  /   /\/   / 
+// /___/  \  /    Vendor: Xilinx 
+// \   \   \/     Version : 14.7
+//  \   \         Application : sch2hdl
+//  /   /         Filename : MyRAM.vf
+// /___/   /\     Timestamp : 12/16/2019 07:07:41
+// \   \  /  \ 
+//  \___\/\___\ 
+//
+//Command: sch2hdl -intstyle ise -family spartan6 -verilog D:/work/2D/Digital/lab/FullTest/MyRAM.vf -w D:/work/2D/Digital/lab/FullTest/MyRAM.sch
+//Design Name: MyRAM
+//Device: spartan6
+//Purpose:
+//    This verilog netlist is translated from an ECS schematic.It can be 
+//    synthesized and simulated, but it should not be modified. 
+//
+`timescale 1ns / 1ps
+
+module MyRAM(Clk, 
+             E, 
+             inp, 
+             o0, 
+             o1, 
+             o2, 
+             o3);
+
+    input Clk;
+    input E;
+    input [0:3] inp;
+   output [0:3] o0;
+   output [0:3] o1;
+   output [0:3] o2;
+   output [0:3] o3;
+   
+   wire XLXN_93;
+   wire [0:3] o0_DUMMY;
+   wire [0:3] o1_DUMMY;
+   wire [0:3] o2_DUMMY;
+   
+   assign o0[0:3] = o0_DUMMY[0:3];
+   assign o1[0:3] = o1_DUMMY[0:3];
+   assign o2[0:3] = o2_DUMMY[0:3];
+   RAM16X4S #( .INIT_00(16'h0000), .INIT_01(16'h0000), .INIT_02(16'h0000), 
+         .INIT_03(16'h0000) ) XLXI_22 (.A0(XLXN_93), 
+                     .A1(XLXN_93), 
+                     .A2(XLXN_93), 
+                     .A3(XLXN_93), 
+                     .D0(inp[0]), 
+                     .D1(inp[1]), 
+                     .D2(inp[2]), 
+                     .D3(inp[3]), 
+                     .WCLK(Clk), 
+                     .WE(E), 
+                     .O0(o0_DUMMY[0]), 
+                     .O1(o0_DUMMY[1]), 
+                     .O2(o0_DUMMY[2]), 
+                     .O3(o0_DUMMY[3]));
+   RAM16X4S #( .INIT_00(16'h0000), .INIT_01(16'h0000), .INIT_02(16'h0000), 
+         .INIT_03(16'h0000) ) XLXI_23 (.A0(XLXN_93), 
+                     .A1(XLXN_93), 
+                     .A2(XLXN_93), 
+                     .A3(XLXN_93), 
+                     .D0(o0_DUMMY[0]), 
+                     .D1(o0_DUMMY[1]), 
+                     .D2(o0_DUMMY[2]), 
+                     .D3(o0_DUMMY[3]), 
+                     .WCLK(Clk), 
+                     .WE(E), 
+                     .O0(o1_DUMMY[0]), 
+                     .O1(o1_DUMMY[1]), 
+                     .O2(o1_DUMMY[2]), 
+                     .O3(o1_DUMMY[3]));
+   RAM16X4S #( .INIT_00(16'h0000), .INIT_01(16'h0000), .INIT_02(16'h0000), 
+         .INIT_03(16'h0000) ) XLXI_24 (.A0(XLXN_93), 
+                     .A1(XLXN_93), 
+                     .A2(XLXN_93), 
+                     .A3(XLXN_93), 
+                     .D0(o1_DUMMY[0]), 
+                     .D1(o1_DUMMY[1]), 
+                     .D2(o1_DUMMY[2]), 
+                     .D3(o1_DUMMY[3]), 
+                     .WCLK(Clk), 
+                     .WE(E), 
+                     .O0(o2_DUMMY[0]), 
+                     .O1(o2_DUMMY[1]), 
+                     .O2(o2_DUMMY[2]), 
+                     .O3(o2_DUMMY[3]));
+   RAM16X4S #( .INIT_00(16'h0000), .INIT_01(16'h0000), .INIT_02(16'h0000), 
+         .INIT_03(16'h0000) ) XLXI_25 (.A0(XLXN_93), 
+                     .A1(XLXN_93), 
+                     .A2(XLXN_93), 
+                     .A3(XLXN_93), 
+                     .D0(o2_DUMMY[0]), 
+                     .D1(o2_DUMMY[1]), 
+                     .D2(o2_DUMMY[2]), 
+                     .D3(o2_DUMMY[3]), 
+                     .WCLK(Clk), 
+                     .WE(E), 
+                     .O0(o3[0]), 
+                     .O1(o3[1]), 
+                     .O2(o3[2]), 
+                     .O3(o3[3]));
+   GND  XLXI_26 (.G(XLXN_93));
+endmodule

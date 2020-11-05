@@ -1,0 +1,95 @@
+////////////////////////////////////////////////////////////////////////////////
+// Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+////////////////////////////////////////////////////////////////////////////////
+//   ____  ____ 
+//  /   /\/   / 
+// /___/  \  /    Vendor: Xilinx 
+// \   \   \/     Version : 14.7
+//  \   \         Application : sch2hdl
+//  /   /         Filename : div5_2.vf
+// /___/   /\     Timestamp : 11/10/2019 04:49:04
+// \   \  /  \ 
+//  \___\/\___\ 
+//
+//Command: sch2hdl -intstyle ise -family spartan6 -verilog D:/Digital/lab/Lab7Clock/div5_2.vf -w D:/Digital/lab/Lab7Clock/div5_2.sch
+//Design Name: div5_2
+//Device: spartan6
+//Purpose:
+//    This verilog netlist is translated from an ECS schematic.It can be 
+//    synthesized and simulated, but it should not be modified. 
+//
+`timescale 100 ps / 10 ps
+
+module CD4RE_HXILINX_div5_2(CEO, Q0, Q1, Q2, Q3, TC, C, CE, R);
+   
+   parameter TERMINAL_COUNT = 4'b1001;
+   
+   output             CEO;
+   output             Q0;
+   output             Q1;
+   output             Q2;
+   output             Q3;
+   output             TC;
+
+   input 	      C;	
+   input 	      CE;	
+   input 	      R;	
+   
+   reg                Q0;
+   reg                Q1;
+   reg                Q2;
+   reg                Q3;
+   
+   always @(posedge C)
+     begin
+	if (R)
+	  {Q3, Q2, Q1, Q0} <= 4'b0000;
+
+	else if (CE)
+          begin
+             if ({Q3,Q2,Q1,Q0} == 4'b1001)
+               {Q3,Q2,Q1,Q0} <= 4'b0000;
+             else if({Q3,Q2,Q1,Q0} == 4'b1011)
+               {Q3,Q2,Q1,Q0} <= 4'b0110;
+             else if({Q3,Q2,Q1,Q0} == 4'b1101)
+               {Q3,Q2,Q1,Q0} <= 4'b0100;
+             else if({Q3,Q2,Q1,Q0} == 4'b1111)
+               {Q3,Q2,Q1,Q0} <= 4'b0010;
+            
+             else
+	      {Q3, Q2, Q1, Q0} <= {Q3, Q2, Q1, Q0} + 1;
+          end
+     end
+   
+   assign CEO = TC & CE;
+   assign TC = R ? 1'b0 : ({Q3, Q2, Q1, Q0} == TERMINAL_COUNT);
+   
+endmodule
+`timescale 1ns / 1ps
+
+module div5_2(Clk_IN, 
+              Clk_OUT);
+
+    input Clk_IN;
+   output Clk_OUT;
+   
+   wire XLXN_2;
+   wire XLXN_3;
+   wire Clk_OUT_DUMMY;
+   
+   assign Clk_OUT = Clk_OUT_DUMMY;
+   VCC  XLXI_2 (.P(XLXN_3));
+   AND2  XLXI_3 (.I0(Clk_IN), 
+                .I1(XLXN_3), 
+                .O(XLXN_2));
+   (* HU_SET = "XLXI_10_0" *) 
+   CD4RE_HXILINX_div5_2  XLXI_10 (.C(XLXN_2), 
+                                 .CE(XLXN_3), 
+                                 .R(Clk_OUT_DUMMY), 
+                                 .CEO(), 
+                                 .Q0(), 
+                                 .Q1(), 
+                                 .Q2(Clk_OUT_DUMMY), 
+                                 .Q3(), 
+                                 .TC());
+endmodule

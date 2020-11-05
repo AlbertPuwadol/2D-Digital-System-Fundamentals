@@ -1,0 +1,4 @@
+verilog work "Svn2.vf"
+verilog work "Mux.vf"
+verilog work "Divider.vf"
+verilog work "res.vf"

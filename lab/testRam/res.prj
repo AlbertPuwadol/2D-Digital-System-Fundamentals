@@ -1,0 +1,6 @@
+verilog work "SevenSeg.vf"
+verilog work "MyRAM.vf"
+verilog work "divide20M.vf"
+vhdl work "detectNum.vhd"
+verilog work "clockforsevensegment.vf"
+verilog work "res.vf"

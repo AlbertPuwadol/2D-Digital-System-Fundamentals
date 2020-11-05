@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- IMPORTANT: This is an internal file that has been generated
+     by the Xilinx ISE software.  Any direct editing or
+     changes made to this file may result in unpredictable
+     behavior or data corruption.  It is strongly advised that
+     users do not edit the contents of this file. -->
+<messages>
+<msg type="warning" file="HDLCompiler" num="413" delta="old" >"D:\Digital\lab\TstLab6\Countertest.vf" Line 60: Result of <arg fmt="%d" index="1">5</arg>-bit expression is truncated to fit in <arg fmt="%d" index="2">4</arg>-bit target.
+</msg>
+
+<msg type="error" file="HDLCompiler" num="1401" delta="old" >"D:\Digital\lab\TstLab6\Countertest.vf" Line 99: Signal <arg fmt="%s" index="1">L0_P82_DUMMY</arg> in unit <arg fmt="%s" index="2">Countertest</arg> is connected to following multiple drivers:
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="1499" delta="old" >"D:\Digital\lab\TstLab6\Countertest.vf" Line 70: Empty module &lt;<arg fmt="%s" index="1">Countertest</arg>&gt; remains a black box.
+</msg>
+
+</messages>
+

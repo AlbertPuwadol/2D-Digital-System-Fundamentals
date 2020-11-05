@@ -1,0 +1,17 @@
+sch2hdl,-intstyle,ise,-family,spartan6,-verilog,D:/work/2D/Digital/lab/FullTest/MyRAM.vf,-w,D:/work/2D/Digital/lab/FullTest/MyRAM.sch
+sch2hdl,-intstyle,ise,-family,spartan6,-verilog,D:/work/2D/Digital/lab/FullTest/MyRam2.vf,-w,D:/work/2D/Digital/lab/FullTest/MyRam2.sch
+sch2hdl,-intstyle,ise,-family,spartan6,-verilog,D:/work/2D/Digital/lab/FullTest/res.vf,-w,D:/work/2D/Digital/lab/FullTest/res.sch
+sch2hdl,-intstyle,ise,-family,spartan6,-verilog,D:/work/2D/Digital/lab/FullTest/DivideClk.vf,-w,D:/work/2D/Digital/lab/FullTest/DivideClk.sch
+sch2hdl,-intstyle,ise,-family,spartan6,-verilog,D:/work/2D/Digital/lab/FullTest/Add2.vf,-w,D:/work/2D/Digital/lab/FullTest/Add2.sch
+sch2hdl,-intstyle,ise,-family,spartan6,-verilog,D:/work/2D/Digital/lab/FullTest/Minus.vf,-w,D:/work/2D/Digital/lab/FullTest/Minus.sch
+sch2hdl,-intstyle,ise,-family,spartan6,-verilog,D:/work/2D/Digital/lab/FullTest/Svn2.vf,-w,D:/work/2D/Digital/lab/FullTest/Svn2.sch
+sch2hdl,-intstyle,ise,-family,spartan6,-verilog,D:/work/2D/Digital/lab/FullTest/divide20M.vf,-w,D:/work/2D/Digital/lab/FullTest/divide20M.sch
+sch2hdl,-intstyle,ise,-family,spartan6,-verilog,D:/work/2D/Digital/lab/FullTest/blockForCommon.vf,-w,D:/work/2D/Digital/lab/FullTest/blockForCommon.sch
+sch2hdl,-intstyle,ise,-family,spartan6,-verilog,D:/work/2D/Digital/lab/FullTest/checkInput.vf,-w,D:/work/2D/Digital/lab/FullTest/checkInput.sch
+sch2hdl,-intstyle,ise,-family,spartan6,-verilog,D:/work/2D/Digital/lab/FullTest/Plus.vf,-w,D:/work/2D/Digital/lab/FullTest/Plus.sch
+sch2hdl,-intstyle,ise,-family,spartan6,-verilog,D:/work/2D/Digital/lab/FullTest/clockInRow.vf,-w,D:/work/2D/Digital/lab/FullTest/clockInRow.sch
+sch2hdl,-intstyle,ise,-family,spartan6,-verilog,D:/work/2D/Digital/lab/FullTest/Minuss.vf,-w,D:/work/2D/Digital/lab/FullTest/Minuss.sch
+sch2hdl,-intstyle,ise,-family,spartan6,-verilog,D:/work/2D/Digital/lab/FullTest/res.vf,-w,D:/work/2D/Digital/lab/FullTest/res.sch
+sch2hdl,-intstyle,ise,-family,spartan6,-verilog,D:/work/2D/Digital/lab/FullTest/Plus.vf,-w,D:/work/2D/Digital/lab/FullTest/Plus.sch
+sch2hdl,-intstyle,ise,-family,spartan6,-verilog,D:/work/2D/Digital/lab/FullTest/clockInRow.vf,-w,D:/work/2D/Digital/lab/FullTest/clockInRow.sch
+sch2hdl,-intstyle,ise,-family,spartan6,-verilog,D:/work/2D/Digital/lab/FullTest/Minuss.vf,-w,D:/work/2D/Digital/lab/FullTest/Minuss.sch

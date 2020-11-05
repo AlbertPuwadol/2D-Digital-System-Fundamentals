@@ -1,0 +1,10 @@
+#-----------------------------------------------------------
+# PlanAhead v14.7 (64-bit)
+# Build 321239 by xbuild on Fri Sep 27 19:29:51 MDT 2013
+# Start of session at: Sun Sep 29 17:21:50 2019
+# Process ID: 14496
+# Log file: D:/Xilinx ISE/NewCOUNTER/planAhead_run_1/planAhead.log
+# Journal file: D:/Xilinx ISE/NewCOUNTER/planAhead_run_1/planAhead.jou
+#-----------------------------------------------------------
+start_gui
+source {D:/Xilinx ISE/NewCOUNTER/pa.fromNetlist.tcl}

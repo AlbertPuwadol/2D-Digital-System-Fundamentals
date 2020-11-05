@@ -1,0 +1,38 @@
+
+
+NET "A" LOC = P41;
+NET "B" LOC = P40;
+NET "C" LOC = P35;
+NET "clk" LOC = P123;
+
+NET "D" LOC = P34;
+NET "E" LOC = P32;
+NET "F" LOC = P29;
+NET "G" LOC = P27;
+NET "P" LOC = P26;
+NET "a(0)" LOC = P66;
+NET "a(1)" LOC = P62;
+NET "a(2)" LOC = P61;
+NET "a(3)" LOC = P59;
+NET "a(4)" LOC = P58;
+NET "a(5)" LOC = P57;
+NET "a(6)" LOC = P56;
+NET "a(7)" LOC = P55;
+
+# PlanAhead Generated physical constraints 
+
+NET "comm0" LOC = P44;
+NET "comm1" LOC = P43;
+NET "comm2" LOC = P33;
+NET "comm3" LOC = P30;
+NET "b(0)" LOC = P99;
+NET "b(1)" LOC = P100;
+NET "b(2)" LOC = P101;
+NET "b(3)" LOC = P102;
+NET "b(4)" LOC = P104;
+NET "b(5)" LOC = P105;
+NET "b(6)" LOC = P111;
+NET "b(7)" LOC = P112;
+
+NET "LED" LOC = P67;
+

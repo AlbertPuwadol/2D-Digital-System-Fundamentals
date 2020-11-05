@@ -1,0 +1,48 @@
+////////////////////////////////////////////////////////////////////////////////
+// Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+////////////////////////////////////////////////////////////////////////////////
+//   ____  ____ 
+//  /   /\/   / 
+// /___/  \  /    Vendor: Xilinx 
+// \   \   \/     Version : 14.7
+//  \   \         Application : sch2hdl
+//  /   /         Filename : SHL.vf
+// /___/   /\     Timestamp : 11/11/2019 01:02:22
+// \   \  /  \ 
+//  \___\/\___\ 
+//
+//Command: sch2hdl -intstyle ise -family spartan6 -verilog D:/Digital/lab/Lab9ALU/SHL.vf -w D:/Digital/lab/Lab9ALU/SHL.sch
+//Design Name: SHL
+//Device: spartan6
+//Purpose:
+//    This verilog netlist is translated from an ECS schematic.It can be 
+//    synthesized and simulated, but it should not be modified. 
+//
+`timescale 1ns / 1ps
+
+module SHL(Data, 
+           ShData);
+
+    input [7:0] Data;
+   output [7:0] ShData;
+   
+   wire [7:0] Data_DUMMY;
+   
+   assign Data_DUMMY[7:0] = Data[7:0];
+   GND  XLXI_14 (.G(ShData[0]));
+   BUF  XLXI_20_0 (.I(Data_DUMMY[0]), 
+                  .O(ShData[1]));
+   BUF  XLXI_20_1 (.I(Data_DUMMY[1]), 
+                  .O(ShData[2]));
+   BUF  XLXI_20_2 (.I(Data_DUMMY[2]), 
+                  .O(ShData[3]));
+   BUF  XLXI_20_3 (.I(Data_DUMMY[3]), 
+                  .O(ShData[4]));
+   BUF  XLXI_20_4 (.I(Data_DUMMY[4]), 
+                  .O(ShData[5]));
+   BUF  XLXI_20_5 (.I(Data_DUMMY[5]), 
+                  .O(ShData[6]));
+   BUF  XLXI_20_6 (.I(Data_DUMMY[6]), 
+                  .O(ShData[7]));
+   GND  XLXI_21 (.G(Data_DUMMY[7]));
+endmodule

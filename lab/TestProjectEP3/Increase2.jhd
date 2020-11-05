@@ -1,0 +1,5 @@
+MODULE Increase2
+	SUBMODULE DividerFor7segment
+		INSTANCE XLXI_8
+	SUBMODULE DividerForNumber
+		INSTANCE XLXI_28

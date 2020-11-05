@@ -1,0 +1,44 @@
+#-----------------------------------------------------------
+# PlanAhead v14.7 (64-bit)
+# Build 321239 by xbuild on Fri Sep 27 19:29:51 MDT 2013
+# Start of session at: Mon Sep 30 15:38:04 2019
+# Process ID: 2260
+# Log file: C:/Users/Puwadol Limwanichsin/Downloads/NewCOUNTER/planAhead_run_3/planAhead.log
+# Journal file: C:/Users/Puwadol Limwanichsin/Downloads/NewCOUNTER/planAhead_run_3/planAhead.jou
+#-----------------------------------------------------------
+start_gui
+source {C:/Users/Puwadol Limwanichsin/Downloads/NewCOUNTER/pa.fromHdl.tcl}
+update_compile_order -fileset sim_1
+startgroup
+set_property package_pin P41 [get_ports A_P41]
+endgroup
+set_property is_loc_fixed false [get_ports [list  A_P41]]
+startgroup
+set_property package_pin P40 [get_ports B_P40]
+endgroup
+set_property is_loc_fixed true [get_ports [list  A_P41]]
+set_property is_loc_fixed false [get_ports [list  A_P41]]
+set_property is_loc_fixed true [get_ports [list  A_P41]]
+startgroup
+set_property package_pin P35 [get_ports C_P35]
+endgroup
+set_property package_pin "" [get_ports [list  D_P34]]
+startgroup
+set_property package_pin P45 [get_ports CLK_P45]
+endgroup
+startgroup
+set_property package_pin P34 [get_ports D_P34]
+endgroup
+startgroup
+set_property package_pin P32 [get_ports E_P32]
+endgroup
+set_property is_loc_fixed false [get_ports [list  E_P32]]
+set_property package_pin "" [get_ports [list  F_P29]]
+set_property is_loc_fixed true [get_ports [list  E_P32]]
+startgroup
+set_property package_pin P29 [get_ports F_P29]
+endgroup
+startgroup
+set_property package_pin P27 [get_ports G_P27]
+endgroup
+save_constraints

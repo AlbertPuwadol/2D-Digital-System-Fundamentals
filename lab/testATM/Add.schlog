@@ -1,0 +1,11 @@
+select figure at 1540 1657 8 -wires -sn=1
+select figure at 1689 2183 8 -wires -sn=1
+select figure at 1261 1945 8 -wires -sn=1
+select figure at 1205 2155 8 -wires -sn=1
+update symbols Add
+select figure at 446 2011 8 -wires -sn=1
+select figure at 378 1904 8 -wires -sn=1
+select all in -2147483648 -2147483648 2147483647 2147483647 -sn=1
+select all in -2147483648 -2147483648 2147483647 2147483647 -sn=1
+select all in -2147483648 -2147483648 2147483647 2147483647 -sn=1
+select all in -2147483648 -2147483648 2147483647 2147483647 -sn=1

@@ -1,0 +1,24 @@
+#-----------------------------------------------------------
+# PlanAhead v14.7 (64-bit)
+# Build 321239 by xbuild on Fri Sep 27 19:29:51 MDT 2013
+# Start of session at: Sun Nov 17 04:20:16 2019
+# Process ID: 3300
+# Log file: D:/work/2D/Digital/lab/TestProjectEP3/planAhead_run_2/planAhead.log
+# Journal file: D:/work/2D/Digital/lab/TestProjectEP3/planAhead_run_2/planAhead.jou
+#-----------------------------------------------------------
+start_gui
+source D:/work/2D/Digital/lab/TestProjectEP3/pa.fromHdl.tcl
+update_compile_order -fileset sim_1
+startgroup
+set_property package_pin P44 [get_ports com0]
+endgroup
+startgroup
+set_property package_pin P43 [get_ports com1]
+endgroup
+startgroup
+set_property package_pin P33 [get_ports com2]
+endgroup
+startgroup
+set_property package_pin P30 [get_ports com3]
+endgroup
+save_constraints

@@ -1,0 +1,8 @@
+INTSTYLE=ise
+INFILE=D:\work\2D\Digital\lab\testLab2\res.ncd
+OUTFILE=D:\work\2D\Digital\lab\testLab2\res.bit
+FAMILY=Spartan6
+PART=xc6slx9-3tqg144
+WORKINGDIR=D:\work\2D\Digital\lab\testLab2
+LICENSE=WebPack
+USER_INFO=__0_0_0

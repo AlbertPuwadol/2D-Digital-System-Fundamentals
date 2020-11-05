@@ -1,0 +1,388 @@
+////////////////////////////////////////////////////////////////////////////////
+// Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+////////////////////////////////////////////////////////////////////////////////
+//   ____  ____ 
+//  /   /\/   / 
+// /___/  \  /    Vendor: Xilinx 
+// \   \   \/     Version : 14.7
+//  \   \         Application : sch2hdl
+//  /   /         Filename : Minuss.vf
+// /___/   /\     Timestamp : 12/16/2019 07:07:48
+// \   \  /  \ 
+//  \___\/\___\ 
+//
+//Command: sch2hdl -intstyle ise -family spartan6 -verilog D:/work/2D/Digital/lab/FullTest/Minuss.vf -w D:/work/2D/Digital/lab/FullTest/Minuss.sch
+//Design Name: Minuss
+//Device: spartan6
+//Purpose:
+//    This verilog netlist is translated from an ECS schematic.It can be 
+//    synthesized and simulated, but it should not be modified. 
+//
+`timescale  100 ps / 10 ps
+
+module COMPMC16_HXILINX_Minuss (GT, LT, A, B);
+    
+
+   output GT;
+   output LT;
+
+   input  [15:0] A;
+   input  [15:0] B;
+
+   assign GT = A > B  ;
+   assign LT = A < B  ;
+
+endmodule
+`timescale  100 ps / 10 ps
+
+module ADSU4_HXILINX_Minuss (CO, OFL, S0, S1, S2, S3, A0, A1, A2, A3, ADD, B0, B1, B2, B3, CI);
+
+   output      CO;
+   output      OFL;
+   output      S0;
+   output      S1;
+   output      S2;
+   output      S3;
+
+   input       A0;
+   input       A1;
+   input       A2;
+   input       A3;
+   input       ADD;
+   input       B0;
+   input       B1;
+   input       B2;
+   input       B3;
+   input       CI;
+
+   reg [4:0]   adsu_tmp;
+     
+   always @(A0, A1, A2, A3, ADD, B0, B1, B2, B3, CI) begin
+      
+      if (ADD)
+       	adsu_tmp = {A3, A2, A1, A0} + {B3, B2, B1, B0} + CI;
+      else
+	adsu_tmp = {A3, A2, A1, A0} - (!CI) - {B3, B2, B1, B0};
+      
+   end 
+   
+   assign {S3, S2, S1, S0} = adsu_tmp [3:0];
+   assign CO =  ADD ? adsu_tmp[4] : ~adsu_tmp[4];
+   assign OFL = ADD ? ( (A3 & B3 & (~S3)) | ((~A3) & (~B3) & S3) ) : ( (A3 & (~B3) & (~S3)) | ((~A3) & B3 & S3) );
+   
+endmodule
+`timescale  100 ps / 10 ps
+
+module M2_1_HXILINX_Minuss (O, D0, D1, S0);
+    
+
+   output O;
+
+   input  D0;
+   input  D1;
+   input  S0;
+
+   reg O;
+
+   always @ ( D0 or D1 or S0)
+   begin
+      case(S0)
+      1'b0 : O <= D0;
+      1'b1 : O <= D1;
+      endcase
+   end
+    
+endmodule
+`timescale 1ns / 1ps
+
+module Minus_MUSER_Minuss(CarryIn, 
+                          Input00, 
+                          Input01, 
+                          Input02, 
+                          Input03, 
+                          Input10, 
+                          Input11, 
+                          Input12, 
+                          Input13, 
+                          CarryOut, 
+                          Output);
+
+    input CarryIn;
+    input Input00;
+    input Input01;
+    input Input02;
+    input Input03;
+    input Input10;
+    input Input11;
+    input Input12;
+    input Input13;
+   output CarryOut;
+   output [0:3] Output;
+   
+   wire [0:3] a;
+   wire [0:3] b;
+   wire XLXN_11;
+   wire XLXN_55;
+   wire XLXN_61;
+   wire CarryOut_DUMMY;
+   
+   assign CarryOut = CarryOut_DUMMY;
+   (* HU_SET = "XLXI_1_197" *) 
+   ADSU4_HXILINX_Minuss  XLXI_1 (.ADD(XLXN_11), 
+                                .A0(Input00), 
+                                .A1(Input01), 
+                                .A2(Input02), 
+                                .A3(Input03), 
+                                .B0(Input10), 
+                                .B1(Input11), 
+                                .B2(Input12), 
+                                .B3(Input13), 
+                                .CI(CarryIn), 
+                                .CO(CarryOut_DUMMY), 
+                                .OFL(), 
+                                .S0(a[0]), 
+                                .S1(a[1]), 
+                                .S2(a[2]), 
+                                .S3(a[3]));
+   (* HU_SET = "XLXI_2_198" *) 
+   ADSU4_HXILINX_Minuss  XLXI_2 (.ADD(CarryOut_DUMMY), 
+                                .A0(a[0]), 
+                                .A1(a[1]), 
+                                .A2(a[2]), 
+                                .A3(a[3]), 
+                                .B0(XLXN_11), 
+                                .B1(XLXN_55), 
+                                .B2(XLXN_55), 
+                                .B3(XLXN_11), 
+                                .CI(XLXN_55), 
+                                .CO(), 
+                                .OFL(), 
+                                .S0(b[0]), 
+                                .S1(b[1]), 
+                                .S2(b[2]), 
+                                .S3(b[3]));
+   VCC  XLXI_3 (.P(XLXN_55));
+   GND  XLXI_4 (.G(XLXN_11));
+   (* HU_SET = "XLXI_7_0_199" *) 
+   M2_1_HXILINX_Minuss  XLXI_7_0 (.D0(a[0]), 
+                                 .D1(b[0]), 
+                                 .S0(XLXN_61), 
+                                 .O(Output[0]));
+   (* HU_SET = "XLXI_7_1_200" *) 
+   M2_1_HXILINX_Minuss  XLXI_7_1 (.D0(a[1]), 
+                                 .D1(b[1]), 
+                                 .S0(XLXN_61), 
+                                 .O(Output[1]));
+   (* HU_SET = "XLXI_7_2_201" *) 
+   M2_1_HXILINX_Minuss  XLXI_7_2 (.D0(a[2]), 
+                                 .D1(b[2]), 
+                                 .S0(XLXN_61), 
+                                 .O(Output[2]));
+   (* HU_SET = "XLXI_7_3_202" *) 
+   M2_1_HXILINX_Minuss  XLXI_7_3 (.D0(a[3]), 
+                                 .D1(b[3]), 
+                                 .S0(XLXN_61), 
+                                 .O(Output[3]));
+   INV  XLXI_11 (.I(CarryOut_DUMMY), 
+                .O(XLXN_61));
+endmodule
+`timescale 1ns / 1ps
+
+module Minuss(A0, 
+              A1, 
+              A2, 
+              A3, 
+              B0, 
+              B1, 
+              B2, 
+              B3, 
+              o0, 
+              o1, 
+              o2, 
+              o3);
+
+    input [0:3] A0;
+    input [0:3] A1;
+    input [0:3] A2;
+    input [0:3] A3;
+    input [0:3] B0;
+    input [0:3] B1;
+    input [0:3] B2;
+    input [0:3] B3;
+   output [0:3] o0;
+   output [0:3] o1;
+   output [0:3] o2;
+   output [0:3] o3;
+   
+   wire [15:0] A;
+   wire [15:0] B;
+   wire [15:0] BOUT;
+   wire XLXN_1;
+   wire XLXN_8;
+   wire XLXN_9;
+   wire XLXN_10;
+   wire XLXN_60;
+   
+   Minus_MUSER_Minuss  XLXI_1 (.CarryIn(XLXN_1), 
+                              .Input00(A[0]), 
+                              .Input01(A[1]), 
+                              .Input02(A[2]), 
+                              .Input03(A[3]), 
+                              .Input10(BOUT[0]), 
+                              .Input11(BOUT[1]), 
+                              .Input12(BOUT[2]), 
+                              .Input13(BOUT[3]), 
+                              .CarryOut(XLXN_8), 
+                              .Output(o0[0:3]));
+   Minus_MUSER_Minuss  XLXI_2 (.CarryIn(XLXN_8), 
+                              .Input00(A[4]), 
+                              .Input01(A[5]), 
+                              .Input02(A[6]), 
+                              .Input03(A[7]), 
+                              .Input10(BOUT[4]), 
+                              .Input11(BOUT[5]), 
+                              .Input12(BOUT[6]), 
+                              .Input13(BOUT[7]), 
+                              .CarryOut(XLXN_9), 
+                              .Output(o1[0:3]));
+   Minus_MUSER_Minuss  XLXI_3 (.CarryIn(XLXN_9), 
+                              .Input00(A[8]), 
+                              .Input01(A[9]), 
+                              .Input02(A[10]), 
+                              .Input03(A[11]), 
+                              .Input10(BOUT[8]), 
+                              .Input11(BOUT[9]), 
+                              .Input12(BOUT[10]), 
+                              .Input13(BOUT[11]), 
+                              .CarryOut(XLXN_10), 
+                              .Output(o2[0:3]));
+   Minus_MUSER_Minuss  XLXI_4 (.CarryIn(XLXN_10), 
+                              .Input00(A[12]), 
+                              .Input01(A[13]), 
+                              .Input02(A[14]), 
+                              .Input03(A[15]), 
+                              .Input10(BOUT[12]), 
+                              .Input11(BOUT[13]), 
+                              .Input12(BOUT[14]), 
+                              .Input13(BOUT[15]), 
+                              .CarryOut(), 
+                              .Output(o3[0:3]));
+   VCC  XLXI_5 (.P(XLXN_1));
+   (* HU_SET = "XLXI_6_203" *) 
+   COMPMC16_HXILINX_Minuss  XLXI_6 (.A(A[15:0]), 
+                                   .B(B[15:0]), 
+                                   .GT(), 
+                                   .LT(XLXN_60));
+   AND2B1  XLXI_7_0 (.I0(XLXN_60), 
+                    .I1(B[15]), 
+                    .O(BOUT[15]));
+   AND2B1  XLXI_7_1 (.I0(XLXN_60), 
+                    .I1(B[14]), 
+                    .O(BOUT[14]));
+   AND2B1  XLXI_7_2 (.I0(XLXN_60), 
+                    .I1(B[13]), 
+                    .O(BOUT[13]));
+   AND2B1  XLXI_7_3 (.I0(XLXN_60), 
+                    .I1(B[12]), 
+                    .O(BOUT[12]));
+   AND2B1  XLXI_7_4 (.I0(XLXN_60), 
+                    .I1(B[11]), 
+                    .O(BOUT[11]));
+   AND2B1  XLXI_7_5 (.I0(XLXN_60), 
+                    .I1(B[10]), 
+                    .O(BOUT[10]));
+   AND2B1  XLXI_7_6 (.I0(XLXN_60), 
+                    .I1(B[9]), 
+                    .O(BOUT[9]));
+   AND2B1  XLXI_7_7 (.I0(XLXN_60), 
+                    .I1(B[8]), 
+                    .O(BOUT[8]));
+   AND2B1  XLXI_7_8 (.I0(XLXN_60), 
+                    .I1(B[7]), 
+                    .O(BOUT[7]));
+   AND2B1  XLXI_7_9 (.I0(XLXN_60), 
+                    .I1(B[6]), 
+                    .O(BOUT[6]));
+   AND2B1  XLXI_7_10 (.I0(XLXN_60), 
+                     .I1(B[5]), 
+                     .O(BOUT[5]));
+   AND2B1  XLXI_7_11 (.I0(XLXN_60), 
+                     .I1(B[4]), 
+                     .O(BOUT[4]));
+   AND2B1  XLXI_7_12 (.I0(XLXN_60), 
+                     .I1(B[3]), 
+                     .O(BOUT[3]));
+   AND2B1  XLXI_7_13 (.I0(XLXN_60), 
+                     .I1(B[2]), 
+                     .O(BOUT[2]));
+   AND2B1  XLXI_7_14 (.I0(XLXN_60), 
+                     .I1(B[1]), 
+                     .O(BOUT[1]));
+   AND2B1  XLXI_7_15 (.I0(XLXN_60), 
+                     .I1(B[0]), 
+                     .O(BOUT[0]));
+   BUF  XLXI_8_0 (.I(A0[0]), 
+                 .O(A[0]));
+   BUF  XLXI_8_1 (.I(A0[1]), 
+                 .O(A[1]));
+   BUF  XLXI_8_2 (.I(A0[2]), 
+                 .O(A[2]));
+   BUF  XLXI_8_3 (.I(A0[3]), 
+                 .O(A[3]));
+   BUF  XLXI_11_0 (.I(A1[0]), 
+                  .O(A[4]));
+   BUF  XLXI_11_1 (.I(A1[1]), 
+                  .O(A[5]));
+   BUF  XLXI_11_2 (.I(A1[2]), 
+                  .O(A[6]));
+   BUF  XLXI_11_3 (.I(A1[3]), 
+                  .O(A[7]));
+   BUF  XLXI_12_0 (.I(A2[0]), 
+                  .O(A[8]));
+   BUF  XLXI_12_1 (.I(A2[1]), 
+                  .O(A[9]));
+   BUF  XLXI_12_2 (.I(A2[2]), 
+                  .O(A[10]));
+   BUF  XLXI_12_3 (.I(A2[3]), 
+                  .O(A[11]));
+   BUF  XLXI_13_0 (.I(A3[0]), 
+                  .O(A[12]));
+   BUF  XLXI_13_1 (.I(A3[1]), 
+                  .O(A[13]));
+   BUF  XLXI_13_2 (.I(A3[2]), 
+                  .O(A[14]));
+   BUF  XLXI_13_3 (.I(A3[3]), 
+                  .O(A[15]));
+   BUF  XLXI_14_0 (.I(B0[0]), 
+                  .O(B[0]));
+   BUF  XLXI_14_1 (.I(B0[1]), 
+                  .O(B[1]));
+   BUF  XLXI_14_2 (.I(B0[2]), 
+                  .O(B[2]));
+   BUF  XLXI_14_3 (.I(B0[3]), 
+                  .O(B[3]));
+   BUF  XLXI_15_0 (.I(B1[0]), 
+                  .O(B[4]));
+   BUF  XLXI_15_1 (.I(B1[1]), 
+                  .O(B[5]));
+   BUF  XLXI_15_2 (.I(B1[2]), 
+                  .O(B[6]));
+   BUF  XLXI_15_3 (.I(B1[3]), 
+                  .O(B[7]));
+   BUF  XLXI_16_0 (.I(B2[0]), 
+                  .O(B[8]));
+   BUF  XLXI_16_1 (.I(B2[1]), 
+                  .O(B[9]));
+   BUF  XLXI_16_2 (.I(B2[2]), 
+                  .O(B[10]));
+   BUF  XLXI_16_3 (.I(B2[3]), 
+                  .O(B[11]));
+   BUF  XLXI_18_0 (.I(B3[0]), 
+                  .O(B[12]));
+   BUF  XLXI_18_1 (.I(B3[1]), 
+                  .O(B[13]));
+   BUF  XLXI_18_2 (.I(B3[2]), 
+                  .O(B[14]));
+   BUF  XLXI_18_3 (.I(B3[3]), 
+                  .O(B[15]));
+endmodule

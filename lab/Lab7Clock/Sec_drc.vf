@@ -1,0 +1,116 @@
+////////////////////////////////////////////////////////////////////////////////
+// Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+////////////////////////////////////////////////////////////////////////////////
+//   ____  ____ 
+//  /   /\/   / 
+// /___/  \  /    Vendor: Xilinx 
+// \   \   \/     Version : 14.7
+//  \   \         Application : sch2hdl
+//  /   /         Filename : Sec_drc.vf
+// /___/   /\     Timestamp : 10/27/2019 02:39:48
+// \   \  /  \ 
+//  \___\/\___\ 
+//
+//Command: C:\Xilinx\14.7\ISE_DS\ISE\bin\nt64\unwrapped\sch2hdl.exe -intstyle ise -family spartan6 -verilog Sec_drc.vf -w D:/Digital/lab/Lab7Clock/Sec.sch
+//Design Name: Sec
+//Device: spartan6
+//Purpose:
+//    This verilog netlist is translated from an ECS schematic.It can be 
+//    synthesized and simulated, but it should not be modified. 
+//
+`timescale 100 ps / 10 ps
+
+module CB4CE_HXILINX_Sec(CEO, Q0, Q1, Q2, Q3, TC, C, CE, CLR);
+   
+   localparam TERMINAL_COUNT = 4'b1111;
+   
+   output             CEO;
+   output             Q0;
+   output             Q1;
+   output             Q2;
+   output             Q3;
+   output             TC;
+
+   input 	      C;	
+   input 	      CE;	
+   input 	      CLR;	
+   
+   reg                Q0;
+   reg                Q1;
+   reg                Q2;
+   reg                Q3;
+   
+   always @(posedge C or posedge CLR)
+     begin
+	if (CLR)
+	  {Q3, Q2, Q1, Q0} <= 4'b0000;
+	else if (CE)
+	  {Q3, Q2, Q1,Q0} <= {Q3, Q2, Q1,Q0} + 1;
+     end
+   
+   assign CEO = TC & CE;
+   assign TC = ({Q3, Q2, Q1, Q0} == TERMINAL_COUNT);
+   
+endmodule
+`timescale 1ns / 1ps
+
+module Sec(Clk_IN, 
+           Enabled, 
+           Reset, 
+           D0, 
+           D1, 
+           TCC);
+
+    input Clk_IN;
+    input Enabled;
+    input Reset;
+   output [0:3] D0;
+   output [0:3] D1;
+   output TCC;
+   
+   wire TC;
+   wire XLXN_23;
+   wire XLXN_51;
+   wire [0:3] D0_DUMMY;
+   wire [0:3] D1_DUMMY;
+   wire TCC_DUMMY;
+   
+   assign D0[0:3] = D0_DUMMY[0:3];
+   assign D1[0:3] = D1_DUMMY[0:3];
+   assign TCC = TCC_DUMMY;
+   (* HU_SET = "XLXI_1_0" *) 
+   CB4CE_HXILINX_Sec  XLXI_1 (.C(D0_DUMMY[0]), 
+                             .CE(Enabled), 
+                             .CLR(XLXN_51), 
+                             .CEO(), 
+                             .Q0(D1_DUMMY[0]), 
+                             .Q1(D1_DUMMY[1]), 
+                             .Q2(D1_DUMMY[2]), 
+                             .Q3(D1_DUMMY[3]), 
+                             .TC());
+   AND2  XLXI_2 (.I0(D0_DUMMY[1]), 
+                .I1(D0_DUMMY[3]), 
+                .O(D0_DUMMY[0]));
+   AND2  XLXI_3 (.I0(D1_DUMMY[1]), 
+                .I1(D1_DUMMY[2]), 
+                .O(TCC_DUMMY));
+   AND2B1  XLXI_4 (.I0(Enabled), 
+                  .I1(Reset), 
+                  .O(XLXN_23));
+   (* HU_SET = "XLXI_5_1" *) 
+   CB4CE_HXILINX_Sec  XLXI_5 (.C(Clk_IN), 
+                             .CE(Enabled), 
+                             .CLR(TC), 
+                             .CEO(), 
+                             .Q0(D0_DUMMY[0]), 
+                             .Q1(D0_DUMMY[1]), 
+                             .Q2(D0_DUMMY[2]), 
+                             .Q3(D0_DUMMY[3]), 
+                             .TC());
+   OR2  XLXI_9 (.I0(D0_DUMMY[0]), 
+               .I1(XLXN_23), 
+               .O(TC));
+   OR2  XLXI_10 (.I0(TCC_DUMMY), 
+                .I1(XLXN_23), 
+                .O(XLXN_51));
+endmodule

@@ -1,0 +1,21 @@
+
+
+NET "com[3]" LOC = P30;
+NET "com[2]" LOC = P33;
+NET "com[1]" LOC = P43;
+NET "Clk_P123" LOC = P123;
+NET "Reset_P48" LOC = P48;
+NET "SegA_P41" LOC = P41;
+NET "SegB_P40" LOC = P40;
+NET "SegC_P35" LOC = P35;
+NET "SegD_P34" LOC = P34;
+NET "SegE_P32" LOC = P32;
+NET "SegF_P29" LOC = P29;
+NET "SegG_P27" LOC = P27;
+NET "SegP_P26" LOC = P26;
+NET "Set_P47" LOC = P47;
+NET "com[0]" LOC = P44;
+
+# PlanAhead Generated physical constraints 
+
+NET "Button_P47" LOC = P47;

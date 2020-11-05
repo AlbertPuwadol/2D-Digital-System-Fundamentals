@@ -1,0 +1,40 @@
+////////////////////////////////////////////////////////////////////////////////
+// Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+////////////////////////////////////////////////////////////////////////////////
+//   ____  ____ 
+//  /   /\/   / 
+// /___/  \  /    Vendor: Xilinx 
+// \   \   \/     Version : 14.7
+//  \   \         Application : sch2hdl
+//  /   /         Filename : Alps.vf
+// /___/   /\     Timestamp : 09/09/2019 13:47:25
+// \   \  /  \ 
+//  \___\/\___\ 
+//
+//Command: sch2hdl -intstyle ise -family spartan6 -verilog D:/Digital/lab/Test1/Alps.vf -w D:/Digital/lab/Test1/Alps.sch
+//Design Name: Alps
+//Device: spartan6
+//Purpose:
+//    This verilog netlist is translated from an ECS schematic.It can be 
+//    synthesized and simulated, but it should not be modified. 
+//
+`timescale 1ns / 1ps
+
+module Alps(SW0_P66, 
+            SW1_P62, 
+            X_P81, 
+            Y_P82);
+
+    input SW0_P66;
+    input SW1_P62;
+   output X_P81;
+   output Y_P82;
+   
+   
+   AND2  XLXI_2 (.I0(SW1_P62), 
+                .I1(SW0_P66), 
+                .O(Y_P82));
+   XOR2  XLXI_3 (.I0(SW0_P66), 
+                .I1(SW1_P62), 
+                .O(X_P81));
+endmodule

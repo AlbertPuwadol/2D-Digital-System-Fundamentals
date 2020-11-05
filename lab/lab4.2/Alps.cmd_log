@@ -1,0 +1,39 @@
+xst -intstyle ise -ifn "D:/Digital/lab/lab4.2/Alps.xst" -ofn "D:/Digital/lab/lab4.2/Alps.syr" 
+xst -intstyle ise -ifn "D:/Digital/lab/lab4.2/Alps.xst" -ofn "D:/Digital/lab/lab4.2/Alps.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc AlpsPin.ucf -uc Alps.ucf -p xc6slx9-tqg144-3 Alps.ngc Alps.ngd  
+map -intstyle ise -p xc6slx9-tqg144-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o Alps_map.ncd Alps.ngd Alps.pcf 
+par -w -intstyle ise -ol high -mt off Alps_map.ncd Alps.ncd Alps.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml Alps.twx Alps.ncd -o Alps.twr Alps.pcf -ucf AlpsPin.ucf -ucf Alps.ucf 
+xst -intstyle ise -ifn "D:/Digital/lab/lab4.2/Alps.xst" -ofn "D:/Digital/lab/lab4.2/Alps.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc AlpsPin.ucf -uc Alps.ucf -p xc6slx9-tqg144-3 Alps.ngc Alps.ngd  
+map -intstyle ise -p xc6slx9-tqg144-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o Alps_map.ncd Alps.ngd Alps.pcf 
+par -w -intstyle ise -ol high -mt off Alps_map.ncd Alps.ncd Alps.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml Alps.twx Alps.ncd -o Alps.twr Alps.pcf -ucf AlpsPin.ucf -ucf Alps.ucf 
+bitgen -intstyle ise -f Alps.ut Alps.ncd 
+xst -intstyle ise -ifn "D:/Digital/lab/lab4.2/Alps.xst" -ofn "D:/Digital/lab/lab4.2/Alps.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc AlpsPin.ucf -uc Alps.ucf -p xc6slx9-tqg144-3 Alps.ngc Alps.ngd  
+map -intstyle ise -p xc6slx9-tqg144-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o Alps_map.ncd Alps.ngd Alps.pcf 
+par -w -intstyle ise -ol high -mt off Alps_map.ncd Alps.ncd Alps.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml Alps.twx Alps.ncd -o Alps.twr Alps.pcf -ucf AlpsPin.ucf -ucf Alps.ucf 
+bitgen -intstyle ise -f Alps.ut Alps.ncd 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc AlpsPin.ucf -uc Alps.ucf -p xc6slx9-tqg144-3 Alps.ngc Alps.ngd  
+map -intstyle ise -p xc6slx9-tqg144-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o Alps_map.ncd Alps.ngd Alps.pcf 
+par -w -intstyle ise -ol high -mt off Alps_map.ncd Alps.ncd Alps.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml Alps.twx Alps.ncd -o Alps.twr Alps.pcf -ucf AlpsPin.ucf -ucf Alps.ucf 
+xst -intstyle ise -ifn "D:/Digital/lab/lab4.2/Alps.xst" -ofn "D:/Digital/lab/lab4.2/Alps.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc AlpsPin.ucf -uc Alps.ucf -p xc6slx9-tqg144-3 Alps.ngc Alps.ngd  
+map -intstyle ise -p xc6slx9-tqg144-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o Alps_map.ncd Alps.ngd Alps.pcf 
+par -w -intstyle ise -ol high -mt off Alps_map.ncd Alps.ncd Alps.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml Alps.twx Alps.ncd -o Alps.twr Alps.pcf -ucf AlpsPin.ucf -ucf Alps.ucf 
+bitgen -intstyle ise -f Alps.ut Alps.ncd 
+xst -intstyle ise -ifn "D:/Digital/lab/lab4.2/Alps.xst" -ofn "D:/Digital/lab/lab4.2/Alps.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc AlpsPin.ucf -uc Alps.ucf -p xc6slx9-tqg144-3 Alps.ngc Alps.ngd  
+map -intstyle ise -p xc6slx9-tqg144-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o Alps_map.ncd Alps.ngd Alps.pcf 
+par -w -intstyle ise -ol high -mt off Alps_map.ncd Alps.ncd Alps.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml Alps.twx Alps.ncd -o Alps.twr Alps.pcf -ucf AlpsPin.ucf -ucf Alps.ucf 
+xst -intstyle ise -ifn "D:/Digital/lab/lab4.2/Alps.xst" -ofn "D:/Digital/lab/lab4.2/Alps.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc AlpsPin.ucf -uc Alps.ucf -p xc6slx9-tqg144-3 Alps.ngc Alps.ngd  
+map -intstyle ise -p xc6slx9-tqg144-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o Alps_map.ncd Alps.ngd Alps.pcf 
+par -w -intstyle ise -ol high -mt off Alps_map.ncd Alps.ncd Alps.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml Alps.twx Alps.ncd -o Alps.twr Alps.pcf -ucf AlpsPin.ucf -ucf Alps.ucf 
+bitgen -intstyle ise -f Alps.ut Alps.ncd 

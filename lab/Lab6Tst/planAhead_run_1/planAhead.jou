@@ -1,0 +1,55 @@
+#-----------------------------------------------------------
+# PlanAhead v14.7 (64-bit)
+# Build 321239 by xbuild on Fri Sep 27 19:29:51 MDT 2013
+# Start of session at: Mon Oct 07 23:50:02 2019
+# Process ID: 7032
+# Log file: D:/Digital/lab/Lab6Tst/planAhead_run_1/planAhead.log
+# Journal file: D:/Digital/lab/Lab6Tst/planAhead_run_1/planAhead.jou
+#-----------------------------------------------------------
+start_gui
+source D:/Digital/lab/Lab6Tst/pa.fromHdl.tcl
+update_compile_order -fileset sim_1
+startgroup
+set_property package_pin P55 [get_ports Button_P55]
+endgroup
+startgroup
+set_property package_pin P123 [get_ports CLOCK_P123]
+endgroup
+startgroup
+set_property package_pin P44 [get_ports COM0_P44]
+endgroup
+startgroup
+set_property package_pin P43 [get_ports COM1_P43]
+endgroup
+startgroup
+set_property package_pin P33 [get_ports COM2_P33]
+endgroup
+startgroup
+set_property package_pin P30 [get_ports COM3_P30]
+endgroup
+startgroup
+set_property package_pin P41 [get_ports SegA_P41]
+endgroup
+startgroup
+set_property package_pin P40 [get_ports SegB_P40]
+endgroup
+startgroup
+set_property package_pin P35 [get_ports SegC_P35]
+endgroup
+startgroup
+set_property package_pin P34 [get_ports SegD_P34]
+endgroup
+startgroup
+set_property package_pin P32 [get_ports SegE_P32]
+endgroup
+set_property is_loc_fixed false [get_ports [list  SegE_P32]]
+set_property is_loc_fixed true [get_ports [list  SegE_P32]]
+startgroup
+set_property package_pin P29 [get_ports SegF_P29]
+endgroup
+startgroup
+set_property package_pin P27 [get_ports SegG_P27]
+endgroup
+set_property is_loc_fixed false [get_ports [list  SegG_P27]]
+set_property is_loc_fixed true [get_ports [list  SegG_P27]]
+save_constraints

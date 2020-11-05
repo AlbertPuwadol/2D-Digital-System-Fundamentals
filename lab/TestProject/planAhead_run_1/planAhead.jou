@@ -1,0 +1,61 @@
+#-----------------------------------------------------------
+# PlanAhead v14.7 (64-bit)
+# Build 321239 by xbuild on Fri Sep 27 19:29:51 MDT 2013
+# Start of session at: Sat Nov 16 00:21:09 2019
+# Process ID: 4020
+# Log file: D:/work/2D/Digital/lab/TestProject/planAhead_run_1/planAhead.log
+# Journal file: D:/work/2D/Digital/lab/TestProject/planAhead_run_1/planAhead.jou
+#-----------------------------------------------------------
+start_gui
+source D:/work/2D/Digital/lab/TestProject/pa.fromHdl.tcl
+update_compile_order -fileset sim_1
+startgroup
+set_property package_pin P26 [get_ports {Segment_out[7]}]
+endgroup
+startgroup
+set_property package_pin P27 [get_ports {Segment_out[6]}]
+endgroup
+startgroup
+set_property package_pin P29 [get_ports {Segment_out[5]}]
+endgroup
+startgroup
+set_property package_pin P32 [get_ports {Segment_out[4]}]
+endgroup
+startgroup
+set_property package_pin P34 [get_ports {Segment_out[3]}]
+endgroup
+set_property package_pin "" [get_ports [list  {Segment_out[1]}]]
+startgroup
+set_property package_pin P35 [get_ports {Segment_out[2]}]
+endgroup
+startgroup
+set_property package_pin P40 [get_ports {Segment_out[1]}]
+endgroup
+startgroup
+set_property package_pin P41 [get_ports {Segment_out[0]}]
+endgroup
+startgroup
+set_property package_pin P45 [get_ports Button]
+endgroup
+set_property package_pin "" [get_ports [list  com0]]
+startgroup
+set_property package_pin P12 [get_ports Clk]
+endgroup
+startgroup
+set_property package_pin P123 [get_ports Clk]
+endgroup
+startgroup
+set_property package_pin P30 [get_ports com0]
+endgroup
+startgroup
+set_property package_pin P33 [get_ports com1]
+endgroup
+startgroup
+set_property package_pin P43 [get_ports com2]
+endgroup
+startgroup
+set_property package_pin P44 [get_ports com3]
+endgroup
+set_property is_loc_fixed false [get_ports [list  com3]]
+set_property is_loc_fixed true [get_ports [list  com3]]
+save_constraints

@@ -1,0 +1,135 @@
+////////////////////////////////////////////////////////////////////////////////
+// Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+////////////////////////////////////////////////////////////////////////////////
+//   ____  ____ 
+//  /   /\/   / 
+// /___/  \  /    Vendor: Xilinx 
+// \   \   \/     Version : 14.7
+//  \   \         Application : sch2hdl
+//  /   /         Filename : blockForCommon.vf
+// /___/   /\     Timestamp : 12/16/2019 07:07:44
+// \   \  /  \ 
+//  \___\/\___\ 
+//
+//Command: sch2hdl -intstyle ise -family spartan6 -verilog D:/work/2D/Digital/lab/FullTest/blockForCommon.vf -w D:/work/2D/Digital/lab/FullTest/blockForCommon.sch
+//Design Name: blockForCommon
+//Device: spartan6
+//Purpose:
+//    This verilog netlist is translated from an ECS schematic.It can be 
+//    synthesized and simulated, but it should not be modified. 
+//
+`timescale  100 ps / 10 ps
+
+module D2_4E_HXILINX_blockForCommon (D0, D1, D2, D3, A0, A1, E);
+    
+
+   output D0;
+   output D1;
+   output D2;
+   output D3;
+
+   input  A0;
+   input  A1;
+   input  E;
+  
+   reg D0;
+   reg D1;
+   reg D2;
+   reg D3;
+
+      always @ (A0 or A1 or E)
+      begin
+         if(!E)
+           {D3, D2, D1, D0} <= 4'b0000;
+        else
+        begin
+           case({A1,A0})
+             2'b00 : {D3,D2,D1,D0} <= 4'b0001;
+             2'b01 : {D3,D2,D1,D0} <= 4'b0010;
+             2'b10 : {D3,D2,D1,D0} <= 4'b0100;
+             2'b11 : {D3,D2,D1,D0} <= 4'b1000;
+          endcase
+        end
+     end 
+
+endmodule
+`timescale 100 ps / 10 ps
+
+module CB2CE_HXILINX_blockForCommon(CEO, Q0, Q1, TC, C, CE, CLR);
+   
+   localparam TERMINAL_COUNT = 2'b11;
+   
+   output             CEO;
+   output             Q0;
+   output             Q1;
+   output             TC;
+
+   input 	      C;	
+   input 	      CE;	
+   input 	      CLR;	
+   
+   reg                Q0;
+   reg                Q1;
+   
+   always @(posedge C or posedge CLR)
+     begin
+	if (CLR)
+	  {Q1, Q0} <= 2'b00;
+	else if (CE)
+	  {Q1,Q0} <= {Q1,Q0} + 1;
+     end
+   
+   assign CEO = TC & CE;
+   assign TC = ({Q1,Q0} == TERMINAL_COUNT);
+   
+endmodule
+`timescale 1ns / 1ps
+
+module blockForCommon(ClkIn, 
+                      com, 
+                      S0, 
+                      S1);
+
+    input ClkIn;
+   output [0:3] com;
+   output S0;
+   output S1;
+   
+   wire XLXN_3;
+   wire XLXN_5;
+   wire XLXN_6;
+   wire XLXN_7;
+   wire XLXN_8;
+   wire XLXN_9;
+   wire S0_DUMMY;
+   wire S1_DUMMY;
+   
+   assign S0 = S0_DUMMY;
+   assign S1 = S1_DUMMY;
+   (* HU_SET = "XLXI_1_90" *) 
+   CB2CE_HXILINX_blockForCommon  XLXI_1 (.C(ClkIn), 
+                                        .CE(XLXN_3), 
+                                        .CLR(XLXN_5), 
+                                        .CEO(), 
+                                        .Q0(S0_DUMMY), 
+                                        .Q1(S1_DUMMY), 
+                                        .TC());
+   (* HU_SET = "XLXI_2_91" *) 
+   D2_4E_HXILINX_blockForCommon  XLXI_2 (.A0(S0_DUMMY), 
+                                        .A1(S1_DUMMY), 
+                                        .E(XLXN_3), 
+                                        .D0(XLXN_6), 
+                                        .D1(XLXN_7), 
+                                        .D2(XLXN_8), 
+                                        .D3(XLXN_9));
+   VCC  XLXI_3 (.P(XLXN_3));
+   GND  XLXI_4 (.G(XLXN_5));
+   INV  XLXI_5 (.I(XLXN_6), 
+               .O(com[0]));
+   INV  XLXI_6 (.I(XLXN_7), 
+               .O(com[1]));
+   INV  XLXI_7 (.I(XLXN_8), 
+               .O(com[2]));
+   INV  XLXI_8 (.I(XLXN_9), 
+               .O(com[3]));
+endmodule

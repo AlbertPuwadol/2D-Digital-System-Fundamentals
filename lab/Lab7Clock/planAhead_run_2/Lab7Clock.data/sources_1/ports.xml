@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<Interface Version="1" Minor="1">
+	<Ifc Id="ROOT" Top="1">
+		<Bus Id="com">
+			<Port Id="3" Dir="OUT"/>
+			<Port Id="2" Dir="OUT"/>
+			<Port Id="1" Dir="OUT"/>
+			<Port Id="0" Dir="OUT"/>
+		</Bus>
+		<Port Id="Clk_P123" Dir="IN"/>
+		<Port Id="Reset_P48" Dir="IN"/>
+		<Port Id="Set_P47" Dir="IN"/>
+		<Port Id="SegA_P41" Dir="OUT"/>
+		<Port Id="SegB_P40" Dir="OUT"/>
+		<Port Id="SegC_P35" Dir="OUT"/>
+		<Port Id="SegD_P34" Dir="OUT"/>
+		<Port Id="SegE_P32" Dir="OUT"/>
+		<Port Id="SegF_P29" Dir="OUT"/>
+		<Port Id="SegG_P27" Dir="OUT"/>
+		<Port Id="SegP_P26" Dir="OUT"/>
+	</Ifc>
+</Interface>
+

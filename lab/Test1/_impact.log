@@ -1,0 +1,63 @@
+iMPACT Version: 14.7
+
+iMPACT log file Started on Mon Sep 09 13:48:37 2019
+
+Welcome to iMPACT
+iMPACT Version: 14.7
+Project: 'C:\Xilinx\14.7\ISE_DS\\auto_project.ipf' already exists.
+Original project has been renamed to'C:\Xilinx\14.7\ISE_DS\\auto_project_1.ipf'.
+Project: C:\Xilinx\14.7\ISE_DS\\auto_project.ipf created.
+// *** BATCH CMD : setMode -bs
+// *** BATCH CMD : setCable -port svf -file "D:/Digital/lab/Test2/Test2.svf"
+// *** BATCH CMD : addDevice -p 1 -file "D:/Digital/lab/Test1/alps.bit"
+'1': Loading file 'D:/Digital/lab/Test1/alps.bit' ...
+done.
+INFO:iMPACT:1777 - 
+   Reading C:/Xilinx/14.7/ISE_DS/ISE/spartan6/data/xc6slx9.bsd...
+INFO:iMPACT:2257 - Startup Clock has been changed to 'JtagClk' in the bitstream   stored in memory,
+   but the original bitstream file remains unchanged.
+UserID read from the bitstream file = 0xFFFFFFFF.
+Data width read from the bitstream file = 1.
+INFO:iMPACT:501 - '1': Added Device xc6slx9 successfully.
+----------------------------------------------------------------------
+Setting Target Device to Mode:BS, Device position 0.
+INFO:iMPACT - Current time: 9/9/2019 1:49:19 PM
+// *** BATCH CMD : Program -p 1 
+PROGRESS_START - Starting Operation.
+
+'1': Programming device...
+ LCK_cycle = NoWait.
+LCK cycle: NoWait
+done.
+INFO:iMPACT:579 - '1': Completed downloading bit file to device.
+INFO:iMPACT:188 - '1': Programming completed successfully.
+ LCK_cycle = NoWait.
+LCK cycle: NoWait
+INFO:iMPACT - '1': Checking done pin....done.
+'1': Programmed successfully.
+PROGRESS_END - End Operation.
+Elapsed time =      1 sec.
+Project: 'C:\Xilinx\14.7\ISE_DS\\auto_project.ipf' created.
+// *** BATCH CMD : setMode -bs
+// *** BATCH CMD : setMode -ss
+// *** BATCH CMD : setMode -sm
+// *** BATCH CMD : setMode -hw140
+// *** BATCH CMD : setMode -spi
+// *** BATCH CMD : setMode -acecf
+// *** BATCH CMD : setMode -acempm
+// *** BATCH CMD : setMode -pff
+// *** BATCH CMD : setMode -bs
+// *** BATCH CMD : saveProjectFile -file"C:\Xilinx\14.7\ISE_DS\\auto_project.ipf"
+// *** BATCH CMD : setMode -bs
+INFO:iMPACT - Launching WebTalk, please refer to the webtalk log at   C:\Xilinx\14.7\ISE_DS\webtalk.log for details.
+INFO:iMPACT - Running wbtc successfully.
+// *** BATCH CMD : setMode -bs
+// *** BATCH CMD : deleteDevice -position 1
+// *** BATCH CMD : setMode -bs
+// *** BATCH CMD : setMode -ss
+// *** BATCH CMD : setMode -sm
+// *** BATCH CMD : setMode -hw140
+// *** BATCH CMD : setMode -spi
+// *** BATCH CMD : setMode -acecf
+// *** BATCH CMD : setMode -acempm
+// *** BATCH CMD : setMode -pff

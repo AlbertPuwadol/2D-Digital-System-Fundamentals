@@ -1,0 +1,187 @@
+--------------------------------------------------------------------------------
+Release 14.7 Trace  (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+
+C:\Xilinx\14.7\ISE_DS\ISE\bin\nt64\unwrapped\trce.exe -intstyle ise -v 3 -s 3
+-n 3 -fastpaths -xml main.twx main.ncd -o main.twr main.pcf -ucf main.ucf
+
+Design file:              main.ncd
+Physical constraint file: main.pcf
+Device,package,speed:     xc6slx9,tqg144,C,-3 (PRODUCTION 1.23 2013-10-13)
+Report level:             verbose report
+
+Environment Variable      Effect 
+--------------------      ------ 
+NONE                      No environment variables were set
+--------------------------------------------------------------------------------
+
+INFO:Timing:2698 - No timing constraints found, doing default enumeration.
+INFO:Timing:3412 - To improve timing, see the Timing Closure User Guide (UG612).
+INFO:Timing:2752 - To get complete path coverage, use the unconstrained paths 
+   option. All paths that are not constrained will be reported in the 
+   unconstrained paths section(s) of the report.
+INFO:Timing:3339 - The clock-to-out numbers in this timing report are based on 
+   a 50 Ohm transmission line loading model.  For the details of this model, 
+   and for more information on accounting for different loading conditions, 
+   please see the device datasheet.
+
+
+
+Data Sheet report:
+-----------------
+All values displayed in nanoseconds (ns)
+
+Clock to Setup on destination clock clk
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+clk            |    1.347|         |         |         |
+---------------+---------+---------+---------+---------+
+
+Pad to Pad
+---------------+---------------+---------+
+Source Pad     |Destination Pad|  Delay  |
+---------------+---------------+---------+
+DIP<0>         |SEVEN<0>       |   12.408|
+DIP<0>         |SEVEN<1>       |   11.759|
+DIP<0>         |SEVEN<2>       |   12.729|
+DIP<0>         |SEVEN<3>       |   13.027|
+DIP<0>         |SEVEN<4>       |   12.762|
+DIP<0>         |SEVEN<5>       |   13.171|
+DIP<0>         |SEVEN<6>       |   13.011|
+DIP<0>         |speaker        |   10.900|
+DIP<1>         |SEVEN<0>       |   12.367|
+DIP<1>         |SEVEN<1>       |   11.718|
+DIP<1>         |SEVEN<2>       |   12.688|
+DIP<1>         |SEVEN<3>       |   12.986|
+DIP<1>         |SEVEN<4>       |   12.721|
+DIP<1>         |SEVEN<5>       |   13.130|
+DIP<1>         |SEVEN<6>       |   12.970|
+DIP<1>         |speaker        |   10.859|
+DIP<2>         |SEVEN<0>       |   12.236|
+DIP<2>         |SEVEN<1>       |   11.587|
+DIP<2>         |SEVEN<2>       |   12.557|
+DIP<2>         |SEVEN<3>       |   12.855|
+DIP<2>         |SEVEN<4>       |   12.590|
+DIP<2>         |SEVEN<5>       |   12.999|
+DIP<2>         |SEVEN<6>       |   12.839|
+DIP<2>         |speaker        |   10.728|
+DIP<3>         |SEVEN<0>       |   12.393|
+DIP<3>         |SEVEN<1>       |   11.744|
+DIP<3>         |SEVEN<2>       |   12.714|
+DIP<3>         |SEVEN<3>       |   13.012|
+DIP<3>         |SEVEN<4>       |   12.747|
+DIP<3>         |SEVEN<5>       |   13.156|
+DIP<3>         |SEVEN<6>       |   12.996|
+DIP<3>         |speaker        |   10.885|
+DIP<4>         |SEVEN<0>       |   12.433|
+DIP<4>         |SEVEN<1>       |   11.873|
+DIP<4>         |SEVEN<2>       |   12.754|
+DIP<4>         |SEVEN<3>       |   13.052|
+DIP<4>         |SEVEN<4>       |   12.866|
+DIP<4>         |SEVEN<5>       |   13.196|
+DIP<4>         |SEVEN<6>       |   13.095|
+DIP<4>         |speaker        |   11.031|
+DIP<5>         |SEVEN<0>       |   12.214|
+DIP<5>         |SEVEN<1>       |   11.699|
+DIP<5>         |SEVEN<2>       |   12.535|
+DIP<5>         |SEVEN<3>       |   12.833|
+DIP<5>         |SEVEN<4>       |   12.692|
+DIP<5>         |SEVEN<5>       |   12.977|
+DIP<5>         |SEVEN<6>       |   12.921|
+DIP<5>         |speaker        |   10.863|
+DIP<6>         |SEVEN<0>       |   12.076|
+DIP<6>         |SEVEN<1>       |   11.779|
+DIP<6>         |SEVEN<2>       |   12.586|
+DIP<6>         |SEVEN<3>       |   12.580|
+DIP<6>         |SEVEN<4>       |   12.772|
+DIP<6>         |SEVEN<5>       |   12.763|
+DIP<6>         |SEVEN<6>       |   13.001|
+DIP<6>         |speaker        |   10.939|
+DIP<7>         |SEVEN<0>       |   11.618|
+DIP<7>         |SEVEN<1>       |   11.393|
+DIP<7>         |SEVEN<2>       |   12.156|
+DIP<7>         |SEVEN<3>       |   12.077|
+DIP<7>         |SEVEN<4>       |   12.368|
+DIP<7>         |SEVEN<5>       |   12.258|
+DIP<7>         |SEVEN<6>       |   12.234|
+DIP<7>         |speaker        |   10.731|
+slide<0>       |SEVEN<0>       |   11.495|
+slide<0>       |SEVEN<1>       |   10.846|
+slide<0>       |SEVEN<2>       |   11.816|
+slide<0>       |SEVEN<3>       |   12.114|
+slide<0>       |SEVEN<4>       |   11.849|
+slide<0>       |SEVEN<5>       |   12.258|
+slide<0>       |SEVEN<6>       |   12.098|
+slide<0>       |speaker        |    9.987|
+slide<1>       |SEVEN<0>       |   11.288|
+slide<1>       |SEVEN<1>       |   10.639|
+slide<1>       |SEVEN<2>       |   11.609|
+slide<1>       |SEVEN<3>       |   11.907|
+slide<1>       |SEVEN<4>       |   11.642|
+slide<1>       |SEVEN<5>       |   12.051|
+slide<1>       |SEVEN<6>       |   11.891|
+slide<1>       |speaker        |    9.780|
+slide<2>       |SEVEN<0>       |   11.222|
+slide<2>       |SEVEN<1>       |   10.573|
+slide<2>       |SEVEN<2>       |   11.543|
+slide<2>       |SEVEN<3>       |   11.841|
+slide<2>       |SEVEN<4>       |   11.576|
+slide<2>       |SEVEN<5>       |   11.985|
+slide<2>       |SEVEN<6>       |   11.825|
+slide<2>       |speaker        |    9.714|
+slide<3>       |SEVEN<0>       |   10.769|
+slide<3>       |SEVEN<1>       |   10.120|
+slide<3>       |SEVEN<2>       |   11.090|
+slide<3>       |SEVEN<3>       |   11.388|
+slide<3>       |SEVEN<4>       |   11.123|
+slide<3>       |SEVEN<5>       |   11.532|
+slide<3>       |SEVEN<6>       |   11.372|
+slide<3>       |speaker        |    9.261|
+slide<4>       |SEVEN<0>       |   11.024|
+slide<4>       |SEVEN<1>       |   10.464|
+slide<4>       |SEVEN<2>       |   11.345|
+slide<4>       |SEVEN<3>       |   11.643|
+slide<4>       |SEVEN<4>       |   11.457|
+slide<4>       |SEVEN<5>       |   11.787|
+slide<4>       |SEVEN<6>       |   11.686|
+slide<4>       |speaker        |    9.622|
+slide<5>       |SEVEN<0>       |   10.898|
+slide<5>       |SEVEN<1>       |   10.383|
+slide<5>       |SEVEN<2>       |   11.219|
+slide<5>       |SEVEN<3>       |   11.517|
+slide<5>       |SEVEN<4>       |   11.376|
+slide<5>       |SEVEN<5>       |   11.661|
+slide<5>       |SEVEN<6>       |   11.605|
+slide<5>       |speaker        |    9.547|
+slide<6>       |SEVEN<0>       |   10.787|
+slide<6>       |SEVEN<1>       |   10.490|
+slide<6>       |SEVEN<2>       |   11.297|
+slide<6>       |SEVEN<3>       |   11.291|
+slide<6>       |SEVEN<4>       |   11.483|
+slide<6>       |SEVEN<5>       |   11.474|
+slide<6>       |SEVEN<6>       |   11.712|
+slide<6>       |speaker        |    9.650|
+slide<7>       |SEVEN<0>       |   10.225|
+slide<7>       |SEVEN<1>       |   10.000|
+slide<7>       |SEVEN<2>       |   10.763|
+slide<7>       |SEVEN<3>       |   10.684|
+slide<7>       |SEVEN<4>       |   10.975|
+slide<7>       |SEVEN<5>       |   10.865|
+slide<7>       |SEVEN<6>       |   10.841|
+slide<7>       |speaker        |    9.338|
+---------------+---------------+---------+
+
+
+Analysis completed Mon Oct 28 15:16:10 2019 
+--------------------------------------------------------------------------------
+
+Trace Settings:
+-------------------------
+Trace Settings 
+
+Peak Memory Usage: 4572 MB
+
+
+

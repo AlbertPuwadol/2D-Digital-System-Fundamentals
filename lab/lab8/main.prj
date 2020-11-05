@@ -1,0 +1,6 @@
+verilog work "Decoder.vf"
+verilog work "Svn2.vf"
+verilog work "Mymux3.vf"
+verilog work "divideto1k.vf"
+verilog work "display2.vf"
+verilog work "main.vf"

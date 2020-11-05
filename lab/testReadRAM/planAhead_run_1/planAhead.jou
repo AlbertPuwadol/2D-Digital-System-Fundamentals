@@ -1,0 +1,68 @@
+#-----------------------------------------------------------
+# PlanAhead v14.7 (64-bit)
+# Build 321239 by xbuild on Fri Sep 27 19:29:51 MDT 2013
+# Start of session at: Sun Dec 15 00:47:25 2019
+# Process ID: 6444
+# Log file: D:/work/2D/Digital/lab/testReadRAM/planAhead_run_1/planAhead.log
+# Journal file: D:/work/2D/Digital/lab/testReadRAM/planAhead_run_1/planAhead.jou
+#-----------------------------------------------------------
+start_gui
+source D:/work/2D/Digital/lab/testReadRAM/pa.fromHdl.tcl
+update_compile_order -fileset sim_1
+startgroup
+set_property package_pin P43 [get_ports {com[1]}]
+endgroup
+startgroup
+set_property package_pin P33 [get_ports {com[2]}]
+endgroup
+startgroup
+set_property package_pin P30 [get_ports {com[3]}]
+endgroup
+startgroup
+set_property package_pin P58 [get_ports {SW[0]}]
+endgroup
+startgroup
+set_property package_pin P57 [get_ports {SW[1]}]
+endgroup
+startgroup
+set_property package_pin P56 [get_ports {SW[2]}]
+endgroup
+startgroup
+set_property package_pin P55 [get_ports {SW[3]}]
+endgroup
+startgroup
+set_property package_pin P41 [get_ports A]
+endgroup
+startgroup
+set_property package_pin P40 [get_ports B]
+endgroup
+startgroup
+set_property package_pin P45 [get_ports Button]
+endgroup
+startgroup
+set_property package_pin P35 [get_ports C]
+endgroup
+startgroup
+set_property package_pin P123 [get_ports Clok]
+endgroup
+startgroup
+set_property package_pin P44 [get_ports com0]
+endgroup
+startgroup
+set_property package_pin P34 [get_ports D]
+endgroup
+set_property package_pin "" [get_ports [list  E]]
+startgroup
+set_property package_pin P32 [get_ports E]
+endgroup
+set_property package_pin "" [get_ports [list  G]]
+startgroup
+set_property package_pin P29 [get_ports F]
+endgroup
+startgroup
+set_property package_pin P27 [get_ports G]
+endgroup
+startgroup
+set_property package_pin P26 [get_ports P]
+endgroup
+save_constraints

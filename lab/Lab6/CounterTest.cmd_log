@@ -1,0 +1,12 @@
+xst -intstyle ise -ifn "D:/Digital/lab/Lab6/CounterTest.xst" -ofn "D:/Digital/lab/Lab6/CounterTest.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc CounterTest.ucf -uc CounterTestPin.ucf -p xc6slx9-tqg144-3 CounterTest.ngc CounterTest.ngd  
+map -intstyle ise -p xc6slx9-tqg144-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o CounterTest_map.ncd CounterTest.ngd CounterTest.pcf 
+par -w -intstyle ise -ol high -mt off CounterTest_map.ncd CounterTest.ncd CounterTest.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml CounterTest.twx CounterTest.ncd -o CounterTest.twr CounterTest.pcf -ucf CounterTest.ucf -ucf CounterTestPin.ucf 
+bitgen -intstyle ise -f CounterTest.ut CounterTest.ncd 
+xst -intstyle ise -ifn "D:/Digital/lab/Lab6/CounterTest.xst" -ofn "D:/Digital/lab/Lab6/CounterTest.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc CounterTest.ucf -uc CounterTestPin.ucf -p xc6slx9-tqg144-3 CounterTest.ngc CounterTest.ngd  
+xst -intstyle ise -ifn "D:/Digital/lab/Lab6/CounterTest.xst" -ofn "D:/Digital/lab/Lab6/CounterTest.syr" 
+xst -intstyle ise -ifn "D:/Digital/lab/Lab6/CounterTest.xst" -ofn "D:/Digital/lab/Lab6/CounterTest.syr" 
+xst -intstyle ise -ifn "D:/Digital/lab/Lab6/CounterTest.xst" -ofn "D:/Digital/lab/Lab6/CounterTest.syr" 
+xst -intstyle ise -ifn "D:/Digital/lab/Lab6/CounterTest.xst" -ofn "D:/Digital/lab/Lab6/CounterTest.syr" 

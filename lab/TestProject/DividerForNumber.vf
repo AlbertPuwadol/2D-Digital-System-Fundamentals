@@ -1,0 +1,205 @@
+////////////////////////////////////////////////////////////////////////////////
+// Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+////////////////////////////////////////////////////////////////////////////////
+//   ____  ____ 
+//  /   /\/   / 
+// /___/  \  /    Vendor: Xilinx 
+// \   \   \/     Version : 14.7
+//  \   \         Application : sch2hdl
+//  /   /         Filename : DividerForNumber.vf
+// /___/   /\     Timestamp : 11/16/2019 01:14:11
+// \   \  /  \ 
+//  \___\/\___\ 
+//
+//Command: sch2hdl -intstyle ise -family spartan6 -verilog D:/work/2D/Digital/lab/TestProject/DividerForNumber.vf -w D:/work/2D/Digital/lab/TestProject/DividerForNumber.sch
+//Design Name: DividerForNumber
+//Device: spartan6
+//Purpose:
+//    This verilog netlist is translated from an ECS schematic.It can be 
+//    synthesized and simulated, but it should not be modified. 
+//
+`timescale 100 ps / 10 ps
+
+module CD4RE_HXILINX_DividerForNumber(CEO, Q0, Q1, Q2, Q3, TC, C, CE, R);
+   
+   parameter TERMINAL_COUNT = 4'b1001;
+   
+   output             CEO;
+   output             Q0;
+   output             Q1;
+   output             Q2;
+   output             Q3;
+   output             TC;
+
+   input 	      C;	
+   input 	      CE;	
+   input 	      R;	
+   
+   reg                Q0;
+   reg                Q1;
+   reg                Q2;
+   reg                Q3;
+   
+   always @(posedge C)
+     begin
+	if (R)
+	  {Q3, Q2, Q1, Q0} <= 4'b0000;
+
+	else if (CE)
+          begin
+             if ({Q3,Q2,Q1,Q0} == 4'b1001)
+               {Q3,Q2,Q1,Q0} <= 4'b0000;
+             else if({Q3,Q2,Q1,Q0} == 4'b1011)
+               {Q3,Q2,Q1,Q0} <= 4'b0110;
+             else if({Q3,Q2,Q1,Q0} == 4'b1101)
+               {Q3,Q2,Q1,Q0} <= 4'b0100;
+             else if({Q3,Q2,Q1,Q0} == 4'b1111)
+               {Q3,Q2,Q1,Q0} <= 4'b0010;
+            
+             else
+	      {Q3, Q2, Q1, Q0} <= {Q3, Q2, Q1, Q0} + 1;
+          end
+     end
+   
+   assign CEO = TC & CE;
+   assign TC = R ? 1'b0 : ({Q3, Q2, Q1, Q0} == TERMINAL_COUNT);
+   
+endmodule
+`timescale 100 ps / 10 ps
+
+module FTC_HXILINX_DividerForNumber(Q, C, CLR, T);
+   
+   output             Q;
+
+   input 	      C;	
+   input 	      CLR;	
+   input              T;
+   
+   parameter INIT = 1'b0;
+   reg                Q = INIT;
+  
+   
+ 
+   always @(posedge C or posedge CLR)
+     begin
+	if (CLR)
+	  Q <= 1'b0;
+	else if(T)
+          Q <= !Q;
+     end
+   
+endmodule
+`timescale 1ns / 1ps
+
+module DividerForNumber(Clk_In, 
+                        Clk_Out);
+
+    input Clk_In;
+   output Clk_Out;
+   
+   wire XLXN_1;
+   wire XLXN_2;
+   wire XLXN_3;
+   wire XLXN_4;
+   wire XLXN_5;
+   wire XLXN_6;
+   wire XLXN_7;
+   wire XLXN_8;
+   wire XLXN_9;
+   wire XLXN_10;
+   wire XLXN_12;
+   wire XLXN_13;
+   wire XLXN_15;
+   wire XLXN_17;
+   wire XLXN_31;
+   
+   (* HU_SET = "XLXI_1_39" *) 
+   CD4RE_HXILINX_DividerForNumber  XLXI_1 (.C(Clk_In), 
+                                          .CE(XLXN_12), 
+                                          .R(XLXN_17), 
+                                          .CEO(), 
+                                          .Q0(), 
+                                          .Q1(), 
+                                          .Q2(), 
+                                          .Q3(), 
+                                          .TC(XLXN_9));
+   (* HU_SET = "XLXI_2_40" *) 
+   CD4RE_HXILINX_DividerForNumber  XLXI_2 (.C(XLXN_8), 
+                                          .CE(XLXN_12), 
+                                          .R(XLXN_17), 
+                                          .CEO(), 
+                                          .Q0(), 
+                                          .Q1(), 
+                                          .Q2(), 
+                                          .Q3(), 
+                                          .TC(XLXN_5));
+   (* HU_SET = "XLXI_3_41" *) 
+   CD4RE_HXILINX_DividerForNumber  XLXI_3 (.C(XLXN_6), 
+                                          .CE(XLXN_12), 
+                                          .R(XLXN_17), 
+                                          .CEO(), 
+                                          .Q0(), 
+                                          .Q1(), 
+                                          .Q2(), 
+                                          .Q3(), 
+                                          .TC(XLXN_13));
+   (* HU_SET = "XLXI_4_42" *) 
+   CD4RE_HXILINX_DividerForNumber  XLXI_4 (.C(XLXN_10), 
+                                          .CE(XLXN_12), 
+                                          .R(XLXN_17), 
+                                          .CEO(), 
+                                          .Q0(), 
+                                          .Q1(), 
+                                          .Q2(), 
+                                          .Q3(), 
+                                          .TC(XLXN_7));
+   INV  XLXI_5 (.I(XLXN_9), 
+               .O(XLXN_10));
+   INV  XLXI_6 (.I(XLXN_7), 
+               .O(XLXN_8));
+   INV  XLXI_7 (.I(XLXN_5), 
+               .O(XLXN_6));
+   VCC  XLXI_8 (.P(XLXN_12));
+   GND  XLXI_9 (.G(XLXN_17));
+   INV  XLXI_10 (.I(XLXN_13), 
+                .O(XLXN_15));
+   (* HU_SET = "XLXI_11_43" *) 
+   CD4RE_HXILINX_DividerForNumber  XLXI_11 (.C(XLXN_15), 
+                                           .CE(XLXN_12), 
+                                           .R(XLXN_17), 
+                                           .CEO(), 
+                                           .Q0(), 
+                                           .Q1(), 
+                                           .Q2(), 
+                                           .Q3(), 
+                                           .TC(XLXN_1));
+   INV  XLXI_12 (.I(XLXN_1), 
+                .O(XLXN_2));
+   (* HU_SET = "XLXI_13_44" *) 
+   CD4RE_HXILINX_DividerForNumber  XLXI_13 (.C(XLXN_2), 
+                                           .CE(XLXN_12), 
+                                           .R(XLXN_17), 
+                                           .CEO(), 
+                                           .Q0(), 
+                                           .Q1(), 
+                                           .Q2(), 
+                                           .Q3(), 
+                                           .TC(XLXN_3));
+   INV  XLXI_14 (.I(XLXN_3), 
+                .O(XLXN_4));
+   (* HU_SET = "XLXI_15_45" *) 
+   CD4RE_HXILINX_DividerForNumber  XLXI_15 (.C(XLXN_4), 
+                                           .CE(XLXN_12), 
+                                           .R(XLXN_31), 
+                                           .CEO(), 
+                                           .Q0(), 
+                                           .Q1(), 
+                                           .Q2(XLXN_31), 
+                                           .Q3(), 
+                                           .TC());
+   (* HU_SET = "XLXI_16_46" *) 
+   FTC_HXILINX_DividerForNumber  XLXI_16 (.C(XLXN_31), 
+                                         .CLR(XLXN_17), 
+                                         .T(XLXN_12), 
+                                         .Q(Clk_Out));
+endmodule

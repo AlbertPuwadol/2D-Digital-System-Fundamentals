@@ -1,0 +1,117 @@
+////////////////////////////////////////////////////////////////////////////////
+// Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+////////////////////////////////////////////////////////////////////////////////
+//   ____  ____ 
+//  /   /\/   / 
+// /___/  \  /    Vendor: Xilinx 
+// \   \   \/     Version : 14.7
+//  \   \         Application : sch2hdl
+//  /   /         Filename : Counter.vf
+// /___/   /\     Timestamp : 10/08/2019 00:54:07
+// \   \  /  \ 
+//  \___\/\___\ 
+//
+//Command: sch2hdl -intstyle ise -family spartan6 -verilog D:/Digital/lab/Lab6Tst/Counter.vf -w D:/Digital/lab/Lab6Tst/Counter.sch
+//Design Name: Counter
+//Device: spartan6
+//Purpose:
+//    This verilog netlist is translated from an ECS schematic.It can be 
+//    synthesized and simulated, but it should not be modified. 
+//
+`timescale 100 ps / 10 ps
+
+module CB4CE_HXILINX_Counter(CEO, Q0, Q1, Q2, Q3, TC, C, CE, CLR);
+   
+   localparam TERMINAL_COUNT = 4'b1111;
+   
+   output             CEO;
+   output             Q0;
+   output             Q1;
+   output             Q2;
+   output             Q3;
+   output             TC;
+
+   input 	      C;	
+   input 	      CE;	
+   input 	      CLR;	
+   
+   reg                Q0;
+   reg                Q1;
+   reg                Q2;
+   reg                Q3;
+   
+   always @(posedge C or posedge CLR)
+     begin
+	if (CLR)
+	  {Q3, Q2, Q1, Q0} <= 4'b0000;
+	else if (CE)
+	  {Q3, Q2, Q1,Q0} <= {Q3, Q2, Q1,Q0} + 1;
+     end
+   
+   assign CEO = TC & CE;
+   assign TC = ({Q3, Q2, Q1, Q0} == TERMINAL_COUNT);
+   
+endmodule
+`timescale 1ns / 1ps
+
+module Counter(CLOCK, 
+               Enabled, 
+               L0_P82, 
+               L1_P81, 
+               L2_P80, 
+               L3_P79, 
+               L4_P78, 
+               L5_P75, 
+               L6_P74, 
+               L7_P67);
+
+   (* CLOCK_DEDICATED_ROUTE = "TRUE" *) 
+    input CLOCK;
+    input Enabled;
+   output L0_P82;
+   output L1_P81;
+   output L2_P80;
+   output L3_P79;
+   output L4_P78;
+   output L5_P75;
+   output L6_P74;
+   output L7_P67;
+   
+   wire XLXN_9;
+   wire XLXN_16;
+   wire L3_P79_DUMMY;
+   wire L5_P75_DUMMY;
+   wire L7_P67_DUMMY;
+   wire L1_P81_DUMMY;
+   
+   assign L1_P81 = L1_P81_DUMMY;
+   assign L3_P79 = L3_P79_DUMMY;
+   assign L5_P75 = L5_P75_DUMMY;
+   assign L7_P67 = L7_P67_DUMMY;
+   (* HU_SET = "XLXI_1_0" *) 
+   CB4CE_HXILINX_Counter  XLXI_1 (.C(CLOCK), 
+                                 .CE(Enabled), 
+                                 .CLR(XLXN_9), 
+                                 .CEO(), 
+                                 .Q0(L0_P82), 
+                                 .Q1(L1_P81_DUMMY), 
+                                 .Q2(L2_P80), 
+                                 .Q3(L3_P79_DUMMY), 
+                                 .TC());
+   (* HU_SET = "XLXI_2_1" *) 
+   CB4CE_HXILINX_Counter  XLXI_2 (.C(XLXN_9), 
+                                 .CE(Enabled), 
+                                 .CLR(XLXN_16), 
+                                 .CEO(), 
+                                 .Q0(L4_P78), 
+                                 .Q1(L5_P75_DUMMY), 
+                                 .Q2(L6_P74), 
+                                 .Q3(L7_P67_DUMMY), 
+                                 .TC());
+   AND2  XLXI_3 (.I0(L3_P79_DUMMY), 
+                .I1(L1_P81_DUMMY), 
+                .O(XLXN_9));
+   AND2  XLXI_4 (.I0(L7_P67_DUMMY), 
+                .I1(L5_P75_DUMMY), 
+                .O(XLXN_16));
+endmodule

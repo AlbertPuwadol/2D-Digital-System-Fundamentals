@@ -1,0 +1,6 @@
+[Inputs]
+=K[1:3]=
+=R[1:4]=
+[Outputs]
+=num[3:0]=
+[BiDir]

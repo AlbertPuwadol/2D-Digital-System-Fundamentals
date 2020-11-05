@@ -1,0 +1,21 @@
+//! **************************************************************************
+// Written by: Map P.20131013 on Mon Oct 28 00:47:23 2019
+//! **************************************************************************
+
+SCHEMATIC START;
+COMP "XLXN_11" LOCATE = SITE "P45" LEVEL 1;
+PIN XLXN_11_pin<0> = BEL "XLXN_11" PINNAME PAD;
+PIN "XLXN_11_pin<0>" CLOCK_DEDICATED_ROUTE = FALSE;
+COMP "XLXN_12" LOCATE = SITE "P41" LEVEL 1;
+COMP "XLXN_13" LOCATE = SITE "P40" LEVEL 1;
+COMP "XLXN_14" LOCATE = SITE "P35" LEVEL 1;
+COMP "XLXN_15" LOCATE = SITE "P34" LEVEL 1;
+COMP "XLXN_16" LOCATE = SITE "P32" LEVEL 1;
+COMP "XLXN_17" LOCATE = SITE "P29" LEVEL 1;
+COMP "XLXN_18" LOCATE = SITE "P27" LEVEL 1;
+COMP "com0" LOCATE = SITE "P44" LEVEL 1;
+COMP "com1" LOCATE = SITE "P43" LEVEL 1;
+COMP "com2" LOCATE = SITE "P33" LEVEL 1;
+COMP "com3" LOCATE = SITE "P30" LEVEL 1;
+SCHEMATIC END;
+

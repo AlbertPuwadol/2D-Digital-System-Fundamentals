@@ -1,0 +1,4 @@
+sch2hdl,-intstyle,ise,-family,spartan6,-verilog,D:/work/2D/Digital/lab/Lab6Tst/ClockForSegment.vf,-w,D:/work/2D/Digital/lab/Lab6Tst/ClockForSegment.sch
+sch2hdl,-intstyle,ise,-family,spartan6,-verilog,D:/work/2D/Digital/lab/Lab6Tst/result.vf,-w,D:/work/2D/Digital/lab/Lab6Tst/result.sch
+sch2hdl,-intstyle,ise,-family,spartan6,-verilog,D:/work/2D/Digital/lab/Lab6Tst/Clock.vf,-w,D:/work/2D/Digital/lab/Lab6Tst/Clock.sch
+sch2hdl,-intstyle,ise,-family,spartan6,-verilog,D:/work/2D/Digital/lab/Lab6Tst/result.vf,-w,D:/work/2D/Digital/lab/Lab6Tst/result.sch

@@ -1,0 +1,8 @@
+cable jtagkey
+bsdl path D:\work\2D\Digital\lab\UrJTAG
+detect
+part 0
+svf D:\Digital\lab\Lab7Clock\Lab7.svf progress stop
+instruction BYPASS
+
+svf D:\Digital\lab\Lab6Tst\Lab6.svf progress stop

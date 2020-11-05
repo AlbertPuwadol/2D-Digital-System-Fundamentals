@@ -1,0 +1,24 @@
+#-----------------------------------------------------------
+# PlanAhead v14.7 (64-bit)
+# Build 321239 by xbuild on Fri Sep 27 19:29:51 MDT 2013
+# Start of session at: Mon Nov 11 13:22:22 2019
+# Process ID: 18104
+# Log file: D:/Digital/lab/Lab9ALU/planAhead_run_4/planAhead.log
+# Journal file: D:/Digital/lab/Lab9ALU/planAhead_run_4/planAhead.jou
+#-----------------------------------------------------------
+start_gui
+source D:/Digital/lab/Lab9ALU/pa.fromHdl.tcl
+update_compile_order -fileset sim_1
+startgroup
+set_property package_pin P67 [get_ports LED_P67]
+endgroup
+startgroup
+set_property package_pin P74 [get_ports LED_P74]
+endgroup
+startgroup
+set_property package_pin P75 [get_ports LED_P75]
+endgroup
+startgroup
+set_property package_pin P78 [get_ports LED_P78]
+endgroup
+save_constraints

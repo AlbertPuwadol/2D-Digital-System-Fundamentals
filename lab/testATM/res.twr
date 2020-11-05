@@ -1,0 +1,187 @@
+--------------------------------------------------------------------------------
+Release 14.7 Trace  (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+
+C:\Xilinx\14.7\ISE_DS\ISE\bin\nt64\unwrapped\trce.exe -intstyle ise -v 3 -s 3
+-n 3 -fastpaths -xml res.twx res.ncd -o res.twr res.pcf -ucf res.ucf
+
+Design file:              res.ncd
+Physical constraint file: res.pcf
+Device,package,speed:     xc6slx9,tqg144,C,-3 (PRODUCTION 1.23 2013-10-13)
+Report level:             verbose report
+
+Environment Variable      Effect 
+--------------------      ------ 
+NONE                      No environment variables were set
+--------------------------------------------------------------------------------
+
+INFO:Timing:2698 - No timing constraints found, doing default enumeration.
+INFO:Timing:3412 - To improve timing, see the Timing Closure User Guide (UG612).
+INFO:Timing:2752 - To get complete path coverage, use the unconstrained paths 
+   option. All paths that are not constrained will be reported in the 
+   unconstrained paths section(s) of the report.
+INFO:Timing:3339 - The clock-to-out numbers in this timing report are based on 
+   a 50 Ohm transmission line loading model.  For the details of this model, 
+   and for more information on accounting for different loading conditions, 
+   please see the device datasheet.
+
+
+
+Data Sheet report:
+-----------------
+All values displayed in nanoseconds (ns)
+
+Clock to Setup on destination clock clk
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+clk            |    1.759|         |         |         |
+---------------+---------+---------+---------+---------+
+
+Pad to Pad
+---------------+---------------+---------+
+Source Pad     |Destination Pad|  Delay  |
+---------------+---------------+---------+
+a<0>           |A              |   18.432|
+a<0>           |B              |   18.521|
+a<0>           |C              |   18.486|
+a<0>           |D              |   18.574|
+a<0>           |E              |   18.260|
+a<0>           |F              |   17.404|
+a<0>           |G              |   17.762|
+a<0>           |LED            |   11.175|
+a<1>           |A              |   18.442|
+a<1>           |B              |   18.531|
+a<1>           |C              |   18.496|
+a<1>           |D              |   18.584|
+a<1>           |E              |   18.270|
+a<1>           |F              |   17.414|
+a<1>           |G              |   17.772|
+a<1>           |LED            |   11.185|
+a<2>           |A              |   18.050|
+a<2>           |B              |   18.139|
+a<2>           |C              |   18.104|
+a<2>           |D              |   18.192|
+a<2>           |E              |   17.878|
+a<2>           |F              |   17.022|
+a<2>           |G              |   17.380|
+a<2>           |LED            |   10.793|
+a<3>           |A              |   17.411|
+a<3>           |B              |   17.500|
+a<3>           |C              |   17.465|
+a<3>           |D              |   17.553|
+a<3>           |E              |   17.239|
+a<3>           |F              |   16.383|
+a<3>           |G              |   16.741|
+a<3>           |LED            |   10.154|
+a<4>           |A              |   17.492|
+a<4>           |B              |   17.581|
+a<4>           |C              |   17.546|
+a<4>           |D              |   17.634|
+a<4>           |E              |   17.320|
+a<4>           |F              |   16.464|
+a<4>           |G              |   16.822|
+a<4>           |LED            |   10.235|
+a<5>           |A              |   18.404|
+a<5>           |B              |   18.493|
+a<5>           |C              |   18.458|
+a<5>           |D              |   18.546|
+a<5>           |E              |   18.232|
+a<5>           |F              |   17.376|
+a<5>           |G              |   17.734|
+a<5>           |LED            |   11.147|
+a<6>           |A              |   16.701|
+a<6>           |B              |   16.790|
+a<6>           |C              |   16.755|
+a<6>           |D              |   16.843|
+a<6>           |E              |   16.529|
+a<6>           |F              |   15.673|
+a<6>           |G              |   16.031|
+a<6>           |LED            |    9.444|
+a<7>           |A              |   16.606|
+a<7>           |B              |   16.695|
+a<7>           |C              |   16.660|
+a<7>           |D              |   16.748|
+a<7>           |E              |   16.434|
+a<7>           |F              |   15.578|
+a<7>           |G              |   15.936|
+a<7>           |LED            |    9.349|
+b<0>           |A              |   18.852|
+b<0>           |B              |   18.941|
+b<0>           |C              |   18.906|
+b<0>           |D              |   18.994|
+b<0>           |E              |   18.680|
+b<0>           |F              |   17.824|
+b<0>           |G              |   18.182|
+b<0>           |LED            |   11.595|
+b<1>           |A              |   19.040|
+b<1>           |B              |   19.129|
+b<1>           |C              |   19.094|
+b<1>           |D              |   19.182|
+b<1>           |E              |   18.868|
+b<1>           |F              |   18.012|
+b<1>           |G              |   18.370|
+b<1>           |LED            |   11.783|
+b<2>           |A              |   18.890|
+b<2>           |B              |   18.979|
+b<2>           |C              |   18.944|
+b<2>           |D              |   19.032|
+b<2>           |E              |   18.718|
+b<2>           |F              |   17.862|
+b<2>           |G              |   18.220|
+b<2>           |LED            |   11.633|
+b<3>           |A              |   18.686|
+b<3>           |B              |   18.775|
+b<3>           |C              |   18.740|
+b<3>           |D              |   18.828|
+b<3>           |E              |   18.514|
+b<3>           |F              |   17.658|
+b<3>           |G              |   18.016|
+b<3>           |LED            |   11.429|
+b<4>           |A              |   18.641|
+b<4>           |B              |   18.730|
+b<4>           |C              |   18.695|
+b<4>           |D              |   18.783|
+b<4>           |E              |   18.469|
+b<4>           |F              |   17.613|
+b<4>           |G              |   17.971|
+b<4>           |LED            |   11.384|
+b<5>           |A              |   18.811|
+b<5>           |B              |   18.900|
+b<5>           |C              |   18.865|
+b<5>           |D              |   18.953|
+b<5>           |E              |   18.639|
+b<5>           |F              |   17.783|
+b<5>           |G              |   18.141|
+b<5>           |LED            |   11.554|
+b<6>           |A              |   18.374|
+b<6>           |B              |   18.463|
+b<6>           |C              |   18.428|
+b<6>           |D              |   18.516|
+b<6>           |E              |   18.202|
+b<6>           |F              |   17.346|
+b<6>           |G              |   17.704|
+b<6>           |LED            |   11.117|
+b<7>           |A              |   18.129|
+b<7>           |B              |   18.218|
+b<7>           |C              |   18.183|
+b<7>           |D              |   18.271|
+b<7>           |E              |   17.957|
+b<7>           |F              |   17.101|
+b<7>           |G              |   17.459|
+b<7>           |LED            |   10.872|
+---------------+---------------+---------+
+
+
+Analysis completed Sat Dec 14 18:01:19 2019 
+--------------------------------------------------------------------------------
+
+Trace Settings:
+-------------------------
+Trace Settings 
+
+Peak Memory Usage: 4572 MB
+
+
+

@@ -1,0 +1,42 @@
+////////////////////////////////////////////////////////////////////////////////
+// Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+////////////////////////////////////////////////////////////////////////////////
+//   ____  ____ 
+//  /   /\/   / 
+// /___/  \  /    Vendor: Xilinx 
+// \   \   \/     Version : 14.7
+//  \   \         Application : sch2hdl
+//  /   /         Filename : Decoder.vf
+// /___/   /\     Timestamp : 10/28/2019 13:00:21
+// \   \  /  \ 
+//  \___\/\___\ 
+//
+//Command: sch2hdl -intstyle ise -family spartan6 -verilog D:/Digital/lab/lab8/Decoder.vf -w D:/Digital/lab/lab8/Decoder.sch
+//Design Name: Decoder
+//Device: spartan6
+//Purpose:
+//    This verilog netlist is translated from an ECS schematic.It can be 
+//    synthesized and simulated, but it should not be modified. 
+//
+`timescale 1ns / 1ps
+
+module Decoder(q0, 
+               q1, 
+               com);
+
+    input q0;
+    input q1;
+   output [3:0] com;
+   
+   
+   OR2  XLXI_1 (.I0(q0), 
+               .I1(q1), 
+               .O(com[0]));
+   OR2B1  XLXI_2 (.I0(q0), 
+                 .I1(q1), 
+                 .O(com[1]));
+   OR2B1  XLXI_3 (.I0(q1), 
+                 .I1(q0), 
+                 .O(com[2]));
+   VCC  XLXI_5 (.P(com[3]));
+endmodule

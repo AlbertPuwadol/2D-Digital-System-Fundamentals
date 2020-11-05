@@ -1,0 +1,163 @@
+xst -intstyle ise -ifn "D:/Xilinx ISE/NewCOUNTER/Counter.xst" -ofn "D:/Xilinx ISE/NewCOUNTER/Counter.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc Counter.ucf -p xc6slx9-tqg144-3 "Counter.ngc" Counter.ngd  
+map -intstyle ise -p xc6slx9-tqg144-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o Counter_map.ncd Counter.ngd Counter.pcf 
+xst -intstyle ise -ifn "D:/Xilinx ISE/NewCOUNTER/Counter.xst" -ofn "D:/Xilinx ISE/NewCOUNTER/Counter.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc Counter.ucf -p xc6slx9-tqg144-3 "Counter.ngc" Counter.ngd  
+map -intstyle ise -p xc6slx9-tqg144-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o Counter_map.ncd Counter.ngd Counter.pcf 
+xst -intstyle ise -ifn "D:/Xilinx ISE/NewCOUNTER/Counter.xst" -ofn "D:/Xilinx ISE/NewCOUNTER/Counter.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc Counter.ucf -p xc6slx9-tqg144-3 "Counter.ngc" Counter.ngd  
+map -intstyle ise -p xc6slx9-tqg144-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o Counter_map.ncd Counter.ngd Counter.pcf 
+par -w -intstyle ise -ol high -mt off Counter_map.ncd Counter.ncd Counter.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml Counter.twx Counter.ncd -o Counter.twr Counter.pcf -ucf Counter.ucf 
+bitgen -intstyle ise -f Counter.ut Counter.ncd 
+xst -intstyle ise -ifn "D:/Xilinx ISE/NewCOUNTER/Counter.xst" -ofn "D:/Xilinx ISE/NewCOUNTER/Counter.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc Counter.ucf -p xc6slx9-tqg144-3 "Counter.ngc" Counter.ngd  
+map -intstyle ise -p xc6slx9-tqg144-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o Counter_map.ncd Counter.ngd Counter.pcf 
+par -w -intstyle ise -ol high -mt off Counter_map.ncd Counter.ncd Counter.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml Counter.twx Counter.ncd -o Counter.twr Counter.pcf -ucf Counter.ucf 
+bitgen -intstyle ise -f Counter.ut Counter.ncd 
+xst -intstyle ise -ifn "D:/Xilinx ISE/NewCOUNTER/Counter.xst" -ofn "D:/Xilinx ISE/NewCOUNTER/Counter.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc Counter.ucf -p xc6slx9-tqg144-3 "Counter.ngc" Counter.ngd  
+map -intstyle ise -p xc6slx9-tqg144-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o Counter_map.ncd Counter.ngd Counter.pcf 
+par -w -intstyle ise -ol high -mt off Counter_map.ncd Counter.ncd Counter.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml Counter.twx Counter.ncd -o Counter.twr Counter.pcf -ucf Counter.ucf 
+bitgen -intstyle ise -f Counter.ut Counter.ncd 
+xst -intstyle ise -ifn "D:/Xilinx ISE/NewCOUNTER/Counter.xst" -ofn "D:/Xilinx ISE/NewCOUNTER/Counter.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc Counter.ucf -p xc6slx9-tqg144-3 "Counter.ngc" Counter.ngd  
+map -intstyle ise -p xc6slx9-tqg144-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o Counter_map.ncd Counter.ngd Counter.pcf 
+par -w -intstyle ise -ol high -mt off Counter_map.ncd Counter.ncd Counter.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml Counter.twx Counter.ncd -o Counter.twr Counter.pcf -ucf Counter.ucf 
+bitgen -intstyle ise -f Counter.ut Counter.ncd 
+xst -intstyle ise -ifn "D:/Xilinx ISE/NewCOUNTER/Counter.xst" -ofn "D:/Xilinx ISE/NewCOUNTER/Counter.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc Counter.ucf -p xc6slx9-tqg144-3 "Counter.ngc" Counter.ngd  
+map -intstyle ise -p xc6slx9-tqg144-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o Counter_map.ncd Counter.ngd Counter.pcf 
+par -w -intstyle ise -ol high -mt off Counter_map.ncd Counter.ncd Counter.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml Counter.twx Counter.ncd -o Counter.twr Counter.pcf -ucf Counter.ucf 
+bitgen -intstyle ise -f Counter.ut Counter.ncd 
+xst -intstyle ise -ifn "D:/Xilinx ISE/NewCOUNTER/Counter.xst" -ofn "D:/Xilinx ISE/NewCOUNTER/Counter.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc Counter.ucf -p xc6slx9-tqg144-3 "Counter.ngc" Counter.ngd  
+map -intstyle ise -p xc6slx9-tqg144-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o Counter_map.ncd Counter.ngd Counter.pcf 
+xst -intstyle ise -ifn "D:/Xilinx ISE/NewCOUNTER/Counter.xst" -ofn "D:/Xilinx ISE/NewCOUNTER/Counter.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc Counter.ucf -p xc6slx9-tqg144-3 "Counter.ngc" Counter.ngd  
+map -intstyle ise -p xc6slx9-tqg144-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o Counter_map.ncd Counter.ngd Counter.pcf 
+xst -intstyle ise -ifn "D:/Xilinx ISE/NewCOUNTER/Counter.xst" -ofn "D:/Xilinx ISE/NewCOUNTER/Counter.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc Counter.ucf -p xc6slx9-tqg144-3 "Counter.ngc" Counter.ngd  
+map -intstyle ise -p xc6slx9-tqg144-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o Counter_map.ncd Counter.ngd Counter.pcf 
+xst -intstyle ise -ifn "D:/Xilinx ISE/NewCOUNTER/Counter.xst" -ofn "D:/Xilinx ISE/NewCOUNTER/Counter.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc Counter.ucf -p xc6slx9-tqg144-3 "Counter.ngc" Counter.ngd  
+map -intstyle ise -p xc6slx9-tqg144-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o Counter_map.ncd Counter.ngd Counter.pcf 
+xst -intstyle ise -ifn "D:/Xilinx ISE/NewCOUNTER/Counter.xst" -ofn "D:/Xilinx ISE/NewCOUNTER/Counter.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc Counter.ucf -p xc6slx9-tqg144-3 "Counter.ngc" Counter.ngd  
+map -intstyle ise -p xc6slx9-tqg144-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o Counter_map.ncd Counter.ngd Counter.pcf 
+xst -intstyle ise -ifn "D:/Xilinx ISE/NewCOUNTER/Counter.xst" -ofn "D:/Xilinx ISE/NewCOUNTER/Counter.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc Counter.ucf -p xc6slx9-tqg144-3 "Counter.ngc" Counter.ngd  
+map -intstyle ise -p xc6slx9-tqg144-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o Counter_map.ncd Counter.ngd Counter.pcf 
+par -w -intstyle ise -ol high -mt off Counter_map.ncd Counter.ncd Counter.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml Counter.twx Counter.ncd -o Counter.twr Counter.pcf -ucf Counter.ucf 
+bitgen -intstyle ise -f Counter.ut Counter.ncd 
+xst -intstyle ise -ifn "D:/Xilinx ISE/NewCOUNTER/Counter.xst" -ofn "D:/Xilinx ISE/NewCOUNTER/Counter.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc Counter.ucf -p xc6slx9-tqg144-3 "Counter.ngc" Counter.ngd  
+map -intstyle ise -p xc6slx9-tqg144-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o Counter_map.ncd Counter.ngd Counter.pcf 
+par -w -intstyle ise -ol high -mt off Counter_map.ncd Counter.ncd Counter.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml Counter.twx Counter.ncd -o Counter.twr Counter.pcf -ucf Counter.ucf 
+bitgen -intstyle ise -f Counter.ut Counter.ncd 
+sch2sym -intstyle ise -family spartan6 -refsym Counter {D:/Xilinx ISE/NewCOUNTER/Counter.sch} {D:/Xilinx ISE/NewCOUNTER/Counter.sym} 
+xst -intstyle ise -ifn "D:/Xilinx ISE/NewCOUNTER/Counter.xst" -ofn "D:/Xilinx ISE/NewCOUNTER/Counter.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc Counter.ucf -p xc6slx9-tqg144-3 "Counter.ngc" Counter.ngd  
+map -intstyle ise -p xc6slx9-tqg144-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o Counter_map.ncd Counter.ngd Counter.pcf 
+par -w -intstyle ise -ol high -mt off Counter_map.ncd Counter.ncd Counter.pcf 
+xst -intstyle ise -ifn "D:/Xilinx ISE/NewCOUNTER/Counter.xst" -ofn "D:/Xilinx ISE/NewCOUNTER/Counter.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc Counter.ucf -p xc6slx9-tqg144-3 "Counter.ngc" Counter.ngd  
+map -intstyle ise -p xc6slx9-tqg144-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o Counter_map.ncd Counter.ngd Counter.pcf 
+par -w -intstyle ise -ol high -mt off Counter_map.ncd Counter.ncd Counter.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml Counter.twx Counter.ncd -o Counter.twr Counter.pcf -ucf Counter.ucf 
+bitgen -intstyle ise -f Counter.ut Counter.ncd 
+xst -intstyle ise -ifn "D:/XilinxISE/NewCOUNTER/Counter.xst" -ofn "D:/XilinxISE/NewCOUNTER/Counter.syr" 
+xst -intstyle ise -ifn "D:/XilinxISE/NewCOUNTER/Counter.xst" -ofn "D:/XilinxISE/NewCOUNTER/Counter.syr" 
+xst -intstyle ise -ifn "D:/XilinxISE/NewCOUNTER/Counter.xst" -ofn "D:/XilinxISE/NewCOUNTER/Counter.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc Counter.ucf -p xc6slx9-tqg144-3 Counter.ngc Counter.ngd  
+map -intstyle ise -p xc6slx9-tqg144-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o Counter_map.ncd Counter.ngd Counter.pcf 
+par -w -intstyle ise -ol high -mt off Counter_map.ncd Counter.ncd Counter.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml Counter.twx Counter.ncd -o Counter.twr Counter.pcf -ucf Counter.ucf 
+bitgen -intstyle ise -f Counter.ut Counter.ncd 
+sch2sym -intstyle ise -family spartan6 -refsym Counter D:/XilinxISE/NewCOUNTER/Counter.sch D:/XilinxISE/NewCOUNTER/Counter.sym 
+xst -intstyle ise -ifn "C:/Users/Puwadol Limwanichsin/Downloads/NewCOUNTER/Counter.xst" -ofn "C:/Users/Puwadol Limwanichsin/Downloads/NewCOUNTER/Counter.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc Counter.ucf -p xc6slx9-tqg144-3 "Counter.ngc" Counter.ngd  
+map -intstyle ise -p xc6slx9-tqg144-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o Counter_map.ncd Counter.ngd Counter.pcf 
+par -w -intstyle ise -ol high -mt off Counter_map.ncd Counter.ncd Counter.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml Counter.twx Counter.ncd -o Counter.twr Counter.pcf -ucf Counter.ucf 
+bitgen -intstyle ise -f Counter.ut Counter.ncd 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc Counter.ucf -p xc6slx9-tqg144-3 "Counter.ngc" Counter.ngd  
+map -intstyle ise -p xc6slx9-tqg144-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o Counter_map.ncd Counter.ngd Counter.pcf 
+par -w -intstyle ise -ol high -mt off Counter_map.ncd Counter.ncd Counter.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml Counter.twx Counter.ncd -o Counter.twr Counter.pcf -ucf Counter.ucf 
+xst -intstyle ise -ifn "C:/Users/Puwadol Limwanichsin/Downloads/NewCOUNTER/Counter.xst" -ofn "C:/Users/Puwadol Limwanichsin/Downloads/NewCOUNTER/Counter.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc Counter.ucf -p xc6slx9-tqg144-3 "Counter.ngc" Counter.ngd  
+map -intstyle ise -p xc6slx9-tqg144-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o Counter_map.ncd Counter.ngd Counter.pcf 
+par -w -intstyle ise -ol high -mt off Counter_map.ncd Counter.ncd Counter.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml Counter.twx Counter.ncd -o Counter.twr Counter.pcf -ucf Counter.ucf 
+bitgen -intstyle ise -f Counter.ut Counter.ncd 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc Counter.ucf -p xc6slx9-tqg144-3 "Counter.ngc" Counter.ngd  
+map -intstyle ise -p xc6slx9-tqg144-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o Counter_map.ncd Counter.ngd Counter.pcf 
+par -w -intstyle ise -ol high -mt off Counter_map.ncd Counter.ncd Counter.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml Counter.twx Counter.ncd -o Counter.twr Counter.pcf -ucf Counter.ucf 
+bitgen -intstyle ise -f Counter.ut Counter.ncd 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml Counter_preroute.twx Counter_map.ncd -o Counter_preroute.twr Counter.pcf -ucf Counter.ucf 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc Counter.ucf -p xc6slx9-tqg144-3 "Counter.ngc" Counter.ngd  
+map -intstyle ise -p xc6slx9-tqg144-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o Counter_map.ncd Counter.ngd Counter.pcf 
+par -w -intstyle ise -ol high -mt off Counter_map.ncd Counter.ncd Counter.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml Counter.twx Counter.ncd -o Counter.twr Counter.pcf -ucf Counter.ucf 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc Counter.ucf -p xc6slx9-tqg144-3 "Counter.ngc" Counter.ngd  
+map -intstyle ise -p xc6slx9-tqg144-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o Counter_map.ncd Counter.ngd Counter.pcf 
+par -w -intstyle ise -ol high -mt off Counter_map.ncd Counter.ncd Counter.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml Counter.twx Counter.ncd -o Counter.twr Counter.pcf -ucf Counter.ucf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml Counter_preroute.twx Counter_map.ncd -o Counter_preroute.twr Counter.pcf -ucf Counter.ucf 
+xst -intstyle ise -ifn "C:/Users/Puwadol Limwanichsin/Downloads/NewCOUNTER/Counter.xst" -ofn "C:/Users/Puwadol Limwanichsin/Downloads/NewCOUNTER/Counter.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc Counter.ucf -p xc6slx9-tqg144-3 "Counter.ngc" Counter.ngd  
+map -intstyle ise -p xc6slx9-tqg144-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o Counter_map.ncd Counter.ngd Counter.pcf 
+par -w -intstyle ise -ol high -mt off Counter_map.ncd Counter.ncd Counter.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml Counter.twx Counter.ncd -o Counter.twr Counter.pcf -ucf Counter.ucf 
+xst -intstyle ise -ifn "C:/Users/Puwadol Limwanichsin/Downloads/NewCOUNTER/Counter.xst" -ofn "C:/Users/Puwadol Limwanichsin/Downloads/NewCOUNTER/Counter.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc Counter.ucf -p xc6slx9-tqg144-3 "Counter.ngc" Counter.ngd  
+map -intstyle ise -p xc6slx9-tqg144-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o Counter_map.ncd Counter.ngd Counter.pcf 
+par -w -intstyle ise -ol high -mt off Counter_map.ncd Counter.ncd Counter.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml Counter.twx Counter.ncd -o Counter.twr Counter.pcf -ucf Counter.ucf 
+bitgen -intstyle ise -f Counter.ut Counter.ncd 
+xst -intstyle ise -ifn "C:/Users/Puwadol Limwanichsin/Downloads/NewCOUNTER/Counter.xst" -ofn "C:/Users/Puwadol Limwanichsin/Downloads/NewCOUNTER/Counter.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc Counter.ucf -p xc6slx9-tqg144-3 "Counter.ngc" Counter.ngd  
+map -intstyle ise -p xc6slx9-tqg144-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o Counter_map.ncd Counter.ngd Counter.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml Counter_preroute.twx Counter_map.ncd -o Counter_preroute.twr Counter.pcf -ucf Counter.ucf 
+xst -intstyle ise -ifn "C:/Users/Puwadol Limwanichsin/Downloads/NewCOUNTER/Counter.xst" -ofn "C:/Users/Puwadol Limwanichsin/Downloads/NewCOUNTER/Counter.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc Counter.ucf -p xc6slx9-tqg144-3 "Counter.ngc" Counter.ngd  
+map -intstyle ise -p xc6slx9-tqg144-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o Counter_map.ncd Counter.ngd Counter.pcf 
+par -w -intstyle ise -ol high -mt off Counter_map.ncd Counter.ncd Counter.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml Counter.twx Counter.ncd -o Counter.twr Counter.pcf -ucf Counter.ucf 
+xst -intstyle ise -ifn "C:/Users/Puwadol Limwanichsin/Downloads/NewCOUNTER/Counter.xst" -ofn "C:/Users/Puwadol Limwanichsin/Downloads/NewCOUNTER/Counter.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc Counter.ucf -p xc6slx9-tqg144-3 "Counter.ngc" Counter.ngd  
+map -intstyle ise -p xc6slx9-tqg144-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o Counter_map.ncd Counter.ngd Counter.pcf 
+par -w -intstyle ise -ol high -mt off Counter_map.ncd Counter.ncd Counter.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml Counter.twx Counter.ncd -o Counter.twr Counter.pcf -ucf Counter.ucf 
+xst -intstyle ise -ifn "C:/Users/Puwadol Limwanichsin/Downloads/NewCOUNTER/Counter.xst" -ofn "C:/Users/Puwadol Limwanichsin/Downloads/NewCOUNTER/Counter.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc Counter.ucf -p xc6slx9-tqg144-3 "Counter.ngc" Counter.ngd  
+map -intstyle ise -p xc6slx9-tqg144-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o Counter_map.ncd Counter.ngd Counter.pcf 
+par -w -intstyle ise -ol high -mt off Counter_map.ncd Counter.ncd Counter.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml Counter.twx Counter.ncd -o Counter.twr Counter.pcf -ucf Counter.ucf 
+xst -intstyle ise -ifn "C:/Users/Puwadol Limwanichsin/Downloads/NewCOUNTER/Counter.xst" -ofn "C:/Users/Puwadol Limwanichsin/Downloads/NewCOUNTER/Counter.syr" 
+xst -intstyle ise -ifn "C:/Users/Puwadol Limwanichsin/Downloads/NewCOUNTER/Counter.xst" -ofn "C:/Users/Puwadol Limwanichsin/Downloads/NewCOUNTER/Counter.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc Counter.ucf -p xc6slx9-tqg144-3 "Counter.ngc" Counter.ngd  
+map -intstyle ise -p xc6slx9-tqg144-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o Counter_map.ncd Counter.ngd Counter.pcf 
+par -w -intstyle ise -ol high -mt off Counter_map.ncd Counter.ncd Counter.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml Counter.twx Counter.ncd -o Counter.twr Counter.pcf -ucf Counter.ucf 
+bitgen -intstyle ise -f Counter.ut Counter.ncd 
+xst -intstyle ise -ifn "C:/Users/Puwadol Limwanichsin/Downloads/NewCOUNTER/Counter.xst" -ofn "C:/Users/Puwadol Limwanichsin/Downloads/NewCOUNTER/Counter.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc Counter.ucf -p xc6slx9-tqg144-3 "Counter.ngc" Counter.ngd  
+map -intstyle ise -p xc6slx9-tqg144-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o Counter_map.ncd Counter.ngd Counter.pcf 
+par -w -intstyle ise -ol high -mt off Counter_map.ncd Counter.ncd Counter.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml Counter.twx Counter.ncd -o Counter.twr Counter.pcf -ucf Counter.ucf 
+bitgen -intstyle ise -f Counter.ut Counter.ncd 
+xst -intstyle ise -ifn "C:/Users/Puwadol Limwanichsin/Downloads/NewCOUNTER/Counter.xst" -ofn "C:/Users/Puwadol Limwanichsin/Downloads/NewCOUNTER/Counter.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc Counter.ucf -uc CounterPin.ucf -p xc6slx9-tqg144-3 "Counter.ngc" Counter.ngd  
+map -intstyle ise -p xc6slx9-tqg144-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o Counter_map.ncd Counter.ngd Counter.pcf 
+par -w -intstyle ise -ol high -mt off Counter_map.ncd Counter.ncd Counter.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml Counter.twx Counter.ncd -o Counter.twr Counter.pcf -ucf Counter.ucf -ucf CounterPin.ucf 
+bitgen -intstyle ise -f Counter.ut Counter.ncd 

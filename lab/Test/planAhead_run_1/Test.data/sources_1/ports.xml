@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+<Interface Version="1" Minor="1">
+	<Ifc Id="ROOT" Top="1">
+		<Port Id="P55" Dir="IN"/>
+		<Port Id="P56" Dir="IN"/>
+		<Port Id="QBAR_P74" Dir="OUT"/>
+		<Port Id="Q_P67" Dir="OUT"/>
+	</Ifc>
+</Interface>
+

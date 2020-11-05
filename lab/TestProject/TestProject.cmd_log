@@ -1,0 +1,83 @@
+xst -intstyle ise -ifn "D:/work/2D/Digital/lab/TestProject/TestProject.xst" -ofn "D:/work/2D/Digital/lab/TestProject/TestProject.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc TestProject.ucf -p xc6slx9-tqg144-3 TestProject.ngc TestProject.ngd  
+map -intstyle ise -p xc6slx9-tqg144-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o TestProject_map.ncd TestProject.ngd TestProject.pcf 
+xst -intstyle ise -ifn "D:/work/2D/Digital/lab/TestProject/TestProject.xst" -ofn "D:/work/2D/Digital/lab/TestProject/TestProject.syr" 
+xst -intstyle ise -ifn "D:/work/2D/Digital/lab/TestProject/TestProject.xst" -ofn "D:/work/2D/Digital/lab/TestProject/TestProject.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc TestProject.ucf -p xc6slx9-tqg144-3 TestProject.ngc TestProject.ngd  
+map -intstyle ise -p xc6slx9-tqg144-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o TestProject_map.ncd TestProject.ngd TestProject.pcf 
+xst -intstyle ise -ifn "D:/work/2D/Digital/lab/TestProject/TestProject.xst" -ofn "D:/work/2D/Digital/lab/TestProject/TestProject.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc TestProject.ucf -p xc6slx9-tqg144-3 TestProject.ngc TestProject.ngd  
+map -intstyle ise -p xc6slx9-tqg144-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o TestProject_map.ncd TestProject.ngd TestProject.pcf 
+xst -intstyle ise -ifn "D:/work/2D/Digital/lab/TestProject/TestProject.xst" -ofn "D:/work/2D/Digital/lab/TestProject/TestProject.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc TestProject.ucf -p xc6slx9-tqg144-3 TestProject.ngc TestProject.ngd  
+map -intstyle ise -p xc6slx9-tqg144-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o TestProject_map.ncd TestProject.ngd TestProject.pcf 
+par -w -intstyle ise -ol high -mt off TestProject_map.ncd TestProject.ncd TestProject.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml TestProject.twx TestProject.ncd -o TestProject.twr TestProject.pcf -ucf TestProject.ucf 
+xst -intstyle ise -ifn "D:/work/2D/Digital/lab/TestProject/TestProject.xst" -ofn "D:/work/2D/Digital/lab/TestProject/TestProject.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc TestProject.ucf -p xc6slx9-tqg144-3 TestProject.ngc TestProject.ngd  
+map -intstyle ise -p xc6slx9-tqg144-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o TestProject_map.ncd TestProject.ngd TestProject.pcf 
+par -w -intstyle ise -ol high -mt off TestProject_map.ncd TestProject.ncd TestProject.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml TestProject.twx TestProject.ncd -o TestProject.twr TestProject.pcf -ucf TestProject.ucf 
+bitgen -intstyle ise -f TestProject.ut TestProject.ncd 
+xst -intstyle ise -ifn "D:/work/2D/Digital/lab/TestProject/TestProject.xst" -ofn "D:/work/2D/Digital/lab/TestProject/TestProject.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc TestProject.ucf -p xc6slx9-tqg144-3 TestProject.ngc TestProject.ngd  
+map -intstyle ise -p xc6slx9-tqg144-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o TestProject_map.ncd TestProject.ngd TestProject.pcf 
+par -w -intstyle ise -ol high -mt off TestProject_map.ncd TestProject.ncd TestProject.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml TestProject.twx TestProject.ncd -o TestProject.twr TestProject.pcf -ucf TestProject.ucf 
+bitgen -intstyle ise -f TestProject.ut TestProject.ncd 
+xst -intstyle ise -ifn "D:/work/2D/Digital/lab/TestProject/TestProject.xst" -ofn "D:/work/2D/Digital/lab/TestProject/TestProject.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc TestProject.ucf -p xc6slx9-tqg144-3 TestProject.ngc TestProject.ngd  
+map -intstyle ise -p xc6slx9-tqg144-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o TestProject_map.ncd TestProject.ngd TestProject.pcf 
+par -w -intstyle ise -ol high -mt off TestProject_map.ncd TestProject.ncd TestProject.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml TestProject.twx TestProject.ncd -o TestProject.twr TestProject.pcf -ucf TestProject.ucf 
+bitgen -intstyle ise -f TestProject.ut TestProject.ncd 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc TestProject.ucf -p xc6slx9-tqg144-3 TestProject.ngc TestProject.ngd  
+map -intstyle ise -p xc6slx9-tqg144-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o TestProject_map.ncd TestProject.ngd TestProject.pcf 
+par -w -intstyle ise -ol high -mt off TestProject_map.ncd TestProject.ncd TestProject.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml TestProject.twx TestProject.ncd -o TestProject.twr TestProject.pcf -ucf TestProject.ucf 
+bitgen -intstyle ise -f TestProject.ut TestProject.ncd 
+xst -intstyle ise -ifn "D:/work/2D/Digital/lab/TestProject/TestProject.xst" -ofn "D:/work/2D/Digital/lab/TestProject/TestProject.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc TestProject.ucf -p xc6slx9-tqg144-3 TestProject.ngc TestProject.ngd  
+map -intstyle ise -p xc6slx9-tqg144-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o TestProject_map.ncd TestProject.ngd TestProject.pcf 
+par -w -intstyle ise -ol high -mt off TestProject_map.ncd TestProject.ncd TestProject.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml TestProject.twx TestProject.ncd -o TestProject.twr TestProject.pcf -ucf TestProject.ucf 
+bitgen -intstyle ise -f TestProject.ut TestProject.ncd 
+xst -intstyle ise -ifn "D:/work/2D/Digital/lab/TestProject/TestProject.xst" -ofn "D:/work/2D/Digital/lab/TestProject/TestProject.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc TestProject.ucf -p xc6slx9-tqg144-3 TestProject.ngc TestProject.ngd  
+map -intstyle ise -p xc6slx9-tqg144-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o TestProject_map.ncd TestProject.ngd TestProject.pcf 
+par -w -intstyle ise -ol high -mt off TestProject_map.ncd TestProject.ncd TestProject.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml TestProject.twx TestProject.ncd -o TestProject.twr TestProject.pcf -ucf TestProject.ucf 
+bitgen -intstyle ise -f TestProject.ut TestProject.ncd 
+xst -intstyle ise -ifn "D:/work/2D/Digital/lab/TestProject/TestProject.xst" -ofn "D:/work/2D/Digital/lab/TestProject/TestProject.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc TestProject.ucf -p xc6slx9-tqg144-3 TestProject.ngc TestProject.ngd  
+map -intstyle ise -p xc6slx9-tqg144-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o TestProject_map.ncd TestProject.ngd TestProject.pcf 
+par -w -intstyle ise -ol high -mt off TestProject_map.ncd TestProject.ncd TestProject.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml TestProject.twx TestProject.ncd -o TestProject.twr TestProject.pcf -ucf TestProject.ucf 
+bitgen -intstyle ise -f TestProject.ut TestProject.ncd 
+xst -intstyle ise -ifn "D:/work/2D/Digital/lab/TestProject/TestProject.xst" -ofn "D:/work/2D/Digital/lab/TestProject/TestProject.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc TestProject.ucf -p xc6slx9-tqg144-3 TestProject.ngc TestProject.ngd  
+map -intstyle ise -p xc6slx9-tqg144-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o TestProject_map.ncd TestProject.ngd TestProject.pcf 
+par -w -intstyle ise -ol high -mt off TestProject_map.ncd TestProject.ncd TestProject.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml TestProject.twx TestProject.ncd -o TestProject.twr TestProject.pcf -ucf TestProject.ucf 
+bitgen -intstyle ise -f TestProject.ut TestProject.ncd 
+xst -intstyle ise -ifn "D:/work/2D/Digital/lab/TestProject/TestProject.xst" -ofn "D:/work/2D/Digital/lab/TestProject/TestProject.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc TestProject.ucf -p xc6slx9-tqg144-3 TestProject.ngc TestProject.ngd  
+map -intstyle ise -p xc6slx9-tqg144-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o TestProject_map.ncd TestProject.ngd TestProject.pcf 
+par -w -intstyle ise -ol high -mt off TestProject_map.ncd TestProject.ncd TestProject.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml TestProject.twx TestProject.ncd -o TestProject.twr TestProject.pcf -ucf TestProject.ucf 
+bitgen -intstyle ise -f TestProject.ut TestProject.ncd 
+xst -intstyle ise -ifn "D:/work/2D/Digital/lab/TestProject/TestProject.xst" -ofn "D:/work/2D/Digital/lab/TestProject/TestProject.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc TestProject.ucf -p xc6slx9-tqg144-3 TestProject.ngc TestProject.ngd  
+map -intstyle ise -p xc6slx9-tqg144-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o TestProject_map.ncd TestProject.ngd TestProject.pcf 
+xst -intstyle ise -ifn "D:/work/2D/Digital/lab/TestProject/TestProject.xst" -ofn "D:/work/2D/Digital/lab/TestProject/TestProject.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc TestProject.ucf -p xc6slx9-tqg144-3 TestProject.ngc TestProject.ngd  
+map -intstyle ise -p xc6slx9-tqg144-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o TestProject_map.ncd TestProject.ngd TestProject.pcf 
+par -w -intstyle ise -ol high -mt off TestProject_map.ncd TestProject.ncd TestProject.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml TestProject.twx TestProject.ncd -o TestProject.twr TestProject.pcf -ucf TestProject.ucf 
+bitgen -intstyle ise -f TestProject.ut TestProject.ncd 
+xst -intstyle ise -ifn "D:/work/2D/Digital/lab/TestProject/TestProject.xst" -ofn "D:/work/2D/Digital/lab/TestProject/TestProject.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc TestProject.ucf -p xc6slx9-tqg144-3 TestProject.ngc TestProject.ngd  
+map -intstyle ise -p xc6slx9-tqg144-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o TestProject_map.ncd TestProject.ngd TestProject.pcf 
+par -w -intstyle ise -ol high -mt off TestProject_map.ncd TestProject.ncd TestProject.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml TestProject.twx TestProject.ncd -o TestProject.twr TestProject.pcf -ucf TestProject.ucf 
+bitgen -intstyle ise -f TestProject.ut TestProject.ncd 

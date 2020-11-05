@@ -1,0 +1,17 @@
+PROMGEN: Xilinx Prom Generator P.20131013
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+
+promgen -w -p mcs -c FF -o D:\Digital\lab\Lab7Clock//Lab7PromtV2 -s 1024 -u 0000 D:/Digital/lab/Lab7Clock/res.bit -spi 
+
+PROM D:\Digital\lab\Lab7Clock\Lab7PromtV2.prm map: Sun Nov 10 04:54:25 2019
+
+Calculating PROM checksum with fill value ff
+
+Format        Mcs86 (32-bit)
+Size          1024K
+PROM start    0000:0000
+PROM end      000f:ffff
+PROM checksum 0ac8ac15
+
+        Addr1        Addr2                     Date File(s)
+    0000:0000    0005:327b     Nov 10 04:49:40 2019 D:/Digital/lab/Lab7Clock/res.bit

@@ -1,0 +1,65 @@
+////////////////////////////////////////////////////////////////////////////////
+// Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+////////////////////////////////////////////////////////////////////////////////
+//   ____  ____ 
+//  /   /\/   / 
+// /___/  \  /    Vendor: Xilinx 
+// \   \   \/     Version : 14.7
+//  \   \         Application : sch2hdl
+//  /   /         Filename : Alps.vf
+// /___/   /\     Timestamp : 09/09/2019 14:34:58
+// \   \  /  \ 
+//  \___\/\___\ 
+//
+//Command: sch2hdl -intstyle ise -family spartan6 -verilog D:/Digital/lab/lab4.2/Alps.vf -w D:/Digital/lab/lab4.2/Alps.sch
+//Design Name: Alps
+//Device: spartan6
+//Purpose:
+//    This verilog netlist is translated from an ECS schematic.It can be 
+//    synthesized and simulated, but it should not be modified. 
+//
+`timescale 1ns / 1ps
+
+module Alps(A_P59, 
+            B_P61, 
+            C_P62, 
+            D_P66, 
+            C1_P82, 
+            S0_P80, 
+            S1_P81);
+
+    input A_P59;
+    input B_P61;
+    input C_P62;
+    input D_P66;
+   output C1_P82;
+   output S0_P80;
+   output S1_P81;
+   
+   wire XLXN_7;
+   wire XLXN_12;
+   wire XLXN_13;
+   wire XLXN_16;
+   
+   XOR2  XLXI_2 (.I0(B_P61), 
+                .I1(A_P59), 
+                .O(S0_P80));
+   XOR2  XLXI_3 (.I0(XLXN_12), 
+                .I1(XLXN_7), 
+                .O(S1_P81));
+   XOR2  XLXI_4 (.I0(D_P66), 
+                .I1(C_P62), 
+                .O(XLXN_12));
+   AND2  XLXI_5 (.I0(B_P61), 
+                .I1(A_P59), 
+                .O(XLXN_7));
+   AND2  XLXI_6 (.I0(XLXN_12), 
+                .I1(XLXN_7), 
+                .O(XLXN_16));
+   AND2  XLXI_8 (.I0(D_P66), 
+                .I1(C_P62), 
+                .O(XLXN_13));
+   OR2  XLXI_9 (.I0(XLXN_13), 
+               .I1(XLXN_16), 
+               .O(C1_P82));
+endmodule

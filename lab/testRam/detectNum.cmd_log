@@ -1,0 +1,6 @@
+vhdtdtfi -lib work detectNum.vhd -prj testRam -o detectNum.spl -module detectNum -template C:/Xilinx/14.7/ISE_DS/ISE//data/splfile.tft -deleteonerror 
+spl2sym -intstyle ise -family spartan6 detectNum.spl D:/work/2D/Digital/lab/testRam/detectNum.sym 
+vhdtdtfi -lib work detectNum.vhd -prj testRam -o detectNum.spl -module detectNum -template C:/Xilinx/14.7/ISE_DS/ISE//data/splfile.tft -deleteonerror 
+spl2sym -intstyle ise -family spartan6 detectNum.spl D:/work/2D/Digital/lab/testRam/detectNum.sym 
+vhdtdtfi -lib work detectNum.vhd -prj testRam -o detectNum.spl -module detectNum -template C:/Xilinx/14.7/ISE_DS/ISE//data/splfile.tft -deleteonerror 
+spl2sym -intstyle ise -family spartan6 detectNum.spl D:/work/2D/Digital/lab/testRam/detectNum.sym 

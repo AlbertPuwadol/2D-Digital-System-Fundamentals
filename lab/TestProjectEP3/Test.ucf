@@ -1,0 +1,21 @@
+
+
+NET "P26" LOC = P26;
+NET "P27" LOC = P27;
+NET "P29" LOC = P29;
+NET "P32" LOC = P32;
+NET "P34" LOC = P34;
+NET "P35" LOC = P35;
+NET "P40" LOC = P40;
+NET "P41" LOC = P41;
+NET "P45" LOC = P45;
+NET "P47" LOC = P47;
+NET "P123" LOC = P123;
+NET "Slide_SW" LOC = P55;
+
+# PlanAhead Generated physical constraints 
+
+NET "com0" LOC = P44;
+NET "com1" LOC = P43;
+NET "com2" LOC = P33;
+NET "com3" LOC = P30;

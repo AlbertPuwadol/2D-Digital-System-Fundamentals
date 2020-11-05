@@ -1,0 +1,114 @@
+////////////////////////////////////////////////////////////////////////////////
+// Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+////////////////////////////////////////////////////////////////////////////////
+//   ____  ____ 
+//  /   /\/   / 
+// /___/  \  /    Vendor: Xilinx 
+// \   \   \/     Version : 14.7
+//  \   \         Application : sch2hdl
+//  /   /         Filename : Min.vf
+// /___/   /\     Timestamp : 10/27/2019 22:23:15
+// \   \  /  \ 
+//  \___\/\___\ 
+//
+//Command: sch2hdl -intstyle ise -family spartan6 -verilog D:/Digital/lab/Lab7Clock/Min.vf -w D:/Digital/lab/Lab7Clock/Min.sch
+//Design Name: Min
+//Device: spartan6
+//Purpose:
+//    This verilog netlist is translated from an ECS schematic.It can be 
+//    synthesized and simulated, but it should not be modified. 
+//
+`timescale 100 ps / 10 ps
+
+module CB4CE_HXILINX_Min(CEO, Q0, Q1, Q2, Q3, TC, C, CE, CLR);
+   
+   localparam TERMINAL_COUNT = 4'b1111;
+   
+   output             CEO;
+   output             Q0;
+   output             Q1;
+   output             Q2;
+   output             Q3;
+   output             TC;
+
+   input 	      C;	
+   input 	      CE;	
+   input 	      CLR;	
+   
+   reg                Q0;
+   reg                Q1;
+   reg                Q2;
+   reg                Q3;
+   
+   always @(posedge C or posedge CLR)
+     begin
+	if (CLR)
+	  {Q3, Q2, Q1, Q0} <= 4'b0000;
+	else if (CE)
+	  {Q3, Q2, Q1,Q0} <= {Q3, Q2, Q1,Q0} + 1;
+     end
+   
+   assign CEO = TC & CE;
+   assign TC = ({Q3, Q2, Q1, Q0} == TERMINAL_COUNT);
+   
+endmodule
+`timescale 1ns / 1ps
+
+module Min(Clk_IN, 
+           Enabled, 
+           Reset, 
+           D2, 
+           D3);
+
+    input Clk_IN;
+    input Enabled;
+    input Reset;
+   output [0:3] D2;
+   output [0:3] D3;
+   
+   wire XLXN_38;
+   wire XLXN_39;
+   wire XLXN_40;
+   wire XLXN_41;
+   wire XLXN_42;
+   wire [0:3] D2_DUMMY;
+   wire [0:3] D3_DUMMY;
+   
+   assign D2[0:3] = D2_DUMMY[0:3];
+   assign D3[0:3] = D3_DUMMY[0:3];
+   (* HU_SET = "XLXI_1_13" *) 
+   CB4CE_HXILINX_Min  XLXI_1 (.C(Clk_IN), 
+                             .CE(Enabled), 
+                             .CLR(XLXN_40), 
+                             .CEO(), 
+                             .Q0(D2_DUMMY[0]), 
+                             .Q1(D2_DUMMY[1]), 
+                             .Q2(D2_DUMMY[2]), 
+                             .Q3(D2_DUMMY[3]), 
+                             .TC());
+   (* HU_SET = "XLXI_2_14" *) 
+   CB4CE_HXILINX_Min  XLXI_2 (.C(XLXN_39), 
+                             .CE(Enabled), 
+                             .CLR(XLXN_41), 
+                             .CEO(), 
+                             .Q0(D3_DUMMY[0]), 
+                             .Q1(D3_DUMMY[1]), 
+                             .Q2(D3_DUMMY[2]), 
+                             .Q3(D3_DUMMY[3]), 
+                             .TC());
+   AND2  XLXI_3 (.I0(D2_DUMMY[3]), 
+                .I1(D2_DUMMY[1]), 
+                .O(XLXN_39));
+   AND2  XLXI_4 (.I0(D3_DUMMY[3]), 
+                .I1(D3_DUMMY[1]), 
+                .O(XLXN_42));
+   AND2B1  XLXI_5 (.I0(Enabled), 
+                  .I1(Reset), 
+                  .O(XLXN_38));
+   OR2  XLXI_6 (.I0(XLXN_39), 
+               .I1(XLXN_38), 
+               .O(XLXN_40));
+   OR2  XLXI_7 (.I0(XLXN_42), 
+               .I1(XLXN_38), 
+               .O(XLXN_41));
+endmodule

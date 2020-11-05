@@ -1,0 +1,15 @@
+//! **************************************************************************
+// Written by: Map P.20131013 on Mon Oct 07 15:03:41 2019
+//! **************************************************************************
+
+SCHEMATIC START;
+COMP "L1_P81" LOCATE = SITE "P81" LEVEL 1;
+COMP "L2_P80" LOCATE = SITE "P80" LEVEL 1;
+COMP "RESET_P46" LOCATE = SITE "P46" LEVEL 1;
+COMP "L3_P79" LOCATE = SITE "P79" LEVEL 1;
+COMP "CLK_P45" LOCATE = SITE "P45" LEVEL 1;
+PIN CLK_P45_pin<0> = BEL "CLK_P45" PINNAME PAD;
+PIN "CLK_P45_pin<0>" CLOCK_DEDICATED_ROUTE;
+COMP "L0_P82" LOCATE = SITE "P82" LEVEL 1;
+SCHEMATIC END;
+

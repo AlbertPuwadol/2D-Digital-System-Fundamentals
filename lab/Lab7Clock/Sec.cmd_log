@@ -1,0 +1,6 @@
+sch2hdl -intstyle ise -family spartan6 -verilog Sec_drc.vf -w D:/Digital/lab/Lab7Clock/Sec.sch 
+sch2sym -intstyle ise -family spartan6 -refsym Sec D:/Digital/lab/Lab7Clock/Sec.sch D:/Digital/lab/Lab7Clock/Sec.sym 
+sch2hdl -intstyle ise -family spartan6 -verilog Sec_drc.vf -w D:/Digital/lab/Lab7Clock/Sec.sch 
+sch2hdl -intstyle ise -family spartan6 -verilog Sec_drc.vf -w D:/Digital/lab/Lab7Clock/Sec.sch 
+sch2hdl -intstyle ise -family spartan6 -verilog Sec_drc.vf -w D:/Digital/lab/Lab7Clock/Sec.sch 
+sch2hdl -intstyle ise -family spartan6 -verilog Sec_drc.vf -w D:/Digital/lab/Lab7Clock/Sec.sch 

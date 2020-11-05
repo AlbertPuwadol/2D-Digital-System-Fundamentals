@@ -1,0 +1,171 @@
+--------------------------------------------------------------------------------
+Release 14.7 Trace  (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+
+C:\Xilinx\14.7\ISE_DS\ISE\bin\nt64\unwrapped\trce.exe -intstyle ise -v 3 -s 3
+-n 3 -fastpaths -xml res.twx res.ncd -o res.twr res.pcf -ucf res.ucf
+
+Design file:              res.ncd
+Physical constraint file: res.pcf
+Device,package,speed:     xc6slx9,tqg144,C,-3 (PRODUCTION 1.23 2013-10-13)
+Report level:             verbose report
+
+Environment Variable      Effect 
+--------------------      ------ 
+NONE                      No environment variables were set
+--------------------------------------------------------------------------------
+
+INFO:Timing:2698 - No timing constraints found, doing default enumeration.
+INFO:Timing:3412 - To improve timing, see the Timing Closure User Guide (UG612).
+INFO:Timing:2752 - To get complete path coverage, use the unconstrained paths 
+   option. All paths that are not constrained will be reported in the 
+   unconstrained paths section(s) of the report.
+INFO:Timing:3339 - The clock-to-out numbers in this timing report are based on 
+   a 50 Ohm transmission line loading model.  For the details of this model, 
+   and for more information on accounting for different loading conditions, 
+   please see the device datasheet.
+
+
+
+Data Sheet report:
+-----------------
+All values displayed in nanoseconds (ns)
+
+Clock to Setup on destination clock Clock
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+Clock          |    1.265|         |         |         |
+---------------+---------+---------+---------+---------+
+
+Pad to Pad
+---------------+---------------+---------+
+Source Pad     |Destination Pad|  Delay  |
+---------------+---------------+---------+
+in1<0>         |SegA           |   10.257|
+in1<0>         |SegB           |   10.123|
+in1<0>         |SegC           |   10.382|
+in1<0>         |SegD           |   10.373|
+in1<0>         |SegE           |    9.588|
+in1<0>         |SegF           |    9.194|
+in1<0>         |SegG           |    9.081|
+in1<1>         |SegA           |   10.107|
+in1<1>         |SegB           |   10.634|
+in1<1>         |SegC           |   10.140|
+in1<1>         |SegD           |    9.861|
+in1<1>         |SegE           |    9.956|
+in1<1>         |SegF           |    8.971|
+in1<1>         |SegG           |    9.554|
+in1<2>         |SegA           |   10.354|
+in1<2>         |SegB           |   10.347|
+in1<2>         |SegC           |   10.349|
+in1<2>         |SegD           |   10.410|
+in1<2>         |SegE           |    9.951|
+in1<2>         |SegF           |    9.369|
+in1<2>         |SegG           |    9.325|
+in1<3>         |SegA           |   10.335|
+in1<3>         |SegB           |   10.273|
+in1<3>         |SegC           |    9.969|
+in1<3>         |SegD           |   10.034|
+in1<3>         |SegE           |    9.704|
+in1<3>         |SegF           |    8.858|
+in1<3>         |SegG           |    9.343|
+in1<4>         |SegA           |   10.046|
+in1<4>         |SegB           |    9.912|
+in1<4>         |SegC           |   10.171|
+in1<4>         |SegD           |   10.162|
+in1<4>         |SegE           |    9.377|
+in1<4>         |SegF           |    8.983|
+in1<4>         |SegG           |    8.870|
+in1<5>         |SegA           |    9.810|
+in1<5>         |SegB           |   10.337|
+in1<5>         |SegC           |    9.843|
+in1<5>         |SegD           |    9.564|
+in1<5>         |SegE           |    9.659|
+in1<5>         |SegF           |    8.674|
+in1<5>         |SegG           |    9.257|
+in1<6>         |SegA           |   10.308|
+in1<6>         |SegB           |   10.301|
+in1<6>         |SegC           |   10.303|
+in1<6>         |SegD           |   10.364|
+in1<6>         |SegE           |    9.905|
+in1<6>         |SegF           |    9.323|
+in1<6>         |SegG           |    9.279|
+in1<7>         |SegA           |   10.324|
+in1<7>         |SegB           |   10.262|
+in1<7>         |SegC           |    9.958|
+in1<7>         |SegD           |   10.023|
+in1<7>         |SegE           |    9.693|
+in1<7>         |SegF           |    8.847|
+in1<7>         |SegG           |    9.332|
+in2<0>         |SegA           |   11.507|
+in2<0>         |SegB           |   11.373|
+in2<0>         |SegC           |   11.632|
+in2<0>         |SegD           |   11.623|
+in2<0>         |SegE           |   10.838|
+in2<0>         |SegF           |   10.444|
+in2<0>         |SegG           |   10.331|
+in2<1>         |SegA           |   11.220|
+in2<1>         |SegB           |   11.747|
+in2<1>         |SegC           |   11.253|
+in2<1>         |SegD           |   10.974|
+in2<1>         |SegE           |   11.069|
+in2<1>         |SegF           |   10.084|
+in2<1>         |SegG           |   10.667|
+in2<2>         |SegA           |   11.322|
+in2<2>         |SegB           |   11.315|
+in2<2>         |SegC           |   11.317|
+in2<2>         |SegD           |   11.378|
+in2<2>         |SegE           |   10.919|
+in2<2>         |SegF           |   10.337|
+in2<2>         |SegG           |   10.293|
+in2<3>         |SegA           |   11.705|
+in2<3>         |SegB           |   11.643|
+in2<3>         |SegC           |   11.339|
+in2<3>         |SegD           |   11.404|
+in2<3>         |SegE           |   11.074|
+in2<3>         |SegF           |   10.228|
+in2<3>         |SegG           |   10.713|
+in2<4>         |SegA           |   11.519|
+in2<4>         |SegB           |   11.385|
+in2<4>         |SegC           |   11.644|
+in2<4>         |SegD           |   11.635|
+in2<4>         |SegE           |   10.850|
+in2<4>         |SegF           |   10.456|
+in2<4>         |SegG           |   10.343|
+in2<5>         |SegA           |   11.162|
+in2<5>         |SegB           |   11.689|
+in2<5>         |SegC           |   11.195|
+in2<5>         |SegD           |   10.916|
+in2<5>         |SegE           |   11.011|
+in2<5>         |SegF           |   10.026|
+in2<5>         |SegG           |   10.609|
+in2<6>         |SegA           |   11.486|
+in2<6>         |SegB           |   11.479|
+in2<6>         |SegC           |   11.481|
+in2<6>         |SegD           |   11.542|
+in2<6>         |SegE           |   11.083|
+in2<6>         |SegF           |   10.501|
+in2<6>         |SegG           |   10.457|
+in2<7>         |SegA           |   11.772|
+in2<7>         |SegB           |   11.710|
+in2<7>         |SegC           |   11.406|
+in2<7>         |SegD           |   11.471|
+in2<7>         |SegE           |   11.141|
+in2<7>         |SegF           |   10.295|
+in2<7>         |SegG           |   10.780|
+---------------+---------------+---------+
+
+
+Analysis completed Mon Nov 25 15:49:04 2019 
+--------------------------------------------------------------------------------
+
+Trace Settings:
+-------------------------
+Trace Settings 
+
+Peak Memory Usage: 4572 MB
+
+
+

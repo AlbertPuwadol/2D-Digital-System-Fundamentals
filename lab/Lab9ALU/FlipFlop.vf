@@ -1,0 +1,96 @@
+////////////////////////////////////////////////////////////////////////////////
+// Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+////////////////////////////////////////////////////////////////////////////////
+//   ____  ____ 
+//  /   /\/   / 
+// /___/  \  /    Vendor: Xilinx 
+// \   \   \/     Version : 14.7
+//  \   \         Application : sch2hdl
+//  /   /         Filename : FlipFlop.vf
+// /___/   /\     Timestamp : 11/11/2019 03:51:14
+// \   \  /  \ 
+//  \___\/\___\ 
+//
+//Command: sch2hdl -intstyle ise -family spartan6 -verilog D:/Digital/lab/Lab9ALU/FlipFlop.vf -w D:/Digital/lab/Lab9ALU/FlipFlop.sch
+//Design Name: FlipFlop
+//Device: spartan6
+//Purpose:
+//    This verilog netlist is translated from an ECS schematic.It can be 
+//    synthesized and simulated, but it should not be modified. 
+//
+`timescale 100 ps / 10 ps
+
+module FTC_HXILINX_FlipFlop(Q, C, CLR, T);
+   
+   output             Q;
+
+   input 	      C;	
+   input 	      CLR;	
+   input              T;
+   
+   parameter INIT = 1'b0;
+   reg                Q = INIT;
+  
+   
+ 
+   always @(posedge C or posedge CLR)
+     begin
+	if (CLR)
+	  Q <= 1'b0;
+	else if(T)
+          Q <= !Q;
+     end
+   
+endmodule
+`timescale 1ns / 1ps
+
+module FlipFlop(inData, 
+                outData);
+
+    input [3:0] inData;
+   output [3:0] outData;
+   
+   wire XLXN_11;
+   wire XLXN_12;
+   wire XLXN_13;
+   wire XLXN_14;
+   wire XLXN_31;
+   
+   (* HU_SET = "XLXI_1_25" *) 
+   FTC_HXILINX_FlipFlop  XLXI_1 (.C(inData[0]), 
+                                .CLR(XLXN_11), 
+                                .T(XLXN_31), 
+                                .Q(outData[0]));
+   (* HU_SET = "XLXI_2_24" *) 
+   FTC_HXILINX_FlipFlop  XLXI_2 (.C(inData[1]), 
+                                .CLR(XLXN_12), 
+                                .T(XLXN_31), 
+                                .Q(outData[1]));
+   (* HU_SET = "XLXI_3_23" *) 
+   FTC_HXILINX_FlipFlop  XLXI_3 (.C(inData[2]), 
+                                .CLR(XLXN_13), 
+                                .T(XLXN_31), 
+                                .Q(outData[2]));
+   (* HU_SET = "XLXI_4_22" *) 
+   FTC_HXILINX_FlipFlop  XLXI_4 (.C(inData[3]), 
+                                .CLR(XLXN_14), 
+                                .T(XLXN_31), 
+                                .Q(outData[3]));
+   OR3  XLXI_5 (.I0(inData[3]), 
+               .I1(inData[2]), 
+               .I2(inData[1]), 
+               .O(XLXN_11));
+   OR3  XLXI_6 (.I0(inData[3]), 
+               .I1(inData[2]), 
+               .I2(inData[0]), 
+               .O(XLXN_12));
+   OR3  XLXI_7 (.I0(inData[3]), 
+               .I1(inData[1]), 
+               .I2(inData[0]), 
+               .O(XLXN_13));
+   OR3  XLXI_8 (.I0(inData[2]), 
+               .I1(inData[1]), 
+               .I2(inData[0]), 
+               .O(XLXN_14));
+   VCC  XLXI_9 (.P(XLXN_31));
+endmodule

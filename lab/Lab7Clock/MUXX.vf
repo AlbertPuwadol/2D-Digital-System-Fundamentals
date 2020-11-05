@@ -1,0 +1,227 @@
+////////////////////////////////////////////////////////////////////////////////
+// Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+////////////////////////////////////////////////////////////////////////////////
+//   ____  ____ 
+//  /   /\/   / 
+// /___/  \  /    Vendor: Xilinx 
+// \   \   \/     Version : 14.7
+//  \   \         Application : sch2hdl
+//  /   /         Filename : MUXX.vf
+// /___/   /\     Timestamp : 11/18/2019 15:30:07
+// \   \  /  \ 
+//  \___\/\___\ 
+//
+//Command: sch2hdl -intstyle ise -family spartan6 -verilog D:/work/2D/Digital/lab/Lab7Clock/MUXX.vf -w D:/work/2D/Digital/lab/Lab7Clock/MUXX.sch
+//Design Name: MUXX
+//Device: spartan6
+//Purpose:
+//    This verilog netlist is translated from an ECS schematic.It can be 
+//    synthesized and simulated, but it should not be modified. 
+//
+`timescale 100 ps / 10 ps
+
+module FTC_HXILINX_MUXX(Q, C, CLR, T);
+   
+   output             Q;
+
+   input 	      C;	
+   input 	      CLR;	
+   input              T;
+   
+   parameter INIT = 1'b0;
+   reg                Q = INIT;
+  
+   
+ 
+   always @(posedge C or posedge CLR)
+     begin
+	if (CLR)
+	  Q <= 1'b0;
+	else if(T)
+          Q <= !Q;
+     end
+   
+endmodule
+`timescale  100 ps / 10 ps
+
+module M4_1E_HXILINX_MUXX (O, D0, D1, D2, D3, E, S0, S1);
+    
+
+   output O;
+
+   input  D0;
+   input  D1;
+   input  D2;
+   input  D3;
+   input  E;
+   input  S0;
+   input  S1;
+
+   reg O;
+
+   always @ ( D0 or D1 or D2 or D3 or E or S0 or S1)
+   begin
+      if(!E)
+      O <= 1'b0;
+      else 
+      begin
+        case({S1,S0})
+        2'b00 : O <= D0;
+        2'b01 : O <= D1;
+        2'b10 : O <= D2;
+        2'b11 : O <= D3;
+        endcase
+      end
+   end
+    
+endmodule
+`timescale 100 ps / 10 ps
+
+module CB2CE_HXILINX_MUXX(CEO, Q0, Q1, TC, C, CE, CLR);
+   
+   localparam TERMINAL_COUNT = 2'b11;
+   
+   output             CEO;
+   output             Q0;
+   output             Q1;
+   output             TC;
+
+   input 	      C;	
+   input 	      CE;	
+   input 	      CLR;	
+   
+   reg                Q0;
+   reg                Q1;
+   
+   always @(posedge C or posedge CLR)
+     begin
+	if (CLR)
+	  {Q1, Q0} <= 2'b00;
+	else if (CE)
+	  {Q1,Q0} <= {Q1,Q0} + 1;
+     end
+   
+   assign CEO = TC & CE;
+   assign TC = ({Q1,Q0} == TERMINAL_COUNT);
+   
+endmodule
+`timescale 1ns / 1ps
+
+module Decoder_MUSER_MUXX(q0, 
+                          q1, 
+                          com);
+
+    input q0;
+    input q1;
+   output [3:0] com;
+   
+   
+   OR2  XLXI_1 (.I0(q0), 
+               .I1(q1), 
+               .O(com[0]));
+   OR2B1  XLXI_2 (.I0(q0), 
+                 .I1(q1), 
+                 .O(com[1]));
+   OR2B1  XLXI_3 (.I0(q1), 
+                 .I1(q0), 
+                 .O(com[2]));
+   OR2B2  XLXI_4 (.I0(q1), 
+                 .I1(q0), 
+                 .O(com[3]));
+endmodule
+`timescale 1ns / 1ps
+
+module MUXX(Clk_IN, 
+            Clk_P, 
+            D0, 
+            D1, 
+            D2, 
+            D3, 
+            A, 
+            B, 
+            C, 
+            com, 
+            D, 
+            P);
+
+    input Clk_IN;
+    input Clk_P;
+    input [0:3] D0;
+    input [0:3] D1;
+    input [0:3] D2;
+    input [0:3] D3;
+   output A;
+   output B;
+   output C;
+   output [3:0] com;
+   output D;
+   output P;
+   
+   wire XLXN_53;
+   wire XLXN_124;
+   wire XLXN_127;
+   wire XLXN_128;
+   
+   (* HU_SET = "XLXI_1_0" *) 
+   M4_1E_HXILINX_MUXX  XLXI_1 (.D0(D0[0]), 
+                              .D1(D1[0]), 
+                              .D2(D2[0]), 
+                              .D3(D3[0]), 
+                              .E(XLXN_124), 
+                              .S0(XLXN_127), 
+                              .S1(XLXN_128), 
+                              .O(A));
+   (* HU_SET = "XLXI_2_1" *) 
+   M4_1E_HXILINX_MUXX  XLXI_2 (.D0(D0[1]), 
+                              .D1(D1[1]), 
+                              .D2(D2[1]), 
+                              .D3(D3[1]), 
+                              .E(XLXN_124), 
+                              .S0(XLXN_127), 
+                              .S1(XLXN_128), 
+                              .O(B));
+   (* HU_SET = "XLXI_3_2" *) 
+   M4_1E_HXILINX_MUXX  XLXI_3 (.D0(D0[2]), 
+                              .D1(D1[2]), 
+                              .D2(D2[2]), 
+                              .D3(D3[2]), 
+                              .E(XLXN_124), 
+                              .S0(XLXN_127), 
+                              .S1(XLXN_128), 
+                              .O(C));
+   (* HU_SET = "XLXI_4_3" *) 
+   M4_1E_HXILINX_MUXX  XLXI_4 (.D0(D0[3]), 
+                              .D1(D1[3]), 
+                              .D2(D2[3]), 
+                              .D3(D3[3]), 
+                              .E(XLXN_124), 
+                              .S0(XLXN_127), 
+                              .S1(XLXN_128), 
+                              .O(D));
+   (* HU_SET = "XLXI_5_4" *) 
+   CB2CE_HXILINX_MUXX  XLXI_5 (.C(XLXN_53), 
+                              .CE(XLXN_124), 
+                              .CLR(), 
+                              .CEO(), 
+                              .Q0(XLXN_127), 
+                              .Q1(XLXN_128), 
+                              .TC());
+   VCC  XLXI_7 (.P(XLXN_124));
+   (* HU_SET = "XLXI_17_5" *) 
+   FTC_HXILINX_MUXX  XLXI_17 (.C(Clk_IN), 
+                             .CLR(), 
+                             .T(XLXN_124), 
+                             .Q(XLXN_53));
+   (* HU_SET = "XLXI_35_6" *) 
+   M4_1E_HXILINX_MUXX  XLXI_35 (.D0(), 
+                               .D1(), 
+                               .D2(Clk_P), 
+                               .D3(), 
+                               .E(XLXN_124), 
+                               .S0(XLXN_127), 
+                               .S1(XLXN_128), 
+                               .O(P));
+   Decoder_MUSER_MUXX  XLXI_36 (.q0(XLXN_127), 
+                               .q1(XLXN_128), 
+                               .com(com[3:0]));
+endmodule

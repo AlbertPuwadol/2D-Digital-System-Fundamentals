@@ -1,0 +1,8 @@
+verilog work "div2.vf"
+verilog work "div10.vf"
+verilog work "sevensegment.vf"
+verilog work "Counter.vf"
+verilog work "Compare.vf"
+verilog work "ClockForSegment.vf"
+verilog work "Clock.vf"
+verilog work "result.vf"
